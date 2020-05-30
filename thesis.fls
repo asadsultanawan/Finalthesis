@@ -177,6 +177,8 @@ INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\F
 INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\CHAPTERS\Chapter-2\Chapter-2.aux
 INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\CHAPTERS\Chapter-3\Chapter-3.aux
 INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\CHAPTERS\Chapter-3\Chapter-3.aux
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\CHAPTERS\Chapter-4\Chapter-4.aux
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\CHAPTERS\Chapter-4\Chapter-4.aux
 OUTPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\thesis.aux
 INPUT C:\Program Files\MiKTeX 2.9\tex\context\base\mkii\supp-pdf.mkii
 INPUT C:\Program Files\MiKTeX 2.9\tex\context\base\mkii\supp-pdf.mkii
@@ -373,6 +375,9 @@ INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\F
 INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\CHAPTERS\Chapter-3\Images\3.11.png
 INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\CHAPTERS\Chapter-3\Images\3.11.png
 INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\CHAPTERS\Chapter-3\Images\3.11.png
+OUTPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\CHAPTERS\Chapter-4\Chapter-4.aux
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\CHAPTERS\Chapter-4\Chapter-4.tex
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\CHAPTERS\Chapter-4\Chapter-4.tex
 INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\thesis.bbl
 INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\thesis.bbl
 INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\thesis.aux
@@ -382,6 +387,8 @@ INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\F
 INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\CHAPTERS\Chapter-2\Chapter-2.aux
 INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\CHAPTERS\Chapter-3\Chapter-3.aux
 INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\CHAPTERS\Chapter-3\Chapter-3.aux
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\CHAPTERS\Chapter-4\Chapter-4.aux
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\CHAPTERS\Chapter-4\Chapter-4.aux
 INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\thesis.out
 INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\thesis.out
 INPUT C:\Program Files\MiKTeX 2.9\fonts\enc\dvips\base\8r.enc
