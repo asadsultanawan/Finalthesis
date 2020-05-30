@@ -1,0 +1,173 @@
+% ****************************************************************************************** % Dissertation template and document class
+% Author  : 
+% ****************************************************************************************** %
+%%% For print copies
+%% set 'singlespace' option to set entire thesis to single space, and define "\printmode" to remove all hyperlinks for printed copies of the thesis. Delete all output files before changing this mode -- it will turn hyperref package on and off
+%\newcommand{\printmode}{}
+
+%%% For the electronic copy, use doublespacing, define "\proquestmode" to use outlined links, instead of colored links. 
+\documentclass[report,a4paper,12pt]{pieasthesis}
+\newcommand{\proquestmode}{} %\printmode or \proquestmode
+\title{AI Frameworks for Visual Traffic Surveillance, from Vehicle Classification to Event Detection}
+
+\submitted{Januray 3, 2020}  % degree conferral date (January, April, June, September, or November)
+\copyrightyear{2011}  % year in which the copyright is secured by publication of the dissertation.
+\author{Assad Sultan \\ \& \\ Muneeb ur Rehman}
+\adviser{Dr. Zulfiqar Hassan}  %replace with the full name of your adviser
+%\departmentprefix{Program in}  % defaults to "Department of", but programs can change this.
+\department{Electrical Engineering}
+\degreeprefix{BS}
+\degree{Electrical Engineering}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%\
+    \renewcommand{\topfraction}{0.85}	% max fraction of floats at top
+    \renewcommand{\bottomfraction}{0.6}	% max fraction of floats at bottom
+    \setcounter{topnumber}{2}
+    \setcounter{bottomnumber}{2}
+    \setcounter{totalnumber}{4}     % 2 may work better
+    \setcounter{dbltopnumber}{2}    % for 2-column pages
+    \renewcommand{\dbltopfraction}{0.66}	% fit big float above 2-col. text
+    \renewcommand{\textfraction}{0.15}	% allow minimal text w. figs
+    %   Parameters for FLOAT pages (not text pages):
+    \renewcommand{\floatpagefraction}{0.66}	% require fuller float pages
+	% N.B.: floatpagefraction MUST be less than topfraction !!
+    \renewcommand{\dblfloatpagefraction}{0.66}	% require fuller float pages
+    
+
+\usepackage{graphicx,verbatim,amsmath,multirow,longtable,booktabs,epsfig,epstopdf,multicol}
+\setlength{\LTcapwidth}{\textwidth}
+\usepackage[top=1in, bottom=1in, left=1.5in, right=1in]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{float} 
+\usepackage{fullpage}
+\usepackage{pbox}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Printed vs. online formatting
+\ifdefined\printmode
+% Printed copy\usepackage{array}
+\usepackage{makecell}
+
+\renewcommand\theadfont{\normalsize\bfseries}
+% url package understands urls (with proper line-breaks) without hyperlinking them
+\usepackage{url}
+\else
+\ifdefined\proquestmode
+\usepackage[hidelinks]{hyperref}
+\hypersetup{bookmarksnumbered}
+\makeatletter
+\hypersetup{pdftitle=\@title,pdfauthor=\@author}
+\makeatother
+
+\else
+\usepackage{hyperref}
+\hypersetup{colorlinks,bookmarksnumbered}
+
+% copy the already-set title and author to use in the pdf properties
+\makeatletter
+\hypersetup{pdftitle=\@title,pdfauthor=\@author}
+\makeatother
+
+% make the page number rather than the text be the link for ToC entries
+%\hypersetup{linktocpage}
+\fi % proquest or online formatting
+\fi % printed or online formatting
+\usepackage{sectsty}
+\usepackage{lipsum}
+\subsectionfont{\fontfamily{phv}\itshape\normalsize}
+\subsubsectionfont{\normalsize}
+\sectionfont{\large}
+%\subsectionfont{\sffamily\itshape}
+\setcounter{secnumdepth}{4} 
+\setcounter{tocdepth}{4}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%\
+%%%% Define commands
+
+\newenvironment{indenttext}{
+    \begin{list}{}{ \itemsep 0in \itemindent 0in
+    \labelsep 0in \labelwidth 0in
+    \listparindent 0in
+    \topsep 0in \partopsep 0in \parskip 0in \parsep 0in
+    \leftmargin 1em \rightmargin 0in
+    \raggedright
+    }
+    \item
+  }
+  {\end{list}}
+
+% another environment that's an indented list, with no spaces between items -- if we want multiple items/lines. Useful in tables. Use \item inside the environment.
+% 	\raggedright makes them left aligned instead of justified
+\newenvironment{indentlist}{
+    \begin{list}{}{ \itemsep 0in \itemindent 0in
+    \labelsep 0in \labelwidth 0in
+    \listparindent 0in
+    \topsep 0in \partopsep 0in \parskip 0in \parsep 0in
+    \leftmargin 1em \rightmargin 0in
+    \raggedright
+    }
+
+  }
+  {\end{list}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%\
+%%%% Front-matter
+% For early drafts, you may want to disable some of the frontmatter. Simply change this to "\ifodd 1" to do so.
+\ifodd 0
+% you can just skip the \acknowledgements and \dedication commands to leave out these sections.
+\else
+\dedication{Dedicated to our Parents for their love and affection}
+% \acknowledgements{
+% \input{front/acknowledgements}
+% }
+\abstract{
+\input{front/abstract}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%\
+%%%% Hide some chapters
+
+%%% If you want to produce a pdf that includes only certain chapters, specify them with includeonly, in addition to including all chapters below.
+%\includeonly{ch-intro/chapter-intro}
+%%% You can also specify multiple chapters.
+%\includeonly{ch-intro/chapter-intro,ch-usage/chapter-usage}
+%\includeonly{chap1,chap2,chap3}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Notes:
+
+% Footnotes should be placed after punctuation.\footnote{place here.}
+% Generally, place citations before the period~\cite{anotherauthor}.
+% The proper usage for i.e., and e.g., include commas ``(e.g., option A, option B)''
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Import chapters
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subfig}
+\fancypagestyle{plain}{
+\fancyhf{} % clear all header and footer fields 
+\fancyhead[R]{\thepage} %RO=right odd, RE=right even 
+\renewcommand{\headrulewidth}{0pt} 
+\renewcommand{\footrulewidth}{0pt}} 
+\usepackage[titletoc]{appendix}
+
+\begin{document}
+\makefrontmatter
+
+\include{CHAPTERS/Chapter-1/Chapter-1}
+\include{CHAPTERS/Chapter-2/Chapter-2}
+\include{CHAPTERS/Chapter-3/Chapter-3}
+\addappheadtotoc
+%\appendixpage
+% \begin{appendices}
+% \include{back/appendices/appendixA}
+% \include{back/appendices/appendixB}
+% \end{appendices}
+% include your .bib file
+\renewcommand{\bibname}{References}
+\cleardoublepage
+\phantomsection
+\addcontentsline{toc}{chapter}{References}
+
+\bibliography{thesis}
+\bibliographystyle{IEEEtr}
+%\include{back/about_the_author/about_the_author}
+\end{document}
