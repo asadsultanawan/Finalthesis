@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{train\PYGZus{}images}\PYG{p}{,} \PYG{n}{test\PYGZus{}images}\PYG{p}{,} \PYG{n}{train\PYGZus{}labels}\PYG{p}{,} \PYG{n}{test\PYGZus{}labels} \PYG{o}{=}
+\PYG{n}{train\PYGZus{}test\PYGZus{}split}\PYG{p}{(}\PYG{n}{images}\PYG{p}{,} \PYG{n}{labels}\PYG{p}{,} \PYG{n}{test\PYGZus{}size} \PYG{o}{=} \PYG{l+m+mf}{0.25}\PYG{p}{,} \PYG{n}{random\PYGZus{}state} \PYG{o}{=} \PYG{l+m+mi}{42}\PYG{p}{)}
+\end{Verbatim}

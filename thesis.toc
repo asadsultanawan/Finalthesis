@@ -34,9 +34,10 @@
 \contentsline {section}{\numberline {4.2}Setting of Workspace for the Project}{28}{section.4.2}%
 \contentsline {section}{\numberline {4.3}Working of Code}{28}{section.4.3}%
 \contentsline {subsection}{\numberline {4.3.1}Conversion of Images and Labels to Numpy Arrays}{28}{subsection.4.3.1}%
-\contentsline {subsection}{\numberline {4.3.2}Train-Test Division}{28}{subsection.4.3.2}%
-\contentsline {subsection}{\numberline {4.3.3}Conversion to Floats}{28}{subsection.4.3.3}%
-\contentsline {subsection}{\numberline {4.3.4}Subtraction of Mean Pixel}{28}{subsection.4.3.4}%
-\contentsline {subsection}{\numberline {4.3.5}c}{28}{subsection.4.3.5}%
-\contentsline {chapter}{Appendices}{29}{section*.43}%
-\contentsline {chapter}{References}{29}{section*.44}%
+\contentsline {subsection}{\numberline {4.3.2}Train-Test Division}{30}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.3}Mean Correction}{30}{subsection.4.3.3}%
+\contentsline {subsection}{\numberline {4.3.4}Defining the Model}{31}{subsection.4.3.4}%
+\contentsline {subsection}{\numberline {4.3.5}Fitting the Model}{32}{subsection.4.3.5}%
+\contentsline {subsection}{\numberline {4.3.6}Defining the Model}{32}{subsection.4.3.6}%
+\contentsline {chapter}{Appendices}{34}{section*.43}%
+\contentsline {chapter}{References}{34}{section*.44}%

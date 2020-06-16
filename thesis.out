@@ -36,8 +36,9 @@
 \BOOKMARK [1][-]{section.4.3}{4.3 Working of Code}{chapter.4}% 36
 \BOOKMARK [2][-]{subsection.4.3.1}{4.3.1 Conversion of Images and Labels to Numpy Arrays}{section.4.3}% 37
 \BOOKMARK [2][-]{subsection.4.3.2}{4.3.2 Train-Test Division}{section.4.3}% 38
-\BOOKMARK [2][-]{subsection.4.3.3}{4.3.3 Conversion to Floats}{section.4.3}% 39
-\BOOKMARK [2][-]{subsection.4.3.4}{4.3.4 Subtraction of Mean Pixel}{section.4.3}% 40
-\BOOKMARK [2][-]{subsection.4.3.5}{4.3.5 c}{section.4.3}% 41
-\BOOKMARK [0][-]{section*.43}{Appendices}{}% 42
-\BOOKMARK [0][-]{section*.44}{References}{}% 43
+\BOOKMARK [2][-]{subsection.4.3.3}{4.3.3 Mean Correction}{section.4.3}% 39
+\BOOKMARK [2][-]{subsection.4.3.4}{4.3.4 Defining the Model}{section.4.3}% 40
+\BOOKMARK [2][-]{subsection.4.3.5}{4.3.5 Fitting the Model}{section.4.3}% 41
+\BOOKMARK [2][-]{subsection.4.3.6}{4.3.6 Defining the Model}{section.4.3}% 42
+\BOOKMARK [0][-]{section*.43}{Appendices}{}% 43
+\BOOKMARK [0][-]{section*.44}{References}{}% 44
