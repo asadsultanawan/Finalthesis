@@ -1,0 +1,11 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kn}{import} \PYG{n+nn}{matplotlib.pyplot} \PYG{k}{as} \PYG{n+nn}{plt}
+\PYG{k+kn}{from} \PYG{n+nn}{matplotlib.image} \PYG{k+kn}{import} \PYG{n}{imread}
+\PYG{n}{path}  \PYG{o}{=} \PYG{l+s+s1}{\PYGZsq{}./images/\PYGZsq{}}
+\PYG{k}{for} \PYG{n}{i} \PYG{o+ow}{in} \PYG{n+nb}{range}\PYG{p}{(}\PYG{l+m+mi}{9}\PYG{p}{):}
+    \PYG{n}{plt}\PYG{o}{.}\PYG{n}{subplot}\PYG{p}{(}\PYG{l+m+mi}{330}\PYG{o}{+}\PYG{l+m+mi}{1}\PYG{o}{+}\PYG{n}{i}\PYG{p}{)}
+    \PYG{n}{filename} \PYG{o}{=} \PYG{n}{path} \PYG{o}{+} \PYG{l+s+s1}{\PYGZsq{}image\PYGZus{}\PYGZsq{}}\PYG{o}{+} \PYG{n+nb}{str}\PYG{p}{(}\PYG{n}{i}\PYG{p}{)} \PYG{o}{+} \PYG{l+s+s1}{\PYGZsq{}.jpg\PYGZsq{}}
+    \PYG{n}{image} \PYG{o}{=} \PYG{n}{imread}\PYG{p}{(}\PYG{n}{filename}\PYG{p}{)}
+    \PYG{n}{plt}\PYG{o}{.}\PYG{n}{imshow}\PYG{p}{(}\PYG{n}{image}\PYG{p}{)}
+    \PYG{n}{plt}\PYG{o}{.}\PYG{n}{show}\PYG{p}{()}
+\end{Verbatim}

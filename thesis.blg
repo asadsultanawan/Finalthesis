@@ -1,0 +1,75 @@
+This is BibTeX, Version 0.99d
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: thesis.aux
+Reallocating 'name_of_file' (item size: 1) to 33 items.
+A level-1 auxiliary file: CHAPTERS/Chapter-1/Chapter-1.aux
+Reallocating 'name_of_file' (item size: 1) to 33 items.
+A level-1 auxiliary file: CHAPTERS/Chapter-2/Chapter-2.aux
+Reallocating 'name_of_file' (item size: 1) to 33 items.
+A level-1 auxiliary file: CHAPTERS/Chapter-3/Chapter-3.aux
+Reallocating 'name_of_file' (item size: 1) to 33 items.
+A level-1 auxiliary file: CHAPTERS/Chapter-4/Chapter-4.aux
+Reallocating 'name_of_file' (item size: 1) to 7 items.
+Reallocating 'name_of_file' (item size: 1) to 7 items.
+The style file: IEEEtr.bst
+Database file #1: thesis.bib
+Warning--empty journal in chap_2_article:1
+Warning--empty publisher in chap_2_article:2
+Warning--empty journal in chap_2_article:3
+Warning--empty journal in chap_2_article:4
+Warning--empty journal in chap_2_article:5
+Warning--empty publisher in chap_2_article:6
+Warning--empty publisher in chap_2_article:7
+Warning--empty journal in chap_2_article:8
+Warning--empty journal in chap_2_article:9
+Warning--empty year in chap_2_article:9
+Warning--empty journal in chap_2_article:10
+Warning--empty journal in chap_2_article:11
+Warning--empty journal in chap_2_article:12
+Warning--empty journal in chap_2_article:13
+Warning--empty journal in chap_2_article:14
+Warning--empty journal in chap_3_article:1
+Warning--empty journal in chap_3_article:3
+Warning--empty journal in chap_3_article:6
+You've used 22 entries,
+            1876 wiz_defined-function locations,
+            577 strings with 6504 characters,
+and the built_in function-call counts, 3963 in all, are:
+= -- 330
+> -- 192
+< -- 0
++ -- 73
+- -- 51
+* -- 262
+:= -- 618
+add.period$ -- 25
+call.type$ -- 22
+change.case$ -- 22
+chr.to.int$ -- 0
+cite$ -- 40
+duplicate$ -- 227
+empty$ -- 413
+format.name$ -- 51
+if$ -- 933
+int.to.chr$ -- 0
+int.to.str$ -- 22
+missing$ -- 25
+newline$ -- 73
+num.names$ -- 22
+pop$ -- 112
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 84
+stack$ -- 0
+substring$ -- 78
+swap$ -- 40
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 18
+while$ -- 28
+width$ -- 24
+write$ -- 177
+(There were 18 warnings)
