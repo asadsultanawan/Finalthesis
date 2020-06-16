@@ -1,0 +1,7 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZsh{}Load Model}
+\PYG{n}{loaded\PYGZus{}model} \PYG{o}{=} \PYG{n}{load\PYGZus{}model}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}saved\PYGZus{}models/model.h5\PYGZdq{}}\PYG{p}{)}
+\PYG{c+c1}{\PYGZsh{}Evaluate Model}
+\PYG{n}{test\PYGZus{}loss}\PYG{p}{,} \PYG{n}{test\PYGZus{}acc} \PYG{o}{=} \PYG{n}{loaded\PYGZus{}model}\PYG{o}{.}\PYG{n}{evaluate}\PYG{p}{(}\PYG{n}{test\PYGZus{}images}\PYG{p}{,} \PYG{n}{test\PYGZus{}labels}\PYG{p}{)}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}Accuarcy of the model:\PYGZsq{}}\PYG{p}{,} \PYG{n}{test\PYGZus{}acc}\PYG{p}{)}
+\end{Verbatim}

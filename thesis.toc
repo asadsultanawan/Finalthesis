@@ -1,7 +1,7 @@
-\contentsline {chapter}{List of Figures}{viii}{section*.3}%
-\contentsline {chapter}{List of Tables}{x}{section*.5}%
-\contentsline {chapter}{Abstract}{xi}{chapter*.7}%
-\contentsline {section}{Abstract}{xi}{section*.8}%
+\contentsline {chapter}{List of Figures}{ix}{section*.3}%
+\contentsline {chapter}{List of Tables}{xi}{section*.5}%
+\contentsline {chapter}{Abstract}{xii}{chapter*.7}%
+\contentsline {section}{Abstract}{xii}{section*.8}%
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}%
 \contentsline {section}{\numberline {1.1}Motivation}{1}{section.1.1}%
 \contentsline {section}{\numberline {1.2}Background}{1}{section.1.2}%
@@ -32,12 +32,15 @@
 \contentsline {section}{\numberline {4.1}Formation of Dataset}{26}{section.4.1}%
 \contentsline {subsection}{\numberline {4.1.1}Data Augmentation}{27}{subsection.4.1.1}%
 \contentsline {section}{\numberline {4.2}Setting of Workspace for the Project}{28}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Working of Code}{28}{section.4.3}%
+\contentsline {section}{\numberline {4.3}Process of Training}{28}{section.4.3}%
 \contentsline {subsection}{\numberline {4.3.1}Conversion of Images and Labels to Numpy Arrays}{28}{subsection.4.3.1}%
 \contentsline {subsection}{\numberline {4.3.2}Train-Test Division}{30}{subsection.4.3.2}%
 \contentsline {subsection}{\numberline {4.3.3}Mean Correction}{30}{subsection.4.3.3}%
 \contentsline {subsection}{\numberline {4.3.4}Defining the Model}{31}{subsection.4.3.4}%
 \contentsline {subsection}{\numberline {4.3.5}Fitting the Model}{32}{subsection.4.3.5}%
 \contentsline {subsection}{\numberline {4.3.6}Defining the Model}{32}{subsection.4.3.6}%
-\contentsline {chapter}{Appendices}{34}{section*.43}%
-\contentsline {chapter}{References}{34}{section*.44}%
+\contentsline {subsection}{\numberline {4.3.7}Plotting the Accuracy and Loss}{34}{subsection.4.3.7}%
+\contentsline {subsection}{\numberline {4.3.8}Saving Model \& Weights}{34}{subsection.4.3.8}%
+\contentsline {section}{\numberline {4.4}Evaluation of Model}{35}{section.4.4}%
+\contentsline {chapter}{Appendices}{36}{section*.43}%
+\contentsline {chapter}{References}{36}{section*.44}%

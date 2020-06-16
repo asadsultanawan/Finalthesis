@@ -1,0 +1,8 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZsh{} Save model and weights}
+\PYG{k}{if} \PYG{o+ow}{not} \PYG{n}{os}\PYG{o}{.}\PYG{n}{path}\PYG{o}{.}\PYG{n}{isdir}\PYG{p}{(}\PYG{n}{save\PYGZus{}dir}\PYG{p}{):}
+    \PYG{n}{os}\PYG{o}{.}\PYG{n}{makedirs}\PYG{p}{(}\PYG{n}{save\PYGZus{}dir}\PYG{p}{)}
+\PYG{n}{model\PYGZus{}path} \PYG{o}{=} \PYG{n}{os}\PYG{o}{.}\PYG{n}{path}\PYG{o}{.}\PYG{n}{join}\PYG{p}{(}\PYG{n}{save\PYGZus{}dir}\PYG{p}{,} \PYG{n}{model\PYGZus{}name}\PYG{p}{)}
+\PYG{n}{model}\PYG{o}{.}\PYG{n}{save}\PYG{p}{(}\PYG{n}{model\PYGZus{}path}\PYG{p}{)}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}Saved trained model at }\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{ \PYGZsq{}} \PYG{o}{\PYGZpc{}} \PYG{n}{model\PYGZus{}path}\PYG{p}{)}
+\end{Verbatim}

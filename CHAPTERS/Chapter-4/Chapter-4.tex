@@ -58,7 +58,7 @@ needed. Due to unavailability of an Nvidia GPU in the system, we used Google Col
 It is an online platform having high end GPUs free provided by Google for training
 up to 12 hours. Enabling a gpu in the notebook settings can accelerate the process of
 training.
-\section{Working of Code}
+\section{Process of Training}
 Keras is one of the leading high level API for neural networks. It contains
 many modules such as layers, cost functions, activation functions, initialization
 schemes and regularization schemes. This project uses Keras for training purposes.
@@ -228,7 +228,7 @@ test_labels = to_categorical(test_labels,num_classes)
 \noindent The last two lines are categorical labeling for using labels fit for Keras.
 \subsection{Defining the Model}
 Recall from chapter \ref{Chapter 3}, a CNN model consists of various layers including
-conv2D, Activation, MaxPoooling2D, Flatten and Dense layer. Listing \ref{listing:4.5}
+conv2D, Activation, MaxPoooling2D, Flatten and Dense layer. Listing \ref{listing:4.7}
 defines the training Model.
 
 \begin{listing}[H]
@@ -268,5 +268,78 @@ else:
         epochs = n_epochs)  
     \end{minted}
     \caption{Training the Model}
-\label{listing:4.6}
+\label{listing:4.7}
+\end{listing}
+\subsection{Plotting the Accuracy and Loss}
+A specific model has a specific accuracy upto which it can detect an unknown data.
+Increasing epochs will not increase the accuracy, it basically overfits
+the model. For a certain model, we have to find a specific number
+of epochs. For this we plot the accuracy and loss of training and
+validation data.
+
+Listing \ref{listing:4.8} shows the script for plotting the accuracy and
+loss of training and validation data.
+
+\begin{listing}[H]
+    \begin{minted}[bgcolor=bg,
+        frame = lines,
+        framesep = 2mm]{python}
+plt.grid()
+plt.plot(history.history['acc'])
+plt.plot(history.history['val_acc'])
+plt.title('model accuracy')
+plt.ylabel('accuracy')
+plt.xlabel('epoch')
+plt.legend(['train', 'validation'], loc='upper left')
+plt.show()
+# summarize history for loss
+plt.grid()
+plt.plot(history.history['loss'])
+plt.plot(history.history['val_loss'])
+plt.title('model loss')
+plt.ylabel('loss')
+plt.xlabel('epoch')
+plt.legend(['train', 'val'], loc='upper left')
+plt.show()
+\end{minted}
+\caption{Training, validation accuracy \& loss vs. epochs}
+\label{listing:4.8}
+\end{listing}
+
+\subsection{Saving Model \& Weights}
+After successful training of model, we have to resuse it. We can directly test it for one time
+when the Colab is not recycled. So the better approach is to save the model
+and then evalaute it on test data. Model is stored as .h5 file in the root directory.
+Listing \ref{listing:4.9} shows the script for saving the weights.
+
+\begin{listing}[H]
+    \begin{minted}[bgcolor=bg,
+        frame = lines,
+        framesep = 2mm]{python}
+# Save model and weights
+if not os.path.isdir(save_dir):
+    os.makedirs(save_dir)
+model_path = os.path.join(save_dir, model_name)
+model.save(model_path)
+print('Saved trained model at %s ' % model_path)
+\end{minted}
+\caption{Saving the Model}
+\label{listing:4.9}
+\end{listing}
+\section{Evaluation of Model}
+Loading the Model saved in the root directory and test it using evalaute function
+tells us the accuracy of Model on the test data. Listing \ref{listing:4.10} shows the script for
+evalaution.
+\begin{listing}[H]
+    \begin{minted}[bgcolor=bg,
+        frame = lines,
+        framesep = 2mm]{python}
+#Load Model
+loaded_model = load_model("saved_models/model.h5")
+#Evaluate Model
+test_loss, test_acc = loaded_model.evaluate(test_images, test_labels)
+print('Accuarcy of the model:', test_acc)
+\end{minted}
+\caption{Evaluating the Model}
+\label{listing:4.10}
 \end{listing}
