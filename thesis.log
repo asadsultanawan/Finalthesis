@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7440 64-bit) (preloaded format=pdflatex 2020.6.16)  17 JUN 2020 15:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7440 64-bit) (preloaded format=pdflatex 2020.6.16)  17 JUN 2020 21:51
 entering extended mode
 **"c:/Users/asads/OneDrive - Higher Education Commission/Project/FYP Thesis/Final Thesis/thesis.tex"
 ("c:/Users/asads/OneDrive - Higher Education Commission/Project/FYP Thesis/Final Thesis/thesis.tex"
@@ -445,21 +445,10 @@ Package caption Info: hyperref package is loaded.
 Package caption Info: longtable package is loaded.
  ("C:\Program Files\MiKTeX 2.9\tex/latex/caption\ltcaption.sty"
 Package: ltcaption 2020/05/30 v1.4b longtable captions (AR)
-)) ("C:\Program Files\MiKTeX 2.9\tex/latex/subfig\subfig.sty"
-Package: subfig 2005/06/28 ver: 1.3 subfig package
-\c@KVtest=\count299
-\sf@farskip=\skip75
-\sf@captopadj=\dimen193
-\sf@capskip=\skip76
-\sf@nearskip=\skip77
-\c@subfigure=\count300
-\c@subfigure@save=\count301
-\c@lofdepth=\count302
-\c@subtable=\count303
-\c@subtable@save=\count304
-\c@lotdepth=\count305
-\sf@top=\skip78
-\sf@bottom=\skip79
+)) ("C:\Program Files\MiKTeX 2.9\tex/latex/caption\subcaption.sty"
+Package: subcaption 2020/01/22 v1.3d Sub-captions (AR)
+\c@subfigure=\count299
+\c@subtable=\count300
 ) ("C:\Program Files\MiKTeX 2.9\tex/latex/xcolor\xcolor.sty"
 Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
  ("C:\Program Files\MiKTeX 2.9\tex/latex/graphics-cfg\color.cfg"
@@ -481,57 +470,57 @@ Package: minted 2017/07/19 v2.5 Yet another Pygments shim for LaTeX
 Package: fvextra 2019/02/04 v1.4 fvextra - extensions and patches for fancyvrb
  ("C:\Program Files\MiKTeX 2.9\tex/latex/etoolbox\etoolbox.sty"
 Package: etoolbox 2019/09/21 v2.5h e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count306
+\etb@tempcnta=\count301
 ) ("C:\Program Files\MiKTeX 2.9\tex/latex/fancyvrb\fancyvrb.sty"
 Package: fancyvrb 2020/05/03 v3.6 verbatim text (tvz,hv)
-\FV@CodeLineNo=\count307
+\FV@CodeLineNo=\count302
 \FV@InFile=\read3
 \FV@TabBox=\box100
-\c@FancyVerbLine=\count308
-\FV@StepNumber=\count309
+\c@FancyVerbLine=\count303
+\FV@StepNumber=\count304
 \FV@OutFile=\write3
 ) ("C:\Program Files\MiKTeX 2.9\tex/latex/upquote\upquote.sty"
 Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verbatim
 ) ("C:\Program Files\MiKTeX 2.9\tex/latex/lineno\lineno.sty"
 Package: lineno 2005/11/02 line numbers on paragraphs v4.41
-\linenopenalty=\count310
+\linenopenalty=\count305
 \output=\toks29
-\linenoprevgraf=\count311
-\linenumbersep=\dimen194
-\linenumberwidth=\dimen195
-\c@linenumber=\count312
-\c@pagewiselinenumber=\count313
-\c@LN@truepage=\count314
-\c@internallinenumber=\count315
-\c@internallinenumbers=\count316
-\quotelinenumbersep=\dimen196
-\bframerule=\dimen197
-\bframesep=\dimen198
+\linenoprevgraf=\count306
+\linenumbersep=\dimen193
+\linenumberwidth=\dimen194
+\c@linenumber=\count307
+\c@pagewiselinenumber=\count308
+\c@LN@truepage=\count309
+\c@internallinenumber=\count310
+\c@internallinenumbers=\count311
+\quotelinenumbersep=\dimen195
+\bframerule=\dimen196
+\bframesep=\dimen197
 \bframebox=\box101
 LaTeX Info: Redefining \\ on input line 3056.
 )
-\c@FV@TrueTabGroupLevel=\count317
-\c@FV@TrueTabCounter=\count318
+\c@FV@TrueTabGroupLevel=\count312
+\c@FV@TrueTabCounter=\count313
 \FV@TabBox@Group=\box102
-\FV@TmpLength=\skip80
-\c@FV@HighlightLinesStart=\count319
-\c@FV@HighlightLinesStop=\count320
-\FV@LoopCount=\count321
+\FV@TmpLength=\skip75
+\c@FV@HighlightLinesStart=\count314
+\c@FV@HighlightLinesStop=\count315
+\FV@LoopCount=\count316
 \FV@NCharsBox=\box103
-\FV@BreakIndent=\dimen199
-\FV@BreakIndentNChars=\count322
-\FV@BreakSymbolSepLeft=\dimen256
-\FV@BreakSymbolSepLeftNChars=\count323
-\FV@BreakSymbolSepRight=\dimen257
-\FV@BreakSymbolSepRightNChars=\count324
-\FV@BreakSymbolIndentLeft=\dimen258
-\FV@BreakSymbolIndentLeftNChars=\count325
-\FV@BreakSymbolIndentRight=\dimen259
-\FV@BreakSymbolIndentRightNChars=\count326
-\c@FancyVerbLineBreakLast=\count327
+\FV@BreakIndent=\dimen198
+\FV@BreakIndentNChars=\count317
+\FV@BreakSymbolSepLeft=\dimen199
+\FV@BreakSymbolSepLeftNChars=\count318
+\FV@BreakSymbolSepRight=\dimen256
+\FV@BreakSymbolSepRightNChars=\count319
+\FV@BreakSymbolIndentLeft=\dimen257
+\FV@BreakSymbolIndentLeftNChars=\count320
+\FV@BreakSymbolIndentRight=\dimen258
+\FV@BreakSymbolIndentRightNChars=\count321
+\c@FancyVerbLineBreakLast=\count322
 \FV@LineBox=\box104
 \FV@LineIndentBox=\box105
-\FV@LineWidth=\dimen260
+\FV@LineWidth=\dimen259
 ) ("C:\Program Files\MiKTeX 2.9\tex/latex/tools\shellesc.sty"
 Package: shellesc 2019/11/08 v1.0c unified shell escape interface for LaTeX
 Package shellesc Info: Unrestricted shell escape enabled on input line 75.
@@ -542,33 +531,33 @@ Package: catchfile 2019/12/09 v1.8 Catch the contents of a file (HO)
 ) ("C:\Program Files\MiKTeX 2.9\tex/generic/iftex\ifluatex.sty"
 Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
 )) ("C:\Program Files\MiKTeX 2.9\tex/latex/xstring\xstring.sty" ("C:\Program Files\MiKTeX 2.9\tex/generic/xstring\xstring.tex"
-\integerpart=\count328
-\decimalpart=\count329
+\integerpart=\count323
+\decimalpart=\count324
 )
 Package: xstring 2019/02/06 v1.83 String manipulations (CT)
 ) ("C:\Program Files\MiKTeX 2.9\tex/latex/framed\framed.sty"
 Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
-\OuterFrameSep=\skip81
-\fb@frw=\dimen261
-\fb@frh=\dimen262
-\FrameRule=\dimen263
-\FrameSep=\dimen264
+\OuterFrameSep=\skip76
+\fb@frw=\dimen260
+\fb@frh=\dimen261
+\FrameRule=\dimen262
+\FrameSep=\dimen263
 )
 \minted@appexistsfile=\read4
 \minted@bgbox=\box106
 \minted@code=\write4
-\c@minted@FancyVerbLineTemp=\count330
-\c@minted@pygmentizecounter=\count331
+\c@minted@FancyVerbLineTemp=\count325
+\c@minted@pygmentizecounter=\count326
 \@float@every@listing=\toks30
-\c@listing=\count332
+\c@listing=\count327
 )
 runsystem(if not exist _minted-thesis mkdir _minted-thesis)...executed.
 
  ("C:\Program Files\MiKTeX 2.9\tex/latex/appendix\appendix.sty"
 Package: appendix 2020/02/08 v1.2c extra appendix facilities
-\c@@pps=\count333
-\c@@ppsavesec=\count334
-\c@@ppsaveapp=\count335
+\c@@pps=\count328
+\c@@ppsavesec=\count329
+\c@@ppsaveapp=\count330
 )
 runsystem(for ^%i in (pygmentize.exe pygmentize.bat pygmentize.cmd) do set > thesis.aex <nul: /p x=^%~$PATH:i>> thesis.aex)...executed.
 
@@ -600,16 +589,16 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 159.
 LaTeX Font Info:    ... okay on input line 159.
  ("C:\Program Files\MiKTeX 2.9\tex/context/base/mkii\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count336
-\scratchdimen=\dimen265
+\scratchcounter=\count331
+\scratchdimen=\dimen264
 \scratchbox=\box107
-\nofMPsegments=\count337
-\nofMParguments=\count338
+\nofMPsegments=\count332
+\nofMParguments=\count333
 \everyMPshowfont=\toks31
-\MPscratchCnt=\count339
-\MPscratchDim=\dimen266
-\MPnumerator=\count340
-\makeMPintoPDFobject=\count341
+\MPscratchCnt=\count334
+\MPscratchDim=\dimen265
+\MPnumerator=\count335
+\makeMPintoPDFobject=\count336
 \everyMPtoPDFconversion=\toks32
 )
 *geometry* driver: auto-detecting
@@ -655,7 +644,7 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ) ("C:\Program Files\MiKTeX 2.9\tex/generic/gettitlestring\gettitlestring.sty"
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count342
+\c@section@level=\count337
 )
 LaTeX Info: Redefining \ref on input line 159.
 LaTeX Info: Redefining \pageref on input line 159.
@@ -665,14 +654,13 @@ LaTeX Info: Redefining \nameref on input line 159.
 \openout5 = `thesis.out'.
 
 Package caption Info: Begin \AtBeginDocument code.
-Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: End \AtBeginDocument code.
 
 
 LaTeX Font Warning: Font shape `OT1/cmr/bx/sc' undefined
 (Font)              using `OT1/cmr/bx/n' instead on input line 161.
 
-<front/pieas.jpg, id=187, 340.27126pt x 243.15843pt>
+<front/pieas.jpg, id=199, 340.27126pt x 243.15843pt>
 File: front/pieas.jpg Graphic file (type jpg)
 <use front/pieas.jpg>
 Package pdftex.def Info: front/pieas.jpg  used on input line 161.
@@ -697,11 +685,11 @@ This may cause the page layout to be inconsistent, however.
 ] ("c:/Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\thesis.toc" [6
 
 
-])
+] [7])
 \tf@toc=\write6
 \openout6 = `thesis.toc'.
 
- [7] ("c:/Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\thesis.lof" [8
+ [8] ("c:/Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\thesis.lof" [9
 
 
 
@@ -709,11 +697,11 @@ This may cause the page layout to be inconsistent, however.
 \tf@lof=\write7
 \openout7 = `thesis.lof'.
 
- [9] ("c:/Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\thesis.lot")
+ [10] ("c:/Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\thesis.lot")
 \tf@lot=\write8
 \openout8 = `thesis.lot'.
 
- [10
+ [11
 
 
 
@@ -722,7 +710,7 @@ This may cause the page layout to be inconsistent, however.
 Package hyperref Warning: The anchor of a bookmark and its parent's must not
 (hyperref)                be the same. Added a new anchor on input line 161.
 
-[11
+[12
 
 
 ]
@@ -747,7 +735,7 @@ Chapter 2.
 
 
 ]
-<CHAPTERS/Chapter-2/Images/2.1.png, id=371, 888.31876pt x 478.03593pt>
+<CHAPTERS/Chapter-2/Images/2.1.png, id=398, 888.31876pt x 478.03593pt>
 File: CHAPTERS/Chapter-2/Images/2.1.png Graphic file (type png)
 <use CHAPTERS/Chapter-2/Images/2.1.png>
 Package pdftex.def Info: CHAPTERS/Chapter-2/Images/2.1.png  used on input line 37.
@@ -765,41 +753,41 @@ LaTeX Font Info:    Font shape `OT1/phv/bx/it' in size <12> not available
 (Font)              Font shape `OT1/phv/b/it' tried instead on input line 60.
 LaTeX Font Info:    Font shape `OT1/phv/b/it' in size <12> not available
 (Font)              Font shape `OT1/phv/b/sl' tried instead on input line 60.
-<CHAPTERS/Chapter-2/Images/2.2.png, id=384, 333.49594pt x 216.05719pt>
+<CHAPTERS/Chapter-2/Images/2.2.png, id=411, 333.49594pt x 216.05719pt>
 File: CHAPTERS/Chapter-2/Images/2.2.png Graphic file (type png)
 <use CHAPTERS/Chapter-2/Images/2.2.png>
 Package pdftex.def Info: CHAPTERS/Chapter-2/Images/2.2.png  used on input line 70.
 (pdftex.def)             Requested size: 166.74756pt x 108.02832pt.
  [6 <c:/Users/asads/OneDrive - Higher Education Commission/Project/FYP Thesis/Final Thesis/CHAPTERS/Chapter-2/Images/2.2.png>]
-<CHAPTERS/Chapter-2/Images/2.3.png, id=393, 589.4522pt x 508.14844pt>
+<CHAPTERS/Chapter-2/Images/2.3.png, id=420, 589.4522pt x 508.14844pt>
 File: CHAPTERS/Chapter-2/Images/2.3.png Graphic file (type png)
 <use CHAPTERS/Chapter-2/Images/2.3.png>
 Package pdftex.def Info: CHAPTERS/Chapter-2/Images/2.3.png  used on input line 86.
 (pdftex.def)             Requested size: 362.37569pt x 312.397pt.
  [7 <c:/Users/asads/OneDrive - Higher Education Commission/Project/FYP Thesis/Final Thesis/CHAPTERS/Chapter-2/Images/2.3.png>]
-<CHAPTERS/Chapter-2/Images/2.4.png, id=400, 625.1355pt x 290.88675pt>
+<CHAPTERS/Chapter-2/Images/2.4.png, id=428, 625.1355pt x 290.88675pt>
 File: CHAPTERS/Chapter-2/Images/2.4.png Graphic file (type png)
 <use CHAPTERS/Chapter-2/Images/2.4.png>
 Package pdftex.def Info: CHAPTERS/Chapter-2/Images/2.4.png  used on input line 103.
 (pdftex.def)             Requested size: 362.37569pt x 168.62122pt.
-<CHAPTERS/Chapter-2/Images/2.5.png, id=401, 338.4645pt x 169.8345pt>
+<CHAPTERS/Chapter-2/Images/2.5.png, id=429, 338.4645pt x 169.8345pt>
 File: CHAPTERS/Chapter-2/Images/2.5.png Graphic file (type png)
 <use CHAPTERS/Chapter-2/Images/2.5.png>
 Package pdftex.def Info: CHAPTERS/Chapter-2/Images/2.5.png  used on input line 118.
 (pdftex.def)             Requested size: 253.84775pt x 127.37555pt.
  [8 <c:/Users/asads/OneDrive - Higher Education Commission/Project/FYP Thesis/Final Thesis/CHAPTERS/Chapter-2/Images/2.4.png> <c:/Users/asads/OneDrive - Higher Education Commission/Project/FYP Thesis/Final Thesis/CHAPTERS/Chapter-2/Images/2.5.png>] [9]
-<CHAPTERS/Chapter-2/Images/2.6.png, id=418, 542.025pt x 378.41376pt>
+<CHAPTERS/Chapter-2/Images/2.6.png, id=445, 542.025pt x 378.41376pt>
 File: CHAPTERS/Chapter-2/Images/2.6.png Graphic file (type png)
 <use CHAPTERS/Chapter-2/Images/2.6.png>
 Package pdftex.def Info: CHAPTERS/Chapter-2/Images/2.6.png  used on input line 162.
 (pdftex.def)             Requested size: 362.37569pt x 252.9989pt.
  [10 <c:/Users/asads/OneDrive - Higher Education Commission/Project/FYP Thesis/Final Thesis/CHAPTERS/Chapter-2/Images/2.6.png>] [11]
-<CHAPTERS/Chapter-2/Images/2.7.jpg, id=433, 534.19576pt x 154.77824pt>
+<CHAPTERS/Chapter-2/Images/2.7.jpg, id=460, 534.19576pt x 154.77824pt>
 File: CHAPTERS/Chapter-2/Images/2.7.jpg Graphic file (type jpg)
 <use CHAPTERS/Chapter-2/Images/2.7.jpg>
 Package pdftex.def Info: CHAPTERS/Chapter-2/Images/2.7.jpg  used on input line 230.
 (pdftex.def)             Requested size: 427.3572pt x 123.82275pt.
-<CHAPTERS/Chapter-2/Images/2.8.jpg, id=434, 777.50475pt x 266.1945pt>
+<CHAPTERS/Chapter-2/Images/2.8.jpg, id=461, 777.50475pt x 266.1945pt>
 File: CHAPTERS/Chapter-2/Images/2.8.jpg Graphic file (type jpg)
 <use CHAPTERS/Chapter-2/Images/2.8.jpg>
 Package pdftex.def Info: CHAPTERS/Chapter-2/Images/2.8.jpg  used on input line 247.
@@ -810,18 +798,18 @@ Overfull \hbox (13.53856pt too wide) in paragraph at lines 247--248
  []
 
 [12 <c:/Users/asads/OneDrive - Higher Education Commission/Project/FYP Thesis/Final Thesis/CHAPTERS/Chapter-2/Images/2.7.jpg>]
-<CHAPTERS/Chapter-2/Images/2.9.jpg, id=444, 699.8145pt x 188.50426pt>
+<CHAPTERS/Chapter-2/Images/2.9.jpg, id=471, 699.8145pt x 188.50426pt>
 File: CHAPTERS/Chapter-2/Images/2.9.jpg Graphic file (type jpg)
 <use CHAPTERS/Chapter-2/Images/2.9.jpg>
 Package pdftex.def Info: CHAPTERS/Chapter-2/Images/2.9.jpg  used on input line 262.
 (pdftex.def)             Requested size: 419.89194pt x 113.10341pt.
-<CHAPTERS/Chapter-2/Images/2.11.png, id=447, 471.7625pt x 277.035pt>
+<CHAPTERS/Chapter-2/Images/2.11.png, id=474, 471.7625pt x 277.035pt>
 File: CHAPTERS/Chapter-2/Images/2.11.png Graphic file (type png)
 <use CHAPTERS/Chapter-2/Images/2.11.png>
 Package pdftex.def Info: CHAPTERS/Chapter-2/Images/2.11.png  used on input line 282.
 (pdftex.def)             Requested size: 283.05968pt x 166.22227pt.
  [13 <c:/Users/asads/OneDrive - Higher Education Commission/Project/FYP Thesis/Final Thesis/CHAPTERS/Chapter-2/Images/2.8.jpg> <c:/Users/asads/OneDrive - Higher Education Commission/Project/FYP Thesis/Final Thesis/CHAPTERS/Chapter-2/Images/2.9.jpg>]
-<CHAPTERS/Chapter-2/Images/2.12.png, id=458, 1756.5625pt x 496.85625pt>
+<CHAPTERS/Chapter-2/Images/2.12.png, id=486, 1756.5625pt x 496.85625pt>
 File: CHAPTERS/Chapter-2/Images/2.12.png Graphic file (type png)
 <use CHAPTERS/Chapter-2/Images/2.12.png>
 Package pdftex.def Info: CHAPTERS/Chapter-2/Images/2.12.png  used on input line 294.
@@ -831,7 +819,7 @@ Package pdftex.def Info: CHAPTERS/Chapter-2/Images/2.12.png  used on input line 
 
  ("c:/Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\CHAPTERS/Chapter-3/Chapter-3.tex"
 Chapter 3.
-<CHAPTERS/Chapter-3/Images/3_1.jpg, id=474, 316.93407pt x 176.91093pt>
+<CHAPTERS/Chapter-3/Images/3_1.jpg, id=501, 316.93407pt x 176.91093pt>
 File: CHAPTERS/Chapter-3/Images/3_1.jpg Graphic file (type jpg)
 <use CHAPTERS/Chapter-3/Images/3_1.jpg>
 Package pdftex.def Info: CHAPTERS/Chapter-3/Images/3_1.jpg  used on input line 23.
@@ -841,68 +829,68 @@ Package pdftex.def Info: CHAPTERS/Chapter-3/Images/3_1.jpg  used on input line 2
 
 
 ]
-<CHAPTERS/Chapter-3/Images/3.2.png, id=482, 675.52374pt x 405.515pt>
+<CHAPTERS/Chapter-3/Images/3.2.png, id=509, 675.52374pt x 405.515pt>
 File: CHAPTERS/Chapter-3/Images/3.2.png Graphic file (type png)
 <use CHAPTERS/Chapter-3/Images/3.2.png>
 Package pdftex.def Info: CHAPTERS/Chapter-3/Images/3.2.png  used on input line 40.
 (pdftex.def)             Requested size: 317.07614pt x 190.34456pt.
  [17 <c:/Users/asads/OneDrive - Higher Education Commission/Project/FYP Thesis/Final Thesis/CHAPTERS/Chapter-3/Images/3_1.jpg> <c:/Users/asads/OneDrive - Higher Education Commission/Project/FYP Thesis/Final Thesis/CHAPTERS/Chapter-3/Images/3.2.png>]
-<CHAPTERS/Chapter-3/Images/3.3.png, id=491, 853.1875pt x 218.8175pt>
+<CHAPTERS/Chapter-3/Images/3.3.png, id=518, 853.1875pt x 218.8175pt>
 File: CHAPTERS/Chapter-3/Images/3.3.png Graphic file (type png)
 <use CHAPTERS/Chapter-3/Images/3.3.png>
 Package pdftex.def Info: CHAPTERS/Chapter-3/Images/3.3.png  used on input line 66.
 (pdftex.def)             Requested size: 362.37569pt x 92.9411pt.
-<CHAPTERS/Chapter-3/Images/3.4.png, id=493, 371.88937pt x 209.28188pt>
+<CHAPTERS/Chapter-3/Images/3.4.png, id=520, 371.88937pt x 209.28188pt>
 File: CHAPTERS/Chapter-3/Images/3.4.png Graphic file (type png)
 <use CHAPTERS/Chapter-3/Images/3.4.png>
 Package pdftex.def Info: CHAPTERS/Chapter-3/Images/3.4.png  used on input line 85.
 (pdftex.def)             Requested size: 317.07614pt x 178.43967pt.
  [18 <c:/Users/asads/OneDrive - Higher Education Commission/Project/FYP Thesis/Final Thesis/CHAPTERS/Chapter-3/Images/3.3.png>]
-<CHAPTERS/Chapter-3/Images/3.5.png, id=500, 356.0803pt x 217.5628pt>
+<CHAPTERS/Chapter-3/Images/3.5.png, id=527, 356.0803pt x 217.5628pt>
 File: CHAPTERS/Chapter-3/Images/3.5.png Graphic file (type png)
 <use CHAPTERS/Chapter-3/Images/3.5.png>
 Package pdftex.def Info: CHAPTERS/Chapter-3/Images/3.5.png  used on input line 100.
 (pdftex.def)             Requested size: 317.07614pt x 193.73984pt.
-<CHAPTERS/Chapter-3/Images/3.6.png, id=501, 370.38374pt x 211.54031pt>
+<CHAPTERS/Chapter-3/Images/3.6.png, id=528, 370.38374pt x 211.54031pt>
 File: CHAPTERS/Chapter-3/Images/3.6.png Graphic file (type png)
 <use CHAPTERS/Chapter-3/Images/3.6.png>
 Package pdftex.def Info: CHAPTERS/Chapter-3/Images/3.6.png  used on input line 114.
 (pdftex.def)             Requested size: 317.07614pt x 181.098pt.
  [19 <c:/Users/asads/OneDrive - Higher Education Commission/Project/FYP Thesis/Final Thesis/CHAPTERS/Chapter-3/Images/3.4.png (PNG copy)> <c:/Users/asads/OneDrive - Higher Education Commission/Project/FYP Thesis/Final Thesis/CHAPTERS/Chapter-3/Images/3.5.png (PNG copy)>] [20 <c:/Users/asads/OneDrive - Higher Education Commission/Project/FYP Thesis/Final Thesis/CHAPTERS/Chapter-3/Images/3.6.png>]
-<CHAPTERS/Chapter-3/Images/3.7.jpg, id=513, 361.35pt x 253.94875pt>
+<CHAPTERS/Chapter-3/Images/3.7.jpg, id=540, 361.35pt x 253.94875pt>
 File: CHAPTERS/Chapter-3/Images/3.7.jpg Graphic file (type jpg)
 <use CHAPTERS/Chapter-3/Images/3.7.jpg>
 Package pdftex.def Info: CHAPTERS/Chapter-3/Images/3.7.jpg  used on input line 153.
 (pdftex.def)             Requested size: 317.07614pt x 222.83621pt.
  [21 <c:/Users/asads/OneDrive - Higher Education Commission/Project/FYP Thesis/Final Thesis/CHAPTERS/Chapter-3/Images/3.7.jpg>]
-<CHAPTERS/Chapter-3/Images/3.8.jpg, id=527, 361.35pt x 248.93pt>
+<CHAPTERS/Chapter-3/Images/3.8.jpg, id=554, 361.35pt x 248.93pt>
 File: CHAPTERS/Chapter-3/Images/3.8.jpg Graphic file (type jpg)
 <use CHAPTERS/Chapter-3/Images/3.8.jpg>
 Package pdftex.def Info: CHAPTERS/Chapter-3/Images/3.8.jpg  used on input line 171.
 (pdftex.def)             Requested size: 317.07614pt x 218.43233pt.
  [22 <c:/Users/asads/OneDrive - Higher Education Commission/Project/FYP Thesis/Final Thesis/CHAPTERS/Chapter-3/Images/3.8.jpg>]
-<CHAPTERS/Chapter-3/Images/3.9a.png, id=537, 215.00325pt x 167.4255pt>
+<CHAPTERS/Chapter-3/Images/3.9a.png, id=564, 215.00325pt x 167.4255pt>
 File: CHAPTERS/Chapter-3/Images/3.9a.png Graphic file (type png)
 <use CHAPTERS/Chapter-3/Images/3.9a.png>
 Package pdftex.def Info: CHAPTERS/Chapter-3/Images/3.9a.png  used on input line 218.
 (pdftex.def)             Requested size: 142.26344pt x 124.62357pt.
-<CHAPTERS/Chapter-3/Images/3.9b.png, id=538, 340.8735pt x 224.7597pt>
+<CHAPTERS/Chapter-3/Images/3.9b.png, id=565, 340.8735pt x 224.7597pt>
 File: CHAPTERS/Chapter-3/Images/3.9b.png Graphic file (type png)
 <use CHAPTERS/Chapter-3/Images/3.9b.png>
 Package pdftex.def Info: CHAPTERS/Chapter-3/Images/3.9b.png  used on input line 220.
 (pdftex.def)             Requested size: 142.26605pt x 113.8097pt.
-<CHAPTERS/Chapter-3/Images/3.10a.png, id=543, 227.04825pt x 125.87025pt>
+<CHAPTERS/Chapter-3/Images/3.10a.png, id=570, 227.04825pt x 125.87025pt>
 File: CHAPTERS/Chapter-3/Images/3.10a.png Graphic file (type png)
 <use CHAPTERS/Chapter-3/Images/3.10a.png>
 Package pdftex.def Info: CHAPTERS/Chapter-3/Images/3.10a.png  used on input line 250.
 (pdftex.def)             Requested size: 170.71535pt x 113.81226pt.
-<CHAPTERS/Chapter-3/Images/3.10b.png, id=544, 268.75406pt x 157.33781pt>
+<CHAPTERS/Chapter-3/Images/3.10b.png, id=571, 268.75406pt x 157.33781pt>
 File: CHAPTERS/Chapter-3/Images/3.10b.png Graphic file (type png)
 <use CHAPTERS/Chapter-3/Images/3.10b.png>
 Package pdftex.def Info: CHAPTERS/Chapter-3/Images/3.10b.png  used on input line 252.
 (pdftex.def)             Requested size: 170.71844pt x 113.8113pt.
  [23 <c:/Users/asads/OneDrive - Higher Education Commission/Project/FYP Thesis/Final Thesis/CHAPTERS/Chapter-3/Images/3.9a.png> <c:/Users/asads/OneDrive - Higher Education Commission/Project/FYP Thesis/Final Thesis/CHAPTERS/Chapter-3/Images/3.9b.png>]
-<CHAPTERS/Chapter-3/Images/3.11.png, id=555, 436.63126pt x 227.34938pt>
+<CHAPTERS/Chapter-3/Images/3.11.png, id=579, 436.63126pt x 227.34938pt>
 File: CHAPTERS/Chapter-3/Images/3.11.png Graphic file (type png)
 <use CHAPTERS/Chapter-3/Images/3.11.png>
 Package pdftex.def Info: CHAPTERS/Chapter-3/Images/3.11.png  used on input line 267.
@@ -924,7 +912,7 @@ Package hyperref Info: bookmark level for unknown listing defaults to 0 on input
 
 
 ]
-<CHAPTERS/Chapter-4/Images/4.1.png, id=576, 374.3586pt x 297.7524pt>
+<CHAPTERS/Chapter-4/Images/4.1.png, id=599, 374.3586pt x 297.7524pt>
 File: CHAPTERS/Chapter-4/Images/4.1.png Graphic file (type png)
 <use CHAPTERS/Chapter-4/Images/4.1.png>
 Package pdftex.def Info: CHAPTERS/Chapter-4/Images/4.1.png  used on input line 47.
@@ -932,7 +920,7 @@ Package pdftex.def Info: CHAPTERS/Chapter-4/Images/4.1.png  used on input line 4
  [27 <c:/Users/asads/OneDrive - Higher Education Commission/Project/FYP Thesis/Final Thesis/CHAPTERS/Chapter-4/Images/4.1.png>]
 \openout3 = `thesis.pyg'.
 
- ("c:/Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\_minted-thesis/B1427A97C1649FCCBF4714400139E1100102E502927AACB428B4F294F23E2359.pygtex") [28]
+ ("c:/Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\_minted-thesis/964EB40B99BDC7091AEFD7C33571F8220102E502927AACB428B4F294F23E2359.pygtex") [28]
 \openout3 = `thesis.pyg'.
 
  ("c:/Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\_minted-thesis/1A5859FE5CEB601A3C76950EF25F09350102E502927AACB428B4F294F23E2359.pygtex") [29]
@@ -947,28 +935,73 @@ Package pdftex.def Info: CHAPTERS/Chapter-4/Images/4.1.png  used on input line 4
  ("c:/Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\_minted-thesis/0BC26245C43757375D1F08197D0C67DE0102E502927AACB428B4F294F23E2359.pygtex") [31]
 \openout3 = `thesis.pyg'.
 
- ("c:/Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\_minted-thesis/27F1061EC4120ACE592B1077E42C69DC0102E502927AACB428B4F294F23E2359.pygtex") [32]
+ ("c:/Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\_minted-thesis/B2CF62C3A0F09FB919A583F9FCCE47BD0102E502927AACB428B4F294F23E2359.pygtex") [32]
 \openout3 = `thesis.pyg'.
 
  ("c:/Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\_minted-thesis/B0EA406BEA64E9FCF5E5D148A43ADC590102E502927AACB428B4F294F23E2359.pygtex")
 \openout3 = `thesis.pyg'.
 
- ("c:/Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\_minted-thesis/EF0811DA02F85330EB85610FD9EE865A0102E502927AACB428B4F294F23E2359.pygtex")) [33] [34] ("c:/Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\thesis.bbl" [35
+ ("c:/Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\_minted-thesis/EF0811DA02F85330EB85610FD9EE865A0102E502927AACB428B4F294F23E2359.pygtex")
+<CHAPTERS/Chapter-4/Images/4.2.jpg, id=646, 712.46175pt x 142.131pt>
+File: CHAPTERS/Chapter-4/Images/4.2.jpg Graphic file (type jpg)
+<use CHAPTERS/Chapter-4/Images/4.2.jpg>
+Package pdftex.def Info: CHAPTERS/Chapter-4/Images/4.2.jpg  used on input line 354.
+(pdftex.def)             Requested size: 448.85327pt x 89.54298pt.
+ [33]
+<CHAPTERS/Chapter-4/Images/4.3.jpg, id=653, 691.98524pt x 535.40025pt>
+File: CHAPTERS/Chapter-4/Images/4.3.jpg Graphic file (type jpg)
+<use CHAPTERS/Chapter-4/Images/4.3.jpg>
+Package pdftex.def Info: CHAPTERS/Chapter-4/Images/4.3.jpg  used on input line 361.
+(pdftex.def)             Requested size: 435.953pt x 337.30394pt.
+ [34 <c:/Users/asads/OneDrive - Higher Education Commission/Project/FYP Thesis/Final Thesis/CHAPTERS/Chapter-4/Images/4.2.jpg> <c:/Users/asads/OneDrive - Higher Education Commission/Project/FYP Thesis/Final Thesis/CHAPTERS/Chapter-4/Images/4.3.jpg>]
+<CHAPTERS/Chapter-4/Images/4.4a.png, id=660, 387.4475pt x 278.03876pt>
+File: CHAPTERS/Chapter-4/Images/4.4a.png Graphic file (type png)
+<use CHAPTERS/Chapter-4/Images/4.4a.png>
+Package pdftex.def Info: CHAPTERS/Chapter-4/Images/4.4a.png  used on input line 380.
+(pdftex.def)             Requested size: 201.47385pt x 144.58098pt.
+<CHAPTERS/Chapter-4/Images/4.4b.png, id=661, 381.425pt x 278.03876pt>
+File: CHAPTERS/Chapter-4/Images/4.4b.png Graphic file (type png)
+<use CHAPTERS/Chapter-4/Images/4.4b.png>
+Package pdftex.def Info: CHAPTERS/Chapter-4/Images/4.4b.png  used on input line 385.
+(pdftex.def)             Requested size: 198.34213pt x 144.58098pt.
+<CHAPTERS/Chapter-4/Images/4.5.jpg, id=664, 654.0435pt x 456.5055pt>
+File: CHAPTERS/Chapter-4/Images/4.5.jpg Graphic file (type jpg)
+<use CHAPTERS/Chapter-4/Images/4.5.jpg>
+Package pdftex.def Info: CHAPTERS/Chapter-4/Images/4.5.jpg  used on input line 402.
+(pdftex.def)             Requested size: 444.7437pt x 310.41963pt.
+<CHAPTERS/Chapter-4/Images/4.6.jpg, id=665, 781.7205pt x 274.626pt>
+File: CHAPTERS/Chapter-4/Images/4.6.jpg Graphic file (type jpg)
+<use CHAPTERS/Chapter-4/Images/4.6.jpg>
+Package pdftex.def Info: CHAPTERS/Chapter-4/Images/4.6.jpg  used on input line 409.
+(pdftex.def)             Requested size: 469.03592pt x 164.77686pt.
+
+Overfull \hbox (16.06802pt too wide) in paragraph at lines 409--410
+ [][] 
+ []
+
+[35 <c:/Users/asads/OneDrive - Higher Education Commission/Project/FYP Thesis/Final Thesis/CHAPTERS/Chapter-4/Images/4.4a.png> <c:/Users/asads/OneDrive - Higher Education Commission/Project/FYP Thesis/Final Thesis/CHAPTERS/Chapter-4/Images/4.4b.png>]
+
+LaTeX Warning: Reference `fig:4.7' on page 36 undefined on input line 423.
+
+) [36 <c:/Users/asads/OneDrive - Higher Education Commission/Project/FYP Thesis/Final Thesis/CHAPTERS/Chapter-4/Images/4.5.jpg> <c:/Users/asads/OneDrive - Higher Education Commission/Project/FYP Thesis/Final Thesis/CHAPTERS/Chapter-4/Images/4.6.jpg>] [37] ("c:/Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\thesis.bbl" [38
 
 
 
 ])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 183.
- [36]
+ [39]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 183.
  ("c:/Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\thesis.aux" ("c:/Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\CHAPTERS/Chapter-1/Chapter-1.aux") ("c:/Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\CHAPTERS/Chapter-2/Chapter-2.aux") ("c:/Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\CHAPTERS/Chapter-3/Chapter-3.aux") ("c:/Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\CHAPTERS/Chapter-4/Chapter-4.aux"))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 183.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 183.
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 7F7D678986DF7C2B1BFA3883A2A26918;3397.
+(rerunfilecheck)             Checksum: 0D41324874FAA4D6A5A9E952BB1DAAC3;3652.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+
+LaTeX Warning: There were undefined references.
 
 runsystem(del thesis.pyg)...executed.
 
@@ -976,17 +1009,17 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 183.
  )
 (\end occurred when \ifodd on line 113 was incomplete) 
 Here is how much of TeX's memory you used:
- 13359 strings out of 480797
- 238583 string characters out of 2905361
- 651729 words of memory out of 3000000
- 28804 multiletter control sequences out of 15000+200000
- 543224 words of font info for 56 fonts, out of 3000000 for 9000
+ 13354 strings out of 480797
+ 239226 string characters out of 2905361
+ 649422 words of memory out of 3000000
+ 28783 multiletter control sequences out of 15000+200000
+ 543524 words of font info for 57 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  39i,12n,54p,1025b,628s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc} <C:\Users\asads\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmitt10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvbo8a.pfb>
-Output written on "c:/Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\thesis.pdf" (47 pages, 2893964 bytes).
+Output written on "c:/Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\thesis.pdf" (51 pages, 3691203 bytes).
 PDF statistics:
- 732 PDF objects out of 1000 (max. 8388607)
- 175 named destinations out of 1000 (max. 500000)
- 499 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 785 PDF objects out of 1000 (max. 8388607)
+ 183 named destinations out of 1000 (max. 500000)
+ 553 words of extra memory for PDF output out of 10000 (max. 10000000)
 

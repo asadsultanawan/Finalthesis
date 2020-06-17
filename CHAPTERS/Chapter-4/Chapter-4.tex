@@ -4,15 +4,15 @@ Classifier}
 Recall from the last chapter that Convolutional Neural Networks (CNNs) are used
 in the training of a model for a classifier. Classification is the process
 of putting a tag on an image from a set of class labels. This chapter is about the
-training of classifier for a dataset of 10000 images with 2000 images of each class.
+training of classifier for a dataset of images of five classes.
 The step by step process of training a classifier is explained in detail in this chapter. Results obtained from the testing of the classifier by varying certain parameters are recorded and attached
 in the latter part of the chapter.
 \section{Formation of Dataset}
-In deep learning techniques for Classification of images, we have
-an example of images which are input to to the system to get a
+In deep learning techniques for classification of images, we have
+images examples which are input to to the system for training purposes
+to train a model and then it is tested for a set of images to get
 label from the given classes. This set of images is called dataset.
-The dataset is divided into training and dataset by a specific ratio.
-
+The dataset is divided into training and test dataset by a specific ratio.
 
 In this project we have five different classes of vehciles i.e. Bus, Car, Truck, Motorcycle
 and Hiace. There are a total of 10000 images with 2000 images of each 
@@ -55,7 +55,7 @@ Data augmentation is the process of applying techniques like shifting, flipping,
 This technique is used within the code using Keras.
 \section{Setting of Workspace for the Project}
 There are a lot of images to be processed. To process images, high end GPU is
-needed. Due to unavailability of an Nvidia GPU in the system, we used Google Colab.
+needed. Due to unavailability of an Nvidia GPU on the system, we used Google Colab.
 It is an online platform having high end GPUs free provided by Google for training
 up to 12 hours. Enabling a GPU in the notebook settings can accelerate the process of
 training.
@@ -69,10 +69,10 @@ Recall to chapter 2, where we studied the basics of an image. In Keras image has
 representations i.e. (width, height, color\_channels) and (color\_channels, width, height).
 First approach is called as channels first approach and the latter is called as
 channels last approach. We will use the channels last approach.
-First step is to read the images from the folder (uploaded to Colab),
+First step is to read the images from the folder mounted from Google drive,
 Labels are assigned to classes from 0 to 4. Keras load\_img() loads image from the folder given
 target size. Target size for this project is chosen as 128 by 128. This means width and height,
-both are 128. Color channels fro RGB images are 3. Images are then converted to numpy arrays using
+both are 128. Color channels for RGB images are 3. Images are then converted to numpy arrays using
 Keras img\_to\_array() method. Labels are stored as 0, 1, 2, 3, 4 based on the class of image (as data is renamed).
 A section of code for this implementation is shown in listing \ref{listing:4.2}.
 
@@ -81,7 +81,7 @@ A section of code for this implementation is shown in listing \ref{listing:4.2}.
         frame = lines,
         framesep = 2mm]{python}
 folder = '/content/Input_data/'
-photos = np.zeros((num_of_images,img_rows,img_cols,color_channels))
+images = np.zeros((num_of_images,img_rows,img_cols,color_channels))
 labels = np.zeros(num_of_images)
 i = 0
 # enumerate files in the directory
@@ -204,13 +204,13 @@ metrics=['accuracy'])
 Last three lines defines the compilation process of the Model. 
 For more than two classes, loss is categorical\_crossentropy. For two
 classes it is binary\_crossentropy. There are many optimizers in Keras i.e.
-SGD, Adam, RMSprop, Adamax etc. Here we have used Adam. Metrics calculates how
+SGD, Adam, RMSprop, Adamax etc. Here we have used Adam. Accuracy metrics calculates how
 often prediction equals labels.
 \subsection{Fitting the Model}
 Here the process of training starts. We have two functions used in Keras. One
 is model.fit and other is model.fit\_generator. As we discussed in section 4.1.1
-about data augmentation. Here we have implemented data augmentation using a true false
-logic. We have also defined a validation set. Validation data tells us about the
+about data augmentation. Here we have implemented data augmentation using a\
+an if-else logic. We have also defined a validation set. Validation data tells us about the
 behavior of the model to an unseen data.
 
 The number of times a model goes through the data is termed as `epochs'.
@@ -274,9 +274,7 @@ A specific model has a specific accuracy upto which it can detect an unknown dat
 Increasing epochs will not increase the accuracy, it basically overfits
 the model. For a certain model, we have to find a specific number
 of epochs. For this we plot the accuracy and loss of training and
-validation data.
-
-Listing \ref{listing:4.7} shows the script for plotting the accuracy and
+validation data. Listing \ref{listing:4.7} shows the script for plotting the accuracy and
 loss of training and validation data.
 
 \begin{longlisting}
@@ -284,8 +282,8 @@ loss of training and validation data.
         frame = lines,
         framesep = 2mm]{python}
 plt.grid()
-plt.plot(history.history['acc'])
-plt.plot(history.history['val_acc'])
+plt.plot(history.history['accuracy'])
+plt.plot(history.history['val_accuracy'])
 plt.title('model accuracy')
 plt.ylabel('accuracy')
 plt.xlabel('epoch')
@@ -329,7 +327,7 @@ print('Saved trained model at %s ' % model_path)
 Loading the Model saved in the root directory and test it using evalaute function
 tells us the accuracy of Model on the test data. Listing \ref{listing:4.9} shows the script for
 evalaution.
-\begin{listing}[H]
+\begin{longlisting}
     \begin{minted}[bgcolor=bg,
         frame = lines,
         framesep = 2mm]{python}
@@ -341,4 +339,85 @@ print('Accuarcy of the model:', test_acc)
 \end{minted}
 \caption{Evaluating the Model}
 \label{listing:4.9}
-\end{listing}
+\end{longlisting}
+\subsection{Two Class Problem \& Results}
+We started with two class problem, Bus \& Car and recorded the results from 5 to 30 epochs.
+The loss was binary\_crossentropy in this case. 
+The training accuracy recorded after 20 epochs was 95.08\% and training
+loss was 14.7\%. The test set was choosen as validation data and validation accuracy after 5 epochs 
+was 96.10\% and validation loss was 10.48\%.
+Here we attach the results only for 5 epochs and 20 epochs
+in figure \ref{fig:4.2} and \ref{fig:4.3}.
+\begin{figure}[H]
+    \centering
+    \captionsetup{justification = centering}
+    \includegraphics[scale = 0.63]{CHAPTERS/Chapter-4/Images/4.2}
+    \caption{Training results for two class problem after 5 epochs} 
+    \label{fig:4.2}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \captionsetup{justification = centering}
+    \includegraphics[scale = 0.63]{CHAPTERS/Chapter-4/Images/4.3}
+    \caption{Training results for two class problem after 20 epochs} 
+    \label{fig:4.3}
+\end{figure}
+After 20 epochs for this model, the validation loss increases which indicate
+that we have to train that model up to 20 epochs. 
+
+\subsection{Five Class Probem \& Results}
+We started with two class problem and extended the model to five classes
+which is our desired task. The loss function in this case is categorical\_crossentropy.
+The model explained in listing \ref{listing:4.5} is used for training.
+We started with 20 epochs, then 50, 80, 100 and 150. The plot of training
+and validation accuracy and training and validation loss is plotted using Python
+matplotlib and it is observed that nearly after 80 epochs, the validation loss
+increases and validation accuracy decreases. The plots are shown in
+figure \ref{fig:4.4}.
+\begin{figure}[htbp]
+    \centering
+    \begin{subfigure}[t]{0.45\textwidth}
+        \includegraphics[scale = 0.52]{CHAPTERS/Chapter-4/Images/4.4a}
+        \caption{Training \& validation accuracy}
+        \label{fig:4.4a}
+    \end{subfigure}
+    \begin{subfigure}[t]{0.45\textwidth}
+        \includegraphics[scale = 0.52]{CHAPTERS/Chapter-4/Images/4.4b}
+        \caption{Training \& validation loss}
+        \label{fig:4.4b}
+    \end{subfigure}
+    \caption[]{Model accuracy \& model loss}
+    \label{fig:4.4}
+  \end{figure}
+  The loss was binary\_crossentropy in this case. 
+  The training accuracy recorded after 80 epochs was 95.08\% and training
+  loss was 14.7\%. The test set was choosen as validation data and validation accuracy after 5 epochs 
+  was 96.10\% and validation loss was 10.48\%.
+  Here we attach the results only for 20 epochs and 80 epochs
+  in figure \ref{fig:4.5} and \ref{fig:4.6}. The results for 80 epochs are attached
+  for only last 10 epochs.
+\begin{figure}[H]
+    \centering
+    \captionsetup{justification = centering}
+    \includegraphics[scale = 0.68]{CHAPTERS/Chapter-4/Images/4.5}
+    \caption{Training results for five class problem after 20 epochs} 
+    \label{fig:4.5}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \captionsetup{justification = centering}
+    \includegraphics[scale = 0.6]{CHAPTERS/Chapter-4/Images/4.6}
+    \caption{Training results for five class problem after 20 epochs} 
+    \label{fig:4.6}
+\end{figure}
+
+\section{Graphical User Interface}
+To observe the results in a concrete way, we have to pass test images
+one by one and obtain the corresponding labels. For this purpose,
+we made a Graphical User Interface (GUI) using tkinter package of Python.
+As discussed earlier that we have saved the model in a folder named
+as saved\_models in the root directory. This model can be downloaded to local
+disks of the computer (As tkinter uses the GUI of computer, it can not
+run on Colab). Then from the test directory, all the images one by one are passed
+and corresponding labels are displayed. An example image is shown in
+figure \ref{fig:4.7}.

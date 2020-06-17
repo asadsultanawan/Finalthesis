@@ -21,11 +21,11 @@
 \contentsline {figure}{\numberline {3.7}{\ignorespaces Sigmoid Function\relax }}{21}{figure.caption.35}%
 \contentsline {figure}{\numberline {3.8}{\ignorespaces Tanh function\relax }}{22}{figure.caption.37}%
 \contentsline {figure}{\numberline {3.9}{\ignorespaces ReLU and Leaky ReLU Function\relax }}{23}{figure.caption.39}%
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{23}{subfigure.9.1}%
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{23}{subfigure.9.2}%
 \contentsline {figure}{\numberline {3.10}{\ignorespaces Average and Max Pooling\relax }}{24}{figure.caption.40}%
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{24}{subfigure.10.1}%
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{24}{subfigure.10.2}%
 \contentsline {figure}{\numberline {3.11}{\ignorespaces Flatten layer\relax }}{24}{figure.caption.41}%
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {4.1}{\ignorespaces Plot of some images from each class\relax }}{27}{figure.caption.42}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Training results for two class problem after 5 epochs\relax }}{34}{figure.caption.48}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Training results for two class problem after 20 epochs\relax }}{34}{figure.caption.49}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Training results for five class problem after 20 epochs\relax }}{36}{figure.caption.51}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Training results for five class problem after 20 epochs\relax }}{36}{figure.caption.52}%
