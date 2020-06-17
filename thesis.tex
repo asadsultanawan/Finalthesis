@@ -144,6 +144,7 @@
 \usepackage{subfig}
 \usepackage{xcolor}
 \usepackage{minted}
+
 \setminted{fontsize=\footnotesize}
 
 \fancypagestyle{plain}{
@@ -154,8 +155,9 @@
 \renewcommand{\footrulewidth}{0pt}} 
 \usepackage[titletoc]{appendix}
 \definecolor{bg}{rgb}{0.95,0.95,0.95}
-
+\newenvironment{longlisting}{\captionsetup{type=listing}}{}
 \begin{document}
+
 \makefrontmatter
 
 \include{CHAPTERS/Chapter-1/Chapter-1}

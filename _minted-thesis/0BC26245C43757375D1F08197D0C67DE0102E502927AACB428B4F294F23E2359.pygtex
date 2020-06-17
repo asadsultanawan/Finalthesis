@@ -1,8 +1,8 @@
 \begin{Verbatim}[commandchars=\\\{\}]
 \PYG{k}{if} \PYG{o+ow}{not} \PYG{n}{data\PYGZus{}augmentation}\PYG{p}{:}
     \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}Not using data augmentation.\PYGZsq{}}\PYG{p}{)}
-    \PYG{n}{history} \PYG{o}{=} \PYG{n}{model}\PYG{o}{.}\PYG{n}{fit}\PYG{p}{(}\PYG{n}{train\PYGZus{}images}\PYG{p}{,} \PYG{n}{train\PYGZus{}labels}\PYG{p}{,} \PYG{n}{validation\PYGZus{}data}\PYG{o}{=}\PYG{p}{(}\PYG{n}{test\PYGZus{}images}\PYG{p}{,}
-    \PYG{n}{test\PYGZus{}labels}\PYG{p}{),} \PYG{n}{batch\PYGZus{}size} \PYG{o}{=} \PYG{n}{batch\PYGZus{}size}\PYG{p}{,} \PYG{n}{epochs} \PYG{o}{=} \PYG{n}{n\PYGZus{}epochs}\PYG{p}{)}
+    \PYG{n}{history} \PYG{o}{=} \PYG{n}{model}\PYG{o}{.}\PYG{n}{fit}\PYG{p}{(}\PYG{n}{train\PYGZus{}images}\PYG{p}{,} \PYG{n}{train\PYGZus{}labels}\PYG{p}{,} \PYG{n}{validation\PYGZus{}data} \PYG{o}{=}
+    \PYG{p}{(}\PYG{n}{test\PYGZus{}images}\PYG{p}{,} \PYG{n}{test\PYGZus{}labels}\PYG{p}{),} \PYG{n}{batch\PYGZus{}size} \PYG{o}{=} \PYG{n}{batch\PYGZus{}size}\PYG{p}{,} \PYG{n}{epochs} \PYG{o}{=} \PYG{n}{n\PYGZus{}epochs}\PYG{p}{)}
 \PYG{k}{else}\PYG{p}{:}
     \PYG{n}{datagen} \PYG{o}{=} \PYG{n}{ImageDataGenerator}\PYG{p}{(}
         \PYG{n}{featurewise\PYGZus{}center}\PYG{o}{=}\PYG{k+kc}{False}\PYG{p}{,}  \PYG{c+c1}{\PYGZsh{} set input mean to 0 over the dataset}
@@ -12,22 +12,30 @@
         \PYG{n}{zca\PYGZus{}whitening}\PYG{o}{=}\PYG{k+kc}{False}\PYG{p}{,}  \PYG{c+c1}{\PYGZsh{} apply ZCA whitening}
         \PYG{n}{zca\PYGZus{}epsilon}\PYG{o}{=}\PYG{l+m+mf}{1e\PYGZhy{}06}\PYG{p}{,}  \PYG{c+c1}{\PYGZsh{} epsilon for ZCA whitening}
         \PYG{n}{rotation\PYGZus{}range}\PYG{o}{=}\PYG{l+m+mi}{0}\PYG{p}{,}  \PYG{c+c1}{\PYGZsh{} randomly rotate images in the range (degrees, 0 to 180)}
+        \PYG{c+c1}{\PYGZsh{} randomly shift images horizontally (fraction of total width)}
         \PYG{n}{width\PYGZus{}shift\PYGZus{}range}\PYG{o}{=}\PYG{l+m+mf}{0.1}\PYG{p}{,}
+        \PYG{c+c1}{\PYGZsh{} randomly shift images vertically (fraction of total height)}
         \PYG{n}{height\PYGZus{}shift\PYGZus{}range}\PYG{o}{=}\PYG{l+m+mf}{0.1}\PYG{p}{,}
         \PYG{n}{shear\PYGZus{}range}\PYG{o}{=}\PYG{l+m+mf}{0.}\PYG{p}{,}  \PYG{c+c1}{\PYGZsh{} set range for random shear}
         \PYG{n}{zoom\PYGZus{}range}\PYG{o}{=}\PYG{l+m+mf}{0.}\PYG{p}{,}  \PYG{c+c1}{\PYGZsh{} set range for random zoom}
         \PYG{n}{channel\PYGZus{}shift\PYGZus{}range}\PYG{o}{=}\PYG{l+m+mf}{0.}\PYG{p}{,}  \PYG{c+c1}{\PYGZsh{} set range for random channel shifts}
+        \PYG{c+c1}{\PYGZsh{} set mode for filling points outside the input boundaries}
         \PYG{n}{fill\PYGZus{}mode}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}nearest\PYGZsq{}}\PYG{p}{,}
         \PYG{n}{cval}\PYG{o}{=}\PYG{l+m+mf}{0.}\PYG{p}{,}  \PYG{c+c1}{\PYGZsh{} value used for fill\PYGZus{}mode = \PYGZdq{}constant\PYGZdq{}}
         \PYG{n}{horizontal\PYGZus{}flip}\PYG{o}{=}\PYG{k+kc}{True}\PYG{p}{,}  \PYG{c+c1}{\PYGZsh{} randomly flip images}
         \PYG{n}{vertical\PYGZus{}flip}\PYG{o}{=}\PYG{k+kc}{False}\PYG{p}{,}  \PYG{c+c1}{\PYGZsh{} randomly flip images}
+        \PYG{c+c1}{\PYGZsh{} set rescaling factor (applied before any other transformation)}
         \PYG{n}{rescale}\PYG{o}{=}\PYG{k+kc}{None}\PYG{p}{,}
+        \PYG{c+c1}{\PYGZsh{} set function that will be applied on each input}
         \PYG{n}{preprocessing\PYGZus{}function}\PYG{o}{=}\PYG{k+kc}{None}\PYG{p}{,}
         \PYG{c+c1}{\PYGZsh{} image data format, either \PYGZdq{}channels\PYGZus{}first\PYGZdq{} or \PYGZdq{}channels\PYGZus{}last\PYGZdq{}}
         \PYG{n}{data\PYGZus{}format}\PYG{o}{=}\PYG{k+kc}{None}\PYG{p}{,}
+        \PYG{c+c1}{\PYGZsh{} fraction of images reserved for validation (strictly between 0 and 1)}
         \PYG{n}{validation\PYGZus{}split}\PYG{o}{=}\PYG{l+m+mf}{0.0}\PYG{p}{)}
-        \PYG{n}{datagen}\PYG{o}{.}\PYG{n}{fit}\PYG{p}{(}\PYG{n}{train\PYGZus{}images}\PYG{p}{)}
-        \PYG{n}{history} \PYG{o}{=} \PYG{n}{model}\PYG{o}{.}\PYG{n}{fit\PYGZus{}generator}\PYG{p}{(}\PYG{n}{datagen}\PYG{o}{.}\PYG{n}{flow}\PYG{p}{(}\PYG{n}{train\PYGZus{}images}\PYG{p}{,} \PYG{n}{train\PYGZus{}labels}\PYG{p}{,}
-        \PYG{n}{batch\PYGZus{}size} \PYG{o}{=} \PYG{n}{batch\PYGZus{}size}\PYG{p}{),}\PYG{n}{validation\PYGZus{}data}\PYG{o}{=}\PYG{p}{(}\PYG{n}{test\PYGZus{}images}\PYG{p}{,} \PYG{n}{test\PYGZus{}labels}\PYG{p}{),}
-        \PYG{n}{epochs} \PYG{o}{=} \PYG{n}{n\PYGZus{}epochs}\PYG{p}{)}
+
+    \PYG{n}{datagen}\PYG{o}{.}\PYG{n}{fit}\PYG{p}{(}\PYG{n}{train\PYGZus{}images}\PYG{p}{)}
+
+    \PYG{n}{history} \PYG{o}{=} \PYG{n}{model}\PYG{o}{.}\PYG{n}{fit\PYGZus{}generator}\PYG{p}{(}\PYG{n}{datagen}\PYG{o}{.}\PYG{n}{flow}\PYG{p}{(}\PYG{n}{train\PYGZus{}images}\PYG{p}{,} \PYG{n}{train\PYGZus{}labels}\PYG{p}{,}
+    \PYG{n}{batch\PYGZus{}size} \PYG{o}{=} \PYG{n}{batch\PYGZus{}size}\PYG{p}{),}\PYG{n}{validation\PYGZus{}data}\PYG{o}{=}\PYG{p}{(}\PYG{n}{test\PYGZus{}images}\PYG{p}{,} \PYG{n}{test\PYGZus{}labels}\PYG{p}{),}
+    \PYG{n}{epochs} \PYG{o}{=} \PYG{n}{n\PYGZus{}epochs}\PYG{p}{)}
 \end{Verbatim}

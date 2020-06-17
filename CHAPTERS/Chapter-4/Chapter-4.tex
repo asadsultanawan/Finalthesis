@@ -22,6 +22,7 @@ can be used along with a simple Python script to download a lot of images.
 Using matplotlib in python, we can plot some of the images with the output as
 shown in listing \ref{listing:4.1} and plot is attached in figure
 \ref{fig:4.1}.
+\linespread{1.0}
 \begin{listing}[H]
 \begin{minted}[bgcolor=bg,
     frame = lines,
@@ -56,7 +57,7 @@ This technique is used within the code using Keras.
 There are a lot of images to be processed. To process images, high end GPU is
 needed. Due to unavailability of an Nvidia GPU in the system, we used Google Colab.
 It is an online platform having high end GPUs free provided by Google for training
-up to 12 hours. Enabling a gpu in the notebook settings can accelerate the process of
+up to 12 hours. Enabling a GPU in the notebook settings can accelerate the process of
 training.
 \section{Process of Training}
 Keras is one of the leading high level API for neural networks. It contains
@@ -75,7 +76,7 @@ both are 128. Color channels fro RGB images are 3. Images are then converted to 
 Keras img\_to\_array() method. Labels are stored as 0, 1, 2, 3, 4 based on the class of image (as data is renamed).
 A section of code for this implementation is shown in listing \ref{listing:4.2}.
 
-\begin{listing}[H]
+\begin{longlisting}
     \begin{minted}[bgcolor=bg,
         frame = lines,
         framesep = 2mm]{python}
@@ -107,12 +108,12 @@ for file in os.listdir(folder):
 \end{minted}
 \caption{Conversion of Images to Numpy arrays}
 \label{listing:4.2}
-\end{listing}
+\end{longlisting}
 The images array has a pattern (num\_of\_images, rows, cols, color\_channels). It
 means that it has a shape (10000, 128, 128, 3). This is a 4D tensor. There are 10000
 images with each image having 128, $128\times 3$ matrices i.e. each $128\times 3$ matrix has
 128 rows with each row containing 3 columns with information of 3 colors.
-The labels array is a 1D tensor with 10000 \% labels.
+The labels array is a 1D tensor with 10000 labels.
 \subsection{Train-Test Division}
 We have to divide the data into two parts, train and test. The training data
 is used to for training purposes and when the model is trained then it is
@@ -146,10 +147,14 @@ Listing \ref{listing:4.4} illustrates the mean correction.
     \begin{minted}[bgcolor=bg,
         frame = lines,
         framesep = 2mm]{python}
+train_images = train_images.astype('float32') / 255
+test_images = test_images.astype('float32') / 255
+
 if subtract_pixel_mean:
-x_train_mean = np.mean(train_images, axis=0)
-train_images -= x_train_mean
-test_images -= x_train_mean
+    x_train_mean = np.mean(train_images, axis=0)
+    train_images -= x_train_mean
+    test_images -= x_train_mean
+
 train_labels = to_categorical(train_labels,num_classes)
 test_labels = to_categorical(test_labels,num_classes)
     \end{minted}
@@ -162,7 +167,7 @@ Recall from chapter \ref{Chapter 3}, a CNN model consists of various layers incl
 conv2D, Activation, MaxPoooling2D, Flatten and Dense layer. Listing \ref{listing:4.5}
 defines the training Model.
 
-\begin{listing}[H]
+\begin{longlisting}
     \begin{minted}[bgcolor=bg,
         frame = lines,
         framesep = 2mm]{python}
@@ -175,23 +180,27 @@ model.add(Conv2D(32, (3, 3)))
 model.add(Activation('relu'))
 model.add(MaxPooling2D(pool_size=(2, 2)))
 model.add(Dropout(0.25))   
+
 model.add(Conv2D(64, (3, 3), padding='same'))
 model.add(Activation('relu'))
 model.add(MaxPooling2D(pool_size=(2, 2)))
-model.add(Dropout(0.25))      
-model.add(Flatten())     
+model.add(Dropout(0.25)) 
+     
+model.add(Flatten())
+
 model.add(Dense(64))
 model.add(Activation('relu'))
-model.add(Dropout(0.5))      
+model.add(Dropout(0.5)) 
+
 model.add(Dense(num_classes))
-model.add(Activation('softmax'))      
-model.compile(loss='categorical_crossentropy',
-                      optimizer='adam',
-                      metrics=['accuracy'])
+model.add(Activation('softmax'))
+
+model.compile(loss='categorical_crossentropy', optimizer='adam',
+metrics=['accuracy'])
     \end{minted}
     \caption{Defining the Model}
 \label{listing:4.5}
-\end{listing}
+\end{longlisting}
 Last three lines defines the compilation process of the Model. 
 For more than two classes, loss is categorical\_crossentropy. For two
 classes it is binary\_crossentropy. There are many optimizers in Keras i.e.
@@ -211,34 +220,16 @@ increase. But when we test that model with the test data, the accuracy of the mo
 will be lower than the training accuracy. This process is called `\textit{overfitting}'.
 We have to avoid the overfitting. We use validation data which shows us the validation accuracy
 and loss after each epoch. Listing \ref{listing:4.6} shows the code for training process.
-\begin{listing}[H]
-    \begin{minted}[bgcolor=bg,
-        frame = lines,
-        framesep = 2mm]{python}
-if subtract_pixel_mean:
-x_train_mean = np.mean(train_images, axis=0)
-train_images -= x_train_mean
-test_images -= x_train_mean
-train_labels = to_categorical(train_labels,num_classes)
-test_labels = to_categorical(test_labels,num_classes)
-    \end{minted}
-    \caption{Mean correction}
-\label{listing:4.4}
-\end{listing}
-\noindent The last two lines are categorical labeling for using labels fit for Keras.
-\subsection{Defining the Model}
-Recall from chapter \ref{Chapter 3}, a CNN model consists of various layers including
-conv2D, Activation, MaxPoooling2D, Flatten and Dense layer. Listing \ref{listing:4.7}
-defines the training Model.
 
-\begin{listing}[H]
+\begin{longlisting}
     \begin{minted}[bgcolor=bg,
         frame = lines,
-        framesep = 2mm]{python}
+        framesep = 2mm
+        ]{python}
 if not data_augmentation:
     print('Not using data augmentation.')
-    history = model.fit(train_images, train_labels, validation_data=(test_images,
-    test_labels), batch_size = batch_size, epochs = n_epochs)
+    history = model.fit(train_images, train_labels, validation_data =
+    (test_images, test_labels), batch_size = batch_size, epochs = n_epochs)
 else:
     datagen = ImageDataGenerator(
         featurewise_center=False,  # set input mean to 0 over the dataset
@@ -248,28 +239,36 @@ else:
         zca_whitening=False,  # apply ZCA whitening
         zca_epsilon=1e-06,  # epsilon for ZCA whitening
         rotation_range=0,  # randomly rotate images in the range (degrees, 0 to 180)
+        # randomly shift images horizontally (fraction of total width)
         width_shift_range=0.1,
+        # randomly shift images vertically (fraction of total height)
         height_shift_range=0.1,
         shear_range=0.,  # set range for random shear
         zoom_range=0.,  # set range for random zoom
         channel_shift_range=0.,  # set range for random channel shifts
+        # set mode for filling points outside the input boundaries
         fill_mode='nearest',
         cval=0.,  # value used for fill_mode = "constant"
         horizontal_flip=True,  # randomly flip images
         vertical_flip=False,  # randomly flip images
+        # set rescaling factor (applied before any other transformation)
         rescale=None,
+        # set function that will be applied on each input
         preprocessing_function=None,
         # image data format, either "channels_first" or "channels_last"
         data_format=None,
+        # fraction of images reserved for validation (strictly between 0 and 1)
         validation_split=0.0)
-        datagen.fit(train_images)
-        history = model.fit_generator(datagen.flow(train_images, train_labels,
-        batch_size = batch_size),validation_data=(test_images, test_labels),
-        epochs = n_epochs)  
+    
+    datagen.fit(train_images)
+    
+    history = model.fit_generator(datagen.flow(train_images, train_labels,
+    batch_size = batch_size),validation_data=(test_images, test_labels),
+    epochs = n_epochs)    
     \end{minted}
     \caption{Training the Model}
-\label{listing:4.7}
-\end{listing}
+\label{listing:4.6}
+\end{longlisting}
 \subsection{Plotting the Accuracy and Loss}
 A specific model has a specific accuracy upto which it can detect an unknown data.
 Increasing epochs will not increase the accuracy, it basically overfits
@@ -277,10 +276,10 @@ the model. For a certain model, we have to find a specific number
 of epochs. For this we plot the accuracy and loss of training and
 validation data.
 
-Listing \ref{listing:4.8} shows the script for plotting the accuracy and
+Listing \ref{listing:4.7} shows the script for plotting the accuracy and
 loss of training and validation data.
 
-\begin{listing}[H]
+\begin{longlisting}
     \begin{minted}[bgcolor=bg,
         frame = lines,
         framesep = 2mm]{python}
@@ -303,14 +302,14 @@ plt.legend(['train', 'val'], loc='upper left')
 plt.show()
 \end{minted}
 \caption{Training, validation accuracy \& loss vs. epochs}
-\label{listing:4.8}
-\end{listing}
+\label{listing:4.7}
+\end{longlisting}
 
 \subsection{Saving Model \& Weights}
 After successful training of model, we have to resuse it. We can directly test it for one time
 when the Colab is not recycled. So the better approach is to save the model
 and then evalaute it on test data. Model is stored as .h5 file in the root directory.
-Listing \ref{listing:4.9} shows the script for saving the weights.
+Listing \ref{listing:4.8} shows the script for saving the weights.
 
 \begin{listing}[H]
     \begin{minted}[bgcolor=bg,
@@ -324,11 +323,11 @@ model.save(model_path)
 print('Saved trained model at %s ' % model_path)
 \end{minted}
 \caption{Saving the Model}
-\label{listing:4.9}
+\label{listing:4.8}
 \end{listing}
 \section{Evaluation of Model}
 Loading the Model saved in the root directory and test it using evalaute function
-tells us the accuracy of Model on the test data. Listing \ref{listing:4.10} shows the script for
+tells us the accuracy of Model on the test data. Listing \ref{listing:4.9} shows the script for
 evalaution.
 \begin{listing}[H]
     \begin{minted}[bgcolor=bg,
@@ -341,5 +340,5 @@ test_loss, test_acc = loaded_model.evaluate(test_images, test_labels)
 print('Accuarcy of the model:', test_acc)
 \end{minted}
 \caption{Evaluating the Model}
-\label{listing:4.10}
+\label{listing:4.9}
 \end{listing}
