@@ -368,11 +368,13 @@ that we have to train that model up to 20 epochs.
 \subsection{Five Class Probem \& Results}
 We started with two class problem and extended the model to five classes
 which is our desired task. The loss function in this case is categorical\_crossentropy.
-The model explained in listing \ref{listing:4.5} is used for training.
-We started with 20 epochs, then 50, 80, 100 and 150. The plot of training
+The model used for five class is a customized VGG-16. The summary of the model
+is given in appendix \ref{appedix:B}. The optimizer used is RMSprop with
+learning rate 0.0001. We started with 5 epochs, then 10 upto 20. The plot of training
 and validation accuracy and training and validation loss is plotted using Python
-matplotlib and it is observed that nearly after 80 epochs, the validation loss
-increases and validation accuracy decreases. The plots are shown in
+matplotlib and it is observed that near to 20 the validation loss
+increases and validation accuracy decreases. So we stopped at 20 epochs
+and recorded the results. The plots are shown in
 figure \ref{fig:4.4}.
 \begin{figure}[htbp]
     \centering
@@ -390,27 +392,26 @@ figure \ref{fig:4.4}.
     \label{fig:4.4}
   \end{figure}
   The loss was binary\_crossentropy in this case. 
-  The training accuracy recorded after 80 epochs was 95.08\% and training
-  loss was 14.7\%. The test set was choosen as validation data and validation accuracy after 5 epochs 
-  was 96.10\% and validation loss was 10.48\%.
-  Here we attach the results only for 20 epochs and 80 epochs
-  in figure \ref{fig:4.5} and \ref{fig:4.6}. The results for 80 epochs are attached
-  for only last 10 epochs.
+  The training accuracy recorded after 20 epochs was 93\% and training
+  loss was 22.3\%. The test set was choosen as validation data and
+  validation accuracy after 20 epochs 
+  was 92.40\% and validation loss was 24\%.
+  Here we attach the results only for 10 epochs and 20 epochs
+  in figure \ref{fig:4.5} and \ref{fig:4.6}.
 \begin{figure}[H]
     \centering
     \captionsetup{justification = centering}
-    \includegraphics[scale = 0.68]{CHAPTERS/Chapter-4/Images/4.5}
-    \caption{Training results for five class problem after 20 epochs} 
+    \includegraphics[scale = 0.53]{CHAPTERS/Chapter-4/Images/4.5}
+    \caption{Training results for five class problem after 10 epochs} 
     \label{fig:4.5}
 \end{figure}
 \begin{figure}[H]
     \centering
     \captionsetup{justification = centering}
-    \includegraphics[scale = 0.58]{CHAPTERS/Chapter-4/Images/4.6}
-    \caption{Training results for five class problem after 80 epochs} 
+    \includegraphics[scale = 0.68]{CHAPTERS/Chapter-4/Images/4.6}
+    \caption{Training results for five class problem after 20 epochs} 
     \label{fig:4.6}
 \end{figure}
-
 \section{Graphical User Interface}
 To observe the results in a concrete way, we have to pass test images
 one by one and obtain the corresponding labels. For this purpose,
@@ -419,5 +420,27 @@ As discussed earlier that we have saved the model in a folder named
 as saved\_models in the root directory. This model can be downloaded to local
 disks of the computer (As tkinter uses the GUI of computer, it can not
 run on Colab). Then from the test directory, all the images one by one are passed
-and corresponding labels are displayed. An example image is shown in
+and corresponding labels are displayed. Some examples are shown in
 figure \ref{fig:4.7}.
+
+\begin{figure}[htbp]
+    \centering
+    \begin{subfigure}[t]{0.3\textwidth}
+        \fbox{\includegraphics[width = 4.5cm, height = 4.5cm]{CHAPTERS/Chapter-4/Images/4.7a}}
+        \caption{}
+        \label{fig:4.7a}
+    \end{subfigure}
+    \begin{subfigure}[t]{0.3\textwidth}
+        \fbox{\includegraphics[width = 4.5cm, height = 4.5cm]{CHAPTERS/Chapter-4/Images/4.7b}}
+        \caption{}
+        \label{fig:4.7b}
+    \end{subfigure}
+    \begin{subfigure}[t]{0.3\textwidth}
+      \fbox{\includegraphics[width = 4.5cm, height = 4.5cm]{CHAPTERS/Chapter-4/Images/4.7c}}
+      \caption{}
+      \label{fig:4.7c}
+  \end{subfigure}
+    \captionsetup{justification = centering}
+    \caption[]{Test images and labels on a GUI}
+    \label{fig:4.7}
+  \end{figure}

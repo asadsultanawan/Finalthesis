@@ -44,5 +44,5 @@
 \contentsline {subsection}{\numberline {4.4.1}Two Class Problem \& Results}{34}{subsection.4.4.1}%
 \contentsline {subsection}{\numberline {4.4.2}Five Class Probem \& Results}{35}{subsection.4.4.2}%
 \contentsline {section}{\numberline {4.5}Graphical User Interface}{36}{section.4.5}%
-\contentsline {chapter}{Appendices}{38}{section*.53}%
-\contentsline {chapter}{References}{38}{section*.54}%
+\contentsline {chapter}{Appendices}{38}{section*.54}%
+\contentsline {chapter}{References}{38}{section*.55}%
