@@ -95,4 +95,16 @@ J.~Gua, Z.~Wangb, {\em et~al.}, ``Recent advances in convolutional neural
 D.~Scherer, A.~M\"{u}ller, and S.~Behnke, ``Evaluation of pooling operations in
   convolutional architectures for object recognition,'' 2010.
 
+\bibitem{chap_5_article:1}
+J.~Redmon, S.~Divval, R.~Girshick, and A.~Farhadi, ``You only look once:
+  Unified, real-time object detection,'' pp.~779--788, 06 2016.
+
+\bibitem{chap_5_article:2}
+J.~Redmon, S.~Divvala, and A.~Farhadi, ``Yolo9000: Better, faster, stronger,''
+  12 2016.
+
+\bibitem{chap_5_article:3}
+J.~Redmon, S.~Divvala, and A.~Farhadi, ``Yolov3: An incremental improvement,''
+  04 2018.
+
 \end{thebibliography}

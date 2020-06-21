@@ -3,47 +3,76 @@
 \BOOKMARK [0][-]{section*.5}{List of Tables}{}% 3
 \BOOKMARK [0][-]{chapter*.7}{Abstract}{}% 4
 \BOOKMARK [1][-]{section*.8}{Abstract}{chapter*.7}% 5
-\BOOKMARK [0][-]{chapter.1}{1 Introduction}{}% 6
-\BOOKMARK [1][-]{section.1.1}{1.1 Motivation}{chapter.1}% 7
-\BOOKMARK [1][-]{section.1.2}{1.2 Background}{chapter.1}% 8
-\BOOKMARK [1][-]{section.1.3}{1.3 Goals \046 Objectives}{chapter.1}% 9
-\BOOKMARK [1][-]{section.1.4}{1.4 Challenges}{chapter.1}% 10
-\BOOKMARK [1][-]{section.1.5}{1.5 Organization of Thesis}{chapter.1}% 11
-\BOOKMARK [0][-]{chapter.2}{2 Literature Review}{}% 12
-\BOOKMARK [1][-]{section.2.1}{2.1 History of Object Recognition \046 Detection}{chapter.2}% 13
-\BOOKMARK [1][-]{section.2.2}{2.2 Basics of an Image}{chapter.2}% 14
-\BOOKMARK [2][-]{subsection.2.2.1}{2.2.1 8-Bit Gray Level Images}{section.2.2}% 15
-\BOOKMARK [2][-]{subsection.2.2.2}{2.2.2 2.2 24-bit Color Images}{section.2.2}% 16
-\BOOKMARK [2][-]{subsection.2.2.3}{2.2.3 8-Bit Color Images}{section.2.2}% 17
-\BOOKMARK [2][-]{subsection.2.2.4}{2.2.4 Intensity Images}{section.2.2}% 18
-\BOOKMARK [2][-]{subsection.2.2.5}{2.2.5 Red, Green, and Blue Components and Grayscale Conversion}{section.2.2}% 19
-\BOOKMARK [1][-]{section.2.3}{2.3 Image Classification}{chapter.2}% 20
-\BOOKMARK [2][-]{subsection.2.3.1}{2.3.1 Convolutional Neural Networks}{section.2.3}% 21
-\BOOKMARK [3][-]{subsubsection.2.3.1.1}{2.3.1.1 CNN Architectures}{subsection.2.3.1}% 22
-\BOOKMARK [0][-]{chapter.3}{3 Convolutional Neural Networks \(CNNs\)}{}% 23
-\BOOKMARK [1][-]{section.3.1}{3.1 Convolutional Neural Networks Architecture}{chapter.3}% 24
-\BOOKMARK [2][-]{subsection.3.1.1}{3.1.1 Convolutional Layer}{section.3.1}% 25
-\BOOKMARK [3][-]{subsubsection.3.1.1.1}{3.1.1.1 Activation Functions}{subsection.3.1.1}% 26
-\BOOKMARK [2][-]{subsection.3.1.2}{3.1.2 Pooling Layer}{section.3.1}% 27
-\BOOKMARK [3][-]{subsubsection.3.1.2.1}{3.1.2.1 Average Pooling}{subsection.3.1.2}% 28
-\BOOKMARK [3][-]{subsubsection.3.1.2.2}{3.1.2.2 Max Pooling}{subsection.3.1.2}% 29
-\BOOKMARK [2][-]{subsection.3.1.3}{3.1.3 Flatten Layer}{section.3.1}% 30
-\BOOKMARK [2][-]{subsection.3.1.4}{3.1.4 Fully Connected Layer}{section.3.1}% 31
-\BOOKMARK [0][-]{chapter.4}{4 Training \046 Testing of the Classifier}{}% 32
-\BOOKMARK [1][-]{section.4.1}{4.1 Formation of Dataset}{chapter.4}% 33
-\BOOKMARK [2][-]{subsection.4.1.1}{4.1.1 Data Augmentation}{section.4.1}% 34
-\BOOKMARK [1][-]{section.4.2}{4.2 Setting of Workspace for the Project}{chapter.4}% 35
-\BOOKMARK [1][-]{section.4.3}{4.3 Process of Training}{chapter.4}% 36
-\BOOKMARK [2][-]{subsection.4.3.1}{4.3.1 Conversion of Images and Labels to Numpy Arrays}{section.4.3}% 37
-\BOOKMARK [2][-]{subsection.4.3.2}{4.3.2 Train-Test Division}{section.4.3}% 38
-\BOOKMARK [2][-]{subsection.4.3.3}{4.3.3 Mean Correction}{section.4.3}% 39
-\BOOKMARK [2][-]{subsection.4.3.4}{4.3.4 Defining the Model}{section.4.3}% 40
-\BOOKMARK [2][-]{subsection.4.3.5}{4.3.5 Fitting the Model}{section.4.3}% 41
-\BOOKMARK [2][-]{subsection.4.3.6}{4.3.6 Plotting the Accuracy and Loss}{section.4.3}% 42
-\BOOKMARK [2][-]{subsection.4.3.7}{4.3.7 Saving Model \046 Weights}{section.4.3}% 43
-\BOOKMARK [1][-]{section.4.4}{4.4 Evaluation of Model}{chapter.4}% 44
-\BOOKMARK [2][-]{subsection.4.4.1}{4.4.1 Two Class Problem \046 Results}{section.4.4}% 45
-\BOOKMARK [2][-]{subsection.4.4.2}{4.4.2 Five Class Probem \046 Results}{section.4.4}% 46
-\BOOKMARK [1][-]{section.4.5}{4.5 Graphical User Interface}{chapter.4}% 47
-\BOOKMARK [0][-]{section*.54}{Appendices}{}% 48
-\BOOKMARK [0][-]{section*.55}{References}{}% 49
+\BOOKMARK [0][-]{chapter*.9}{Abbreviations}{}% 6
+\BOOKMARK [0][-]{chapter.1}{1 Introduction}{}% 7
+\BOOKMARK [1][-]{section.1.1}{1.1 Motivation}{chapter.1}% 8
+\BOOKMARK [1][-]{section.1.2}{1.2 Background}{chapter.1}% 9
+\BOOKMARK [1][-]{section.1.3}{1.3 Goals \046 Objectives}{chapter.1}% 10
+\BOOKMARK [1][-]{section.1.4}{1.4 Challenges}{chapter.1}% 11
+\BOOKMARK [1][-]{section.1.5}{1.5 Organization of Thesis}{chapter.1}% 12
+\BOOKMARK [0][-]{chapter.2}{2 Literature Review}{}% 13
+\BOOKMARK [1][-]{section.2.1}{2.1 History of Object Recognition \046 Detection}{chapter.2}% 14
+\BOOKMARK [1][-]{section.2.2}{2.2 Basics of an Image}{chapter.2}% 15
+\BOOKMARK [2][-]{subsection.2.2.1}{2.2.1 8-Bit Gray Level Images}{section.2.2}% 16
+\BOOKMARK [2][-]{subsection.2.2.2}{2.2.2 2.2 24-bit Color Images}{section.2.2}% 17
+\BOOKMARK [2][-]{subsection.2.2.3}{2.2.3 8-Bit Color Images}{section.2.2}% 18
+\BOOKMARK [2][-]{subsection.2.2.4}{2.2.4 Intensity Images}{section.2.2}% 19
+\BOOKMARK [2][-]{subsection.2.2.5}{2.2.5 Red, Green, and Blue Components and Grayscale Conversion}{section.2.2}% 20
+\BOOKMARK [1][-]{section.2.3}{2.3 Image Classification}{chapter.2}% 21
+\BOOKMARK [2][-]{subsection.2.3.1}{2.3.1 Convolutional Neural Networks}{section.2.3}% 22
+\BOOKMARK [3][-]{subsubsection.2.3.1.1}{2.3.1.1 CNN Architectures}{subsection.2.3.1}% 23
+\BOOKMARK [0][-]{chapter.3}{3 Convolutional Neural Networks \(CNNs\)}{}% 24
+\BOOKMARK [1][-]{section.3.1}{3.1 Convolutional Neural Networks Architecture}{chapter.3}% 25
+\BOOKMARK [2][-]{subsection.3.1.1}{3.1.1 Convolutional Layer}{section.3.1}% 26
+\BOOKMARK [3][-]{subsubsection.3.1.1.1}{3.1.1.1 Activation Functions}{subsection.3.1.1}% 27
+\BOOKMARK [2][-]{subsection.3.1.2}{3.1.2 Pooling Layer}{section.3.1}% 28
+\BOOKMARK [3][-]{subsubsection.3.1.2.1}{3.1.2.1 Average Pooling}{subsection.3.1.2}% 29
+\BOOKMARK [3][-]{subsubsection.3.1.2.2}{3.1.2.2 Max Pooling}{subsection.3.1.2}% 30
+\BOOKMARK [2][-]{subsection.3.1.3}{3.1.3 Flatten Layer}{section.3.1}% 31
+\BOOKMARK [2][-]{subsection.3.1.4}{3.1.4 Fully Connected Layer}{section.3.1}% 32
+\BOOKMARK [0][-]{chapter.4}{4 Training \046 Testing of the Classifier}{}% 33
+\BOOKMARK [1][-]{section.4.1}{4.1 Formation of Dataset}{chapter.4}% 34
+\BOOKMARK [2][-]{subsection.4.1.1}{4.1.1 Data Augmentation}{section.4.1}% 35
+\BOOKMARK [1][-]{section.4.2}{4.2 Setting of Workspace for the Project}{chapter.4}% 36
+\BOOKMARK [1][-]{section.4.3}{4.3 Process of Training}{chapter.4}% 37
+\BOOKMARK [2][-]{subsection.4.3.1}{4.3.1 Conversion of Images and Labels to Numpy Arrays}{section.4.3}% 38
+\BOOKMARK [2][-]{subsection.4.3.2}{4.3.2 Train-Test Division}{section.4.3}% 39
+\BOOKMARK [2][-]{subsection.4.3.3}{4.3.3 Mean Correction}{section.4.3}% 40
+\BOOKMARK [2][-]{subsection.4.3.4}{4.3.4 Defining the Model}{section.4.3}% 41
+\BOOKMARK [2][-]{subsection.4.3.5}{4.3.5 Fitting the Model}{section.4.3}% 42
+\BOOKMARK [2][-]{subsection.4.3.6}{4.3.6 Plotting the Accuracy and Loss}{section.4.3}% 43
+\BOOKMARK [2][-]{subsection.4.3.7}{4.3.7 Saving Model \046 Weights}{section.4.3}% 44
+\BOOKMARK [1][-]{section.4.4}{4.4 Evaluation of Model}{chapter.4}% 45
+\BOOKMARK [2][-]{subsection.4.4.1}{4.4.1 Two Class Problem \046 Results}{section.4.4}% 46
+\BOOKMARK [2][-]{subsection.4.4.2}{4.4.2 Five Class Probem \046 Results}{section.4.4}% 47
+\BOOKMARK [1][-]{section.4.5}{4.5 Graphical User Interface}{chapter.4}% 48
+\BOOKMARK [1][-]{section.4.6}{4.6 Limitations \046 Future Work}{chapter.4}% 49
+\BOOKMARK [0][-]{chapter.5}{5 Training \046 Testing of the Detector}{}% 50
+\BOOKMARK [1][-]{section.5.1}{5.1 You Only Look Once \(YOLO\)}{chapter.5}% 51
+\BOOKMARK [2][-]{subsection.5.1.1}{5.1.1 YOLO v3}{section.5.1}% 52
+\BOOKMARK [3][-]{subsubsection.5.1.1.1}{5.1.1.1 Darknet53}{subsection.5.1.1}% 53
+\BOOKMARK [3][-]{subsubsection.5.1.1.2}{5.1.1.2 Multi-scale Detector}{subsection.5.1.1}% 54
+\BOOKMARK [3][-]{subsubsection.5.1.1.3}{5.1.1.3 Anchor Boxes}{subsection.5.1.1}% 55
+\BOOKMARK [3][-]{subsubsection.5.1.1.4}{5.1.1.4 Loss Function}{subsection.5.1.1}% 56
+\BOOKMARK [1][-]{section.5.2}{5.2 Preparation of Dataset}{chapter.5}% 57
+\BOOKMARK [2][-]{subsection.5.2.1}{5.2.1 Collection of Data}{section.5.2}% 58
+\BOOKMARK [2][-]{subsection.5.2.2}{5.2.2 Labelling of Images}{section.5.2}% 59
+\BOOKMARK [3][-]{subsubsection.5.2.2.1}{5.2.2.1 Conversion of labels to YOLO v3 Format}{subsection.5.2.2}% 60
+\BOOKMARK [1][-]{section.5.3}{5.3 Training of Detector}{chapter.5}% 61
+\BOOKMARK [2][-]{subsection.5.3.1}{5.3.1 Setting up Environment}{section.5.3}% 62
+\BOOKMARK [2][-]{subsection.5.3.2}{5.3.2 Cloning and Building Darknet}{section.5.3}% 63
+\BOOKMARK [2][-]{subsection.5.3.3}{5.3.3 Downloading pre-trained weights for transfer learning}{section.5.3}% 64
+\BOOKMARK [2][-]{subsection.5.3.4}{5.3.4 Configuring Files for training}{section.5.3}% 65
+\BOOKMARK [3][-]{subsubsection.5.3.4.1}{5.3.4.1 Custom config file}{subsection.5.3.4}% 66
+\BOOKMARK [3][-]{subsubsection.5.3.4.2}{5.3.4.2 Generating train.txt and val.txt}{subsection.5.3.4}% 67
+\BOOKMARK [3][-]{subsubsection.5.3.4.3}{5.3.4.3 .names and .data files}{subsection.5.3.4}% 68
+\BOOKMARK [2][-]{subsection.5.3.5}{5.3.5 Training of Model}{section.5.3}% 69
+\BOOKMARK [1][-]{section.5.4}{5.4 Testing of Detector}{chapter.5}% 70
+\BOOKMARK [2][-]{subsection.5.4.1}{5.4.1 Evaluation Metrices}{section.5.4}% 71
+\BOOKMARK [3][-]{subsubsection.5.4.1.1}{5.4.1.1 Precision}{subsection.5.4.1}% 72
+\BOOKMARK [3][-]{subsubsection.5.4.1.2}{5.4.1.2 Recall}{subsection.5.4.1}% 73
+\BOOKMARK [3][-]{subsubsection.5.4.1.3}{5.4.1.3 Mean Average Precision}{subsection.5.4.1}% 74
+\BOOKMARK [2][-]{subsection.5.4.2}{5.4.2 Testing the Model}{section.5.4}% 75
+\BOOKMARK [1][-]{section.5.5}{5.5 Limitations and Future Work}{chapter.5}% 76
+\BOOKMARK [0][-]{section*.80}{Appendices}{}% 77
+\BOOKMARK [0][-]{section*.81}{References}{}% 78

@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZsh{} upload pre\PYGZhy{}trained convolutional layer weights}
+\PYG{err}{!}\PYG{n}{wget} \PYG{n}{http}\PYG{p}{:}\PYG{o}{//}\PYG{n}{pjreddie}\PYG{o}{.}\PYG{n}{com}\PYG{o}{/}\PYG{n}{media}\PYG{o}{/}\PYG{n}{files}\PYG{o}{/}\PYG{n}{darknet53}\PYG{o}{.}\PYG{n}{conv}\PYG{o}{.}\PYG{l+m+mi}{74}
+\end{Verbatim}

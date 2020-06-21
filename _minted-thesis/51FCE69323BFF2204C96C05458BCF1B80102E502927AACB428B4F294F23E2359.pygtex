@@ -1,0 +1,7 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{classes} \PYG{o}{=}\PYG{l+m+mi}{4}
+\PYG{n}{train} \PYG{o}{=} \PYG{n}{data}\PYG{o}{/}\PYG{n}{train}\PYG{o}{.}\PYG{n}{txt}
+\PYG{n}{valid} \PYG{o}{=} \PYG{n}{data}\PYG{o}{/}\PYG{n}{test}\PYG{o}{.}\PYG{n}{txt}
+\PYG{n}{names} \PYG{o}{=} \PYG{n}{data}\PYG{o}{/}\PYG{n}{yolo}\PYG{o}{.}\PYG{n}{names}
+\PYG{n}{backup} \PYG{o}{=} \PYG{o}{/}\PYG{n}{mydrive}\PYG{o}{/}\PYG{n}{yolov3}\PYG{o}{/}\PYG{n}{backup}\PYG{o}{/}
+\end{Verbatim}

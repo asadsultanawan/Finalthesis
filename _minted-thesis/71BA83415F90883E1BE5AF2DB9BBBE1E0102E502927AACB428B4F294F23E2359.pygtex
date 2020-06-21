@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{err}{!}\PYG{o}{./}\PYG{n}{darknet} \PYG{n}{detector} \PYG{n+nb}{map} \PYG{n}{data}\PYG{o}{/}\PYG{n}{obj}\PYG{o}{.}\PYG{n}{data} \PYG{n}{cfg}\PYG{o}{/}\PYG{n}{yolov3\PYGZus{}custom}\PYG{o}{.}\PYG{n}{cfg}
+\PYG{o}{/}\PYG{n}{mydrive}\PYG{o}{/}\PYG{n}{yolov3}\PYG{o}{/}\PYG{n}{backup}\PYG{o}{/}\PYG{n}{yolov3\PYGZus{}custom\PYGZus{}best}\PYG{o}{.}\PYG{n}{weights} \PYG{o}{\PYGZhy{}}\PYG{n}{thresh} \PYG{l+m+mf}{0.4}
+\end{Verbatim}

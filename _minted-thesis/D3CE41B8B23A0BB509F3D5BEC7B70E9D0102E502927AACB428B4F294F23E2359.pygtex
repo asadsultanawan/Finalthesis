@@ -1,0 +1,5 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{err}{!}\PYG{n}{sed} \PYG{o}{\PYGZhy{}}\PYG{n}{i} \PYG{l+s+s1}{\PYGZsq{}s/OPENCV=0/OPENCV=1/\PYGZsq{}} \PYG{n}{Makefile}
+\PYG{err}{!}\PYG{n}{sed} \PYG{o}{\PYGZhy{}}\PYG{n}{i} \PYG{l+s+s1}{\PYGZsq{}s/GPU=0/GPU=1/\PYGZsq{}} \PYG{n}{Makefile}
+\PYG{err}{!}\PYG{n}{sed} \PYG{o}{\PYGZhy{}}\PYG{n}{i} \PYG{l+s+s1}{\PYGZsq{}s/CUDNN=0/CUDNN=1/\PYGZsq{}} \PYG{n}{Makefile}
+\end{Verbatim}

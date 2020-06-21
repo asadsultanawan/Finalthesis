@@ -8,11 +8,7 @@ of human brain. Billions of neurons in our brain process information through
 electrical signals. Dendrites receive external information or stimuli in form of 
 electrical impulses which is further processed in the cell body where it integrates 
 all the signals coming in and the output is carried away to the downstream neurons 
-through Axons \cite{chap_3_article:1}. The neuron chooses to either reject or accept the signal 
-depending on the signal strength. Likewise, an artificial neural network consists of large 
-number of interconnected nodes known as neurons. The computational node and cell body of 
-neuron works in kind of a similar way where we have large number of signals 
-coming as inputs to neuron. Each signal has a weight W associated with it and the 
+through Axons \cite{chap_3_article:1}. The neuron chooses to either reject or accept the signal depending on the signal strength. Likewise, an artificial neural network has large  number of interconnected nodes called as neurons. The computational node and cell body of neuron works in kind of a similar way where we have large number of signals coming as inputs to neuron. Each signal has a weight W associated with it and the 
 summation of these weighted inputs is passed to the activation function where 
  non-linearity is introduced in the output. Neural networks have the ability to gradually 
 update the weights of the interconnections of the neuron until desirable results 
@@ -31,8 +27,9 @@ of following layer. The input layer of the feed forward neural
 networks feeds the information to the network and no kind of mathematical 
 computation is performed. The hidden layer also known as distillation layer 
 acts like a cell body and performs computation to extract salient features and 
-patterns from the input data. A simple feed forward neural network with one 
-hidden layer is shown in \ref{fig:3.2} \cite{chap_3_article:2}.
+patterns from the input data. Figure \ref{fig:3.2} a simple 
+feed forward neural network having one 
+hidden layer \cite{chap_3_article:2}.
 The output layer simply provides the results for given information. 
 
 \begin{figure}[H]
@@ -43,7 +40,7 @@ The output layer simply provides the results for given information.
 \end{figure}
 
 The pixels of the image are arranged in a particular 
-manner i.e. the appearance of the picture will be changed 
+way i.e. the appearance of the picture will be changed 
 if we change the coordinate of one pixel. However, simple feed 
 forward neural network loses to learn the inherent spatial 
 relationships within images and fails to extract high level features 
@@ -56,9 +53,7 @@ and learning more and more complex features in the later stages.
 
 \section{Convolutional Neural Networks Architecture}
 
-CNNs consist of three types of layers. These layers 
-include convolutional layers, pooling layers and fully connected layers. When 
-these layers are stacked together, we get a CNN architecture. A general
+There are three types of layers associated with CNN. These layers include convolutional layers, pooling layers and fully connected layers.When we stack together these layers, we get a CNN architecture. A general
 architecture of CNNs with two convolutional layers is shown in \ref{fig:3.3} \cite{chap_3_article:2}.
 
 \begin{figure}[H]
@@ -70,13 +65,12 @@ architecture of CNNs with two convolutional layers is shown in \ref{fig:3.3} \ci
 
 \subsection{Convolutional Layer}
 Convolutional layers are integral part of CNNs and when these layers are stacked
- together, we start extracting more simple 
+together, we start extracting more simple 
 features and then aggregating these into more complex features later 
-on. It consists of the set of learnable filters also known as kernels whose
+on. There is a set of learnable filters also called as kernels whose
 height and width are smaller than the input image and always extend 
 to the full depth of the input volume. We slide the filter over entire 
-image to perform the mathematical operation of convolution i.e. element-wise 
-multiplication of input image with the feature detector. The resultants are 
+image to perform the operation of convolution i.e. multiplying each element of input image with the feature detector. The resultants are 
 summed up and the value is assigned to the top left corner of receptive field 
 as shown in figure 3.4 \cite{chap_3_article:4}.
 
@@ -88,8 +82,8 @@ as shown in figure 3.4 \cite{chap_3_article:4}.
 \end{figure}
 
 The kernel window slides right or downward by a 
-certain value in each step called the stride value and 
-the process is repeated until the entire image is processed. Stride value of
+certain value known as stride value in each step and we repeat the process
+whole image is processed. Stride value of
 1 moves the filter 1 pixel in each step. This results in a feature map with 
 much smaller size than the input image and keeps on shrinking at every layer 
 which is usually not desirable. Thus, dimensionality of the input image can be 
@@ -118,11 +112,9 @@ shows the no. of filters applied on the image.
 
 \subsubsection{Activation Functions}
 
-It is a mathematical function that is applied to every neuron 
-in the network and decides whether a neuron should be activated 
+It is like mathematical function that we apply to every neuron present in the network and it decides that whether to activate the neuron 
 or not depending on how much neuron’s input is relevant to model’s prediction. 
-The main purpose of the activation function is to introduce non-linearity in the 
-output. Without activation function, our network will be reduced to a simple 
+In this way, a non-linearity is introduced in the output with the help of activation function. Without activation function, our network will be reduced to a simple 
 regression model which would be unable to model and learn complex and complicated 
 form of data. Thus, non-linear functions make neural networks capable 
 of performing non-linear transformations to learn complex kinds of data such 
@@ -140,10 +132,10 @@ A sigmoid function can be represented by the mathematical function:
 \begin{equation}
 	sig(z) = \frac{1}{1+e^{-z}}
 \end{equation}
-This function takes a real value as an input and squeezes 
-it between 0 and -1 i.e. very large values. It is often known 
+This function takes input a real value and squeezes 
+it between 0 and -1 i.e. very large values. It is often called
 as squashing function as the large negative and positive 
-values becomes 0 and 1 respectively \cite{chap_3_article:5} . However, the sigmoid function 
+values becomes 0 and 1 respectively \cite{chap_3_article:5} . But the sigmoid function 
 output is not zero-centered, and it also kills the neurons as function 
 gets saturated at higher values. That’s why sigmoid function are usually 
 not preferred in neural networks because of these drawbacks.
@@ -182,7 +174,7 @@ ReLU stands for Rectified Linear unit and is represented by the following equati
 
 It takes real values as an input and sets all the negative 
 values equal to zero \cite{chap_3_article:3}. It is computationally very efficient as no 
-complicated math need to be performed. And it is the most commonly used 
+complicated math need to be performed. And it is the most frequently used 
 activation function in neural networks as it increases the convergence rate 
 of gradient descent by six times as compared to sigmoid and tanh activation 
 functions. However, the function doesn’t get saturated for larger values of 
@@ -278,9 +270,9 @@ probabilities for each class.  The output feature value vector obtained by the f
 given as input to the fully connected layer. It classifies the input image into various classes using these features. The output is simply a vector 
 of m $\times$ 1 dimension giving the probability of the 
 classification label model is trying to predict. The probabilities of the
-classes are obtained using Softman activation function which simply squashes the input values between 0 and 1 that sums to one.
+classes are obtained using Softmax activation function which simply squashes the input values between 0 and 1 that sums to one.
 
 Thus we conclude that CNNs are divided into two separate categories i.e. feature learning and classification. In feature learning part,
- data is passed through convolutional layer, activation functioin and pooling layer over and over again to extract several types
+ data is passed through convolutional layer, activation function and pooling layer over and over again to extract several types
 of features from the images. The resulting feature matrix is passed to classification
 layer where it is flattened to a single vector and get probability for each class as an output of fully connected layer.

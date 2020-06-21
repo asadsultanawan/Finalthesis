@@ -46,24 +46,21 @@ classification and detection using CNNs.
 
 \section{Basics of an Image}
 To start with, we must understand all about an image, the information of 
-an image that is important to a machine. A digital image is picture 
-information in digital form. It consists of pixels. The number of pixels 
-in the presentation of a digital image is its spatial resolution, which 
+an image that is important to a machine. A digital image is an information of a picture 
+encoded in a digital form. It consists of pixels. The number of pixels 
+in is the spatial resolution of an imahge, which 
 relates to the image quality. The higher the spatial resolution, the better 
-quality the image has. The resolution can be high, for instance, as high as 
-1,600 $\times$ 1,200 (1,920,000 pixels = 1.92 megapixels), or as 
-low as 320 $\times$ 200 (64,000 pixels = 64 kilo pixels). In notation, the number 
-to the left of the multiplication symbol represents the width, and that to 
-the right of the symbol represents the height. Image quality also depends on 
-the numbers of bits used in encoding each pixel level \cite{chap_2_article:6,chap_2_article:7}. 
+is the image quality. The resolution of an image is normally denoted by width $\times$ height. 
+The numbers of bits used in encoding each pixel level also affects the image quality \cite{chap_2_article:6,chap_2_article:7}. 
 
 \subsection{8-Bit Gray Level Images}
-If a pixel is encoded on a gray scale from 0 to 255, where 
-0 corresponds to black and 255 corresponds to white. The intermediate 
-numbers represent the shades of gray. For example, for a 640 $\times$ 480 bit 
-image, 307.2 kilobytes are required for storage. Figure \ref{fig:2.2} shows a 
+Images encoded on a gray scale ranging from 0 to 255 are called as
+8-bit gray level images. The number 0 represents full black
+and 255 represents a full white. The numbers in between 
+represent the shades of gray. For example, for a 640 $\times$ 480 bit 
+image, we need 307.2 kilobytes to store it. Figure \ref{fig:2.2} shows a 
 grayscale image format. The pixel value indicated 
-in the box has an 8-bit value of 25. 
+in the box has a value of 25 in 8-bit format. 
 
 \begin{figure}[H]
 	\centering
@@ -73,12 +70,14 @@ in the box has an 8-bit value of 25.
 \end{figure}
 
 \subsection{2.2	24-bit Color Images}
-In a 24-bit color representation, each pixel of an image is 
-encoded with Red (R), Green (G) and Blue (B) values. With each component 
-encoded in 8 bits, we have a total of 24 bits for a full color RGB image. Having 
-such an image, we have 2\textsuperscript{24} = 16:777216 $\times$ 10\textsuperscript{6} 
-different colors. A 640 $\times$ 480 24-bit color 
-image requires 921.6 kilobytes for storage. Figure 2.3 shows the format for the 24-bit 
+Each pixel of an image in a 24-bit color images is 
+encoded with Red (R), Green (G) and Blue (B) values. Each component of a 24-bit
+images is encoded in 8 bits. Thus we get a total of 24 bits for a
+a complete color RGB image. Having 
+such an image, we have $2^{24} = 16.777216 \times 10^{6} \approx 16\:M$ colors.
+As an example, take an image of resolution 640 $\times$ 480 in 24-bit color 
+representation, it will require 922 kilobytes storage memoey.
+Figure \ref{fig:2.3} shows the format for the 24-bit 
 color image where the indicated pixel has 8-bit RGB components.
 
 \begin{figure}[H]
@@ -89,14 +88,17 @@ color image where the indicated pixel has 8-bit RGB components.
 \end{figure}
 
 \subsection{8-Bit Color Images}
-The 8-bit color image is also a popular image format. The pixel 
+Another popular format of images is an 8-bit color image. The pixel 
 values are indexed from 0 to 255. Each index represents an entry of the 
 color map. These images are called color indexed images. As an example, figure 2.4 shows 
-a color indexed image that has a pixel value of 5, which is the index for the entry of 
-the color table. At location 5 in the color table, there are three color components with 
-RGB values of 66, 132 and 134 respectively. Each color component is encoded in 8 bits. There are 
-only 256 different colors in the image. A 640 $\times$ 480 8-bit color image requires 307.2 kilobytes 
-for data storage and 3 $\times$ 256 = 768 bytes for color map storage.
+a color indexed image having a pixel value of 5, which is the index for the entry of 
+the color table. There are 3 color components having 
+RGB values of 66, 132 and 134 respectively. 
+Each component is encoded in 8 bits. There are 
+only 256 different colors in the image. For instance, a
+$640\times 480$ 8-bit color image requires 307 kB memory
+for storage and 768 bytes (3 $\times$ 256) for storing
+color map.
 
 \begin{figure}[H]
 	\centering
@@ -110,8 +112,8 @@ In section 2.1, we mentioned that a grayscale image uses a
 pixel value in the range 0-255. A 0 value represents black while 255 
 represents white. In some processing environments, floating point representations 
 are used. The grayscale image has an intensity value normalized from 0 to 1, where 0 is 
-for black and 1 is for white. Figure 2.5 shows the format of the grayscale intensity 
-image, where the indicated pixel shows the intensity value of 0.5988.
+for black and 1 is for white. In Figure 2.5, we have a grayscale intensity 
+image, where the specfied pixel shows 0.5988 intensity value.
 
 \begin{figure}[H]
 	\centering
@@ -122,7 +124,7 @@ image, where the indicated pixel shows the intensity value of 0.5988.
 
 \subsection{Red, Green, and Blue Components and Grayscale Conversion}
 
-For processing applications, we often need to convert RGB image to grayscale. There are two popular methods, one is average method where a grayscale value is obtained by just averaging the red, green and blue pixel values. The other is luminosity method, where we use approximately 30 \% of Red, 59 \% of Green and
+For processing applications, we often need conversion from an RGB image to grayscale. There are two popular methods, one is average method where a grayscale value is obtained by just averaging the red, green and blue pixel values. The other is luminosity method, where we use approximately 30 \% of Red, 59 \% of Green and
 11\% of Blue to form a grayscale image.
 \begin{equation}
 	\mbox{New grayscale image} = 0.3R + 0.587G + 0.114B
@@ -134,7 +136,7 @@ achieve that purpose, we make the machines learn from examples and when it has l
 enough, it may extract information from an image from an outside world and recognize it.
 
 There exist many algorithms for image classification. One of them is BoW 
-model, which is commonly used for document classification and natural language 
+model, which is common for document classification and natural language 
 processing. In addition to document classification, the BoW model can also be used for 
 image classification. We extract a set of features from an image and count 
 their occurrence. We have different algorithms for feature extraction. For example, in 
@@ -143,13 +145,14 @@ classification methods include texture analysis. However, a gain in performance 
 brought by using neural networks. With the introduction of AlexNet architecture in 
 2012, the error rate was dropped tremendously. Due to robustness of these 
 algorithms, the CNNs are widely used for 
-image classification and recognition nowadays. 
+image recognition and classification nowadays. 
 
 The problem of image classification can be stated as: \textit{“Given a set of 
 images labeled with a single category, the machine has to predict a new set 
 of images by assigning it a label and test the accuracy of the predictions”}. For 
-example, in Figure \ref{fig:2.6} an image classification model takes a single image and assigns 
-probabilities to 4 labels, {cat, dog, hat, mug}. The computer sees the image as a 
+example, in Figure \ref{fig:2.6} an image classification model takes a single image
+as an input and allocates probabilities to 4 labels, {cat, hat, dog, mug}.
+The computer sees the image as a 
 3D-array of numbers. The cat example image is 248 pixels wide and 400 pixels in height 
 with three color channels, Red, Blue and Green, therefore, a total 
 of 248 $\times$ 400 $\times$ 3  = 297,600 numbers. Each number is an integer with values 
@@ -164,9 +167,9 @@ thousands of numbers, a single label, such as “cat”.
 	\label{fig:2.6}
 \end{figure}
 
-There are a variety of challenges associated with this. There 
+There are a multiple challenges linked with this. There 
 may exist viewpoint variation, scale variation, deformation, occlusion (a small portion 
-of object is displaying), illumination conditions, background clutter and intraclass 
+of object is displaying), background clutter, illumination conditions and intraclass 
 variations. How do we end up writing an algorithm for image classification? Researchers have 
 arrived at the point that in order to solve this problem, use data-driven approach. Instead 
 of writing a code to specify everyone categories of interest look like, we provide computer 
@@ -185,14 +188,14 @@ of N images of labeled with K different classes.
 
 CNNs are the most famous network used 
 for classification problems of images. The idea behind CNNs is that a 
-local understanding of an image is good enough. A practical advantage is 
-that if we have fewer parameters, it will reduce the amount of data to train 
+understanding of an image locally is good enough. A practical advantage is 
+that if we have less parameters, it will reduce the amount of data to train 
 a model and improves the time of learning. A CNN has weights to look at a small 
 patch of image. 
 
 A convolution is a weighted sum of  the pixel values of an image, as 
-we have a sliding window moving across the whole image. It produces another 
-image of the same size. A CNN typically consists of 3 layers:
+we have a sliding window moving across the whole image. It gives another 
+image having the same size. A CNN typically consists of 3 layers:
 
 \begin{enumerate}
 	\item Convolution Layer
@@ -204,9 +207,9 @@ There are some batch normalization layers in some old CNNs
 but not used these days. (Details of CNNs are covered in chapter 3).
 
 \subsubsection{CNN Architectures}
-As mentioned before, the ImageNet project is a large visual database designed for research purposes. This 
-project runs on an yearly contest named as ILSVRC, where different algorithms compete 
-to classify and detect objects. Here 
+As mentioned before, the ImageNet project is an enormous visual database cretaed for research purposes. This 
+project runs on an yearly contest named as ILSVRC, where different algorithms take 
+part in competitions to classify and detect objects. Here 
 we will talk about the competition top competitors \cite{chap_2_article:9}.
 \begin{itemize}
 	\item LeNet-5 (1998)
@@ -218,11 +221,11 @@ we will talk about the competition top competitors \cite{chap_2_article:9}.
 \end{itemize}
 \paragraph*{LeNet}
 
-It is a pioneering 7-layer convolutional network by 
-Yann LeCun et al. in 1998. It classifies digits and was applied by 
+It is a 7-layer convolutional network by 
+Yann LeCun et al. in 1998. It is used to classify digits and was applied by 
 several banks to recognize handwritten numbers on cheques. The processing 
-of higher resolution images we need more convolutional layers, so this 
-technique is constrained by the availability of resources \cite{chap_2_article:10}.
+of higher resolution images need more convolutional layers, so this 
+technique is restricted to the availability of resources \cite{chap_2_article:10}.
 
 \begin{figure}[H]
 	\centering
@@ -285,7 +288,8 @@ VGGNet is that it consists of 138 million parameters \cite{chap_2_article:13}.
 \end{figure}
 
 \paragraph*{ResNet (2015):}
-In 2015, Residual Neural Network (ResNet) by Kaiming He et al. was introduced. It was a novel architecture with “skip connections” and features heavy batch normalization. These connections are known as gated units. There are 152 layers but still less complex than VGGNet. It achieved a top-5 
+In 2015, Residual Neural Network (ResNet) by Kaiming He et al. was introduced. It was a new
+architecture with “skip connections” and features heavy batch normalization. These connections are known as gated units. There are 152 layers but still less complex than VGGNet. It achieved a top-5 
 error rate of 3.57 \% which beats human-level performance \cite{chap_2_article:14}. 
 
 \begin{figure}[H]
@@ -322,4 +326,14 @@ inception modules, ResNet has residual connections.
 		\end{tabular}}
 	  \end{center}
 \end{table}
+
+We have discussed tha basics of an image, classification and famous models used
+for classification purposes. The other part of the project deals with
+the detection algorithm which is discussed in detail in chapter \ref{Chapter 5}.
+In next chapter we will explore about CNNs and we will continue our discussion
+of classifier in chapter \ref{Chapter 4} starting with dataset leading to the
+results in detail. The models discussed will not be used as they are. 
+Cutomised model according to the nature of the dataset and need will be used.
+We will solve two class problem at first and having the results noted, 
+we will train a classifier for five classes.
 

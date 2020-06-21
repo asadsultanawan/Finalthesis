@@ -71,6 +71,7 @@
     \addcontentsline{toc}{chapter}{List of Tables}
 \listoftabless
 \makeabstract
+\makeabbreviations
 %\makenomenclature
 \makelot
 \clearpage
@@ -141,8 +142,11 @@ Nilore, Islamabad 45650, Pakistan\\
 \LARGE Declaration of Originality\\}
 \vspace{10 mm}
   \end{center}
-I hereby declare that the work contained in this thesis and the intellectual content of this thesis are the product of my own research. This thesis has not been previously published in any form nor does it contain any verbatim of the published resources which could be treated as infringement of the international copyright law.
-I also declare that I do understand the terms ‘copyright’ and ‘plagiarism,’ and that in case of any copyright violation or plagiarism found in this work, I will be held fully responsible of the consequences of any such violation. \\
+This thesis titled as ``AI Frameworks for Visual TrafficSurveillance, from Vehicle Classification to Event Detection" is submitted to the department
+of Electrical Engineering, PIEAS in the partial fulfillment of requirements of BS Electrical Engineering degree.
+We declare that this project is our own original work. This work has not been published previously and all the ideas taken
+from other sources are explicitly referenced in the text. We also declare that in case of `plagiarism' and `copyright' found in this project,
+we will be fully responsible for the consequences. We are also aware of the consequences of non-compliance of the above declaration.
 \vspace{10 mm}
  \begin{flushleft}
 \hspace{3.2in} Signature: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\\
@@ -201,9 +205,15 @@ This page is left intentionally blank.
   \addcontentsline{toc}{section}{Abstract}
   \clearpage
   }
-  \newcommand*{\makenomenclature}{
+    \newcommand*{\makenomenclature}{
 
 \include{front/Nomenclaturex}
+  \clearpage
+  }
+
+\newcommand*{\makeabbreviations}{  
+
+\include{front/abbreviations}
   \clearpage
   }
   \newcommand*{\listoffiguress}{

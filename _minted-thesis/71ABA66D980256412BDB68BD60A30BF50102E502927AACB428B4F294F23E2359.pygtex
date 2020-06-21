@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZsh{} make darknet (build)}
+\PYG{err}{!}\PYG{n}{make}
+\end{Verbatim}

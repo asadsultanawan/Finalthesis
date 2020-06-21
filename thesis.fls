@@ -170,12 +170,24 @@ INPUT C:\Program Files\MiKTeX 2.9\tex\latex\xstring\xstring.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\generic\xstring\xstring.tex
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\framed\framed.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\framed\framed.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\mwe\mwe.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\mwe\mwe.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\lipsum\lipsum.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\blindtext\blindtext.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\blindtext\blindtext.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\blindtext\blindtext.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\tools\xspace.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\tools\xspace.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\notoccite\notoccite.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\notoccite\notoccite.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\appendix\appendix.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\appendix\appendix.sty
 INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\thesis.aex
 INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\thesis.aex
 INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\thesis.aux
 INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\thesis.aux
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\front\abbreviations.aux
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\front\abbreviations.aux
 INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\CHAPTERS\Chapter-1\Chapter-1.aux
 INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\CHAPTERS\Chapter-1\Chapter-1.aux
 INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\CHAPTERS\Chapter-2\Chapter-2.aux
@@ -184,6 +196,8 @@ INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\F
 INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\CHAPTERS\Chapter-3\Chapter-3.aux
 INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\CHAPTERS\Chapter-4\Chapter-4.aux
 INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\CHAPTERS\Chapter-4\Chapter-4.aux
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\CHAPTERS\Chapter-5\Chapter-5.aux
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\CHAPTERS\Chapter-5\Chapter-5.aux
 OUTPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\thesis.aux
 INPUT C:\Program Files\MiKTeX 2.9\tex\context\base\mkii\supp-pdf.mkii
 INPUT C:\Program Files\MiKTeX 2.9\tex\context\base\mkii\supp-pdf.mkii
@@ -240,6 +254,11 @@ INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\F
 OUTPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\thesis.lot
 INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\front\abstract.tex
 INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\front\abstract.tex
+OUTPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\front\abbreviations.aux
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\front\abbreviations.tex
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\front\abbreviations.tex
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmbx8.tfm
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmbx6.tfm
 OUTPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\CHAPTERS\Chapter-1\Chapter-1.aux
 INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\CHAPTERS\Chapter-1\Chapter-1.tex
 INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\CHAPTERS\Chapter-1\Chapter-1.tex
@@ -424,16 +443,16 @@ INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\F
 INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\_minted-thesis\B1839F7C33BCED0923F2E779C2DDAC0A0102E502927AACB428B4F294F23E2359.pygtex
 OUTPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\thesis.pyg
 INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\thesis.pyg
-INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\_minted-thesis\2A01593E262F18AB7C5476B593492CDC0102E502927AACB428B4F294F23E2359.pygtex
-INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\_minted-thesis\2A01593E262F18AB7C5476B593492CDC0102E502927AACB428B4F294F23E2359.pygtex
-INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\_minted-thesis\2A01593E262F18AB7C5476B593492CDC0102E502927AACB428B4F294F23E2359.pygtex
-INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\_minted-thesis\2A01593E262F18AB7C5476B593492CDC0102E502927AACB428B4F294F23E2359.pygtex
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\_minted-thesis\28DF584B2996BB6260C80428F728A0F10102E502927AACB428B4F294F23E2359.pygtex
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\_minted-thesis\28DF584B2996BB6260C80428F728A0F10102E502927AACB428B4F294F23E2359.pygtex
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\_minted-thesis\28DF584B2996BB6260C80428F728A0F10102E502927AACB428B4F294F23E2359.pygtex
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\_minted-thesis\28DF584B2996BB6260C80428F728A0F10102E502927AACB428B4F294F23E2359.pygtex
 OUTPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\thesis.pyg
 INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\thesis.pyg
-INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\_minted-thesis\0BC26245C43757375D1F08197D0C67DE0102E502927AACB428B4F294F23E2359.pygtex
-INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\_minted-thesis\0BC26245C43757375D1F08197D0C67DE0102E502927AACB428B4F294F23E2359.pygtex
-INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\_minted-thesis\0BC26245C43757375D1F08197D0C67DE0102E502927AACB428B4F294F23E2359.pygtex
-INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\_minted-thesis\0BC26245C43757375D1F08197D0C67DE0102E502927AACB428B4F294F23E2359.pygtex
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\_minted-thesis\B8CB17EE74E530F06DCCE12E089318330102E502927AACB428B4F294F23E2359.pygtex
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\_minted-thesis\B8CB17EE74E530F06DCCE12E089318330102E502927AACB428B4F294F23E2359.pygtex
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\_minted-thesis\B8CB17EE74E530F06DCCE12E089318330102E502927AACB428B4F294F23E2359.pygtex
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\_minted-thesis\B8CB17EE74E530F06DCCE12E089318330102E502927AACB428B4F294F23E2359.pygtex
 OUTPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\thesis.pyg
 INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\thesis.pyg
 INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\_minted-thesis\B2CF62C3A0F09FB919A583F9FCCE47BD0102E502927AACB428B4F294F23E2359.pygtex
@@ -462,6 +481,11 @@ INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\F
 INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\CHAPTERS\Chapter-4\Images\4.3.jpg
 INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\CHAPTERS\Chapter-4\Images\4.3.jpg
 INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\CHAPTERS\Chapter-4\Images\4.3.jpg
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\CHAPTERS\Chapter-4\Images\summary-01.jpg
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\CHAPTERS\Chapter-4\Images\summary-01.jpg
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\CHAPTERS\Chapter-4\Images\summary-01.jpg
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\CHAPTERS\Chapter-4\Images\summary-01.jpg
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\CHAPTERS\Chapter-4\Images\summary-01.jpg
 INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\CHAPTERS\Chapter-4\Images\4.4a.png
 INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\CHAPTERS\Chapter-4\Images\4.4a.png
 INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\CHAPTERS\Chapter-4\Images\4.4a.png
@@ -497,9 +521,166 @@ INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\F
 INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\CHAPTERS\Chapter-4\Images\4.7c.jpg
 INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\CHAPTERS\Chapter-4\Images\4.7c.jpg
 INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\CHAPTERS\Chapter-4\Images\4.7c.jpg
+OUTPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\CHAPTERS\Chapter-5\Chapter-5.aux
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\CHAPTERS\Chapter-5\Chapter-5.tex
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\CHAPTERS\Chapter-5\Chapter-5.tex
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\CHAPTERS\Chapter-5\images\5.1.png
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\CHAPTERS\Chapter-5\images\5.1.png
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\CHAPTERS\Chapter-5\images\5.1.png
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\CHAPTERS\Chapter-5\images\5.1.png
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\CHAPTERS\Chapter-5\images\5.1.png
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\CHAPTERS\Chapter-5\images\5.2.png
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\CHAPTERS\Chapter-5\images\5.2.png
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\CHAPTERS\Chapter-5\images\5.2.png
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\CHAPTERS\Chapter-5\images\5.2.png
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\CHAPTERS\Chapter-5\images\5.2.png
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\CHAPTERS\Chapter-5\images\5.3.PNG
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\CHAPTERS\Chapter-5\images\5.3.PNG
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\CHAPTERS\Chapter-5\images\5.3.PNG
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\CHAPTERS\Chapter-5\images\5.3.PNG
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\CHAPTERS\Chapter-5\images\5.3.PNG
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\CHAPTERS\Chapter-5\images\5.4a.PNG
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\CHAPTERS\Chapter-5\images\5.4a.PNG
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\CHAPTERS\Chapter-5\images\5.4a.PNG
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\CHAPTERS\Chapter-5\images\5.4a.PNG
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\CHAPTERS\Chapter-5\images\5.4a.PNG
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\CHAPTERS\Chapter-5\images\5.4b.PNG
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\CHAPTERS\Chapter-5\images\5.4b.PNG
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\CHAPTERS\Chapter-5\images\5.4b.PNG
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\CHAPTERS\Chapter-5\images\5.4b.PNG
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\CHAPTERS\Chapter-5\images\5.4b.PNG
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\CHAPTERS\Chapter-5\images\5.5.PNG
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\CHAPTERS\Chapter-5\images\5.5.PNG
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\CHAPTERS\Chapter-5\images\5.5.PNG
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\CHAPTERS\Chapter-5\images\5.5.PNG
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\CHAPTERS\Chapter-5\images\5.5.PNG
+OUTPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\thesis.pyg
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\thesis.pyg
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\_minted-thesis\2E173D4DCE592E23CC2A80D3C4E5B9C20102E502927AACB428B4F294F23E2359.pygtex
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\_minted-thesis\2E173D4DCE592E23CC2A80D3C4E5B9C20102E502927AACB428B4F294F23E2359.pygtex
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\_minted-thesis\2E173D4DCE592E23CC2A80D3C4E5B9C20102E502927AACB428B4F294F23E2359.pygtex
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\_minted-thesis\2E173D4DCE592E23CC2A80D3C4E5B9C20102E502927AACB428B4F294F23E2359.pygtex
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\CHAPTERS\Chapter-5\images\5.6.PNG
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\CHAPTERS\Chapter-5\images\5.6.PNG
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\CHAPTERS\Chapter-5\images\5.6.PNG
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\CHAPTERS\Chapter-5\images\5.6.PNG
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\CHAPTERS\Chapter-5\images\5.6.PNG
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\CHAPTERS\Chapter-5\images\5.7.PNG
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\CHAPTERS\Chapter-5\images\5.7.PNG
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\CHAPTERS\Chapter-5\images\5.7.PNG
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\CHAPTERS\Chapter-5\images\5.7.PNG
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\CHAPTERS\Chapter-5\images\5.7.PNG
+OUTPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\thesis.pyg
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\thesis.pyg
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\_minted-thesis\29B2F44A4AAF57B41099016CD54C5B000102E502927AACB428B4F294F23E2359.pygtex
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\_minted-thesis\29B2F44A4AAF57B41099016CD54C5B000102E502927AACB428B4F294F23E2359.pygtex
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\_minted-thesis\29B2F44A4AAF57B41099016CD54C5B000102E502927AACB428B4F294F23E2359.pygtex
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\_minted-thesis\29B2F44A4AAF57B41099016CD54C5B000102E502927AACB428B4F294F23E2359.pygtex
+OUTPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\thesis.pyg
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\thesis.pyg
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\_minted-thesis\AF50437BFEAECBDDD1ED0290B95C37F30102E502927AACB428B4F294F23E2359.pygtex
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\_minted-thesis\AF50437BFEAECBDDD1ED0290B95C37F30102E502927AACB428B4F294F23E2359.pygtex
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\_minted-thesis\AF50437BFEAECBDDD1ED0290B95C37F30102E502927AACB428B4F294F23E2359.pygtex
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\_minted-thesis\AF50437BFEAECBDDD1ED0290B95C37F30102E502927AACB428B4F294F23E2359.pygtex
+OUTPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\thesis.pyg
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\thesis.pyg
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\_minted-thesis\D3CE41B8B23A0BB509F3D5BEC7B70E9D0102E502927AACB428B4F294F23E2359.pygtex
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\_minted-thesis\D3CE41B8B23A0BB509F3D5BEC7B70E9D0102E502927AACB428B4F294F23E2359.pygtex
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\_minted-thesis\D3CE41B8B23A0BB509F3D5BEC7B70E9D0102E502927AACB428B4F294F23E2359.pygtex
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\_minted-thesis\D3CE41B8B23A0BB509F3D5BEC7B70E9D0102E502927AACB428B4F294F23E2359.pygtex
+OUTPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\thesis.pyg
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\thesis.pyg
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\_minted-thesis\71ABA66D980256412BDB68BD60A30BF50102E502927AACB428B4F294F23E2359.pygtex
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\_minted-thesis\71ABA66D980256412BDB68BD60A30BF50102E502927AACB428B4F294F23E2359.pygtex
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\_minted-thesis\71ABA66D980256412BDB68BD60A30BF50102E502927AACB428B4F294F23E2359.pygtex
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\_minted-thesis\71ABA66D980256412BDB68BD60A30BF50102E502927AACB428B4F294F23E2359.pygtex
+OUTPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\thesis.pyg
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\thesis.pyg
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\_minted-thesis\6CD1C783888792CA43864F08F12DB6C80102E502927AACB428B4F294F23E2359.pygtex
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\_minted-thesis\6CD1C783888792CA43864F08F12DB6C80102E502927AACB428B4F294F23E2359.pygtex
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\_minted-thesis\6CD1C783888792CA43864F08F12DB6C80102E502927AACB428B4F294F23E2359.pygtex
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\_minted-thesis\6CD1C783888792CA43864F08F12DB6C80102E502927AACB428B4F294F23E2359.pygtex
+OUTPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\thesis.pyg
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\thesis.pyg
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\_minted-thesis\506F0269B7F6987869E1198ED2FEA23B0102E502927AACB428B4F294F23E2359.pygtex
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\_minted-thesis\506F0269B7F6987869E1198ED2FEA23B0102E502927AACB428B4F294F23E2359.pygtex
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\_minted-thesis\506F0269B7F6987869E1198ED2FEA23B0102E502927AACB428B4F294F23E2359.pygtex
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\_minted-thesis\506F0269B7F6987869E1198ED2FEA23B0102E502927AACB428B4F294F23E2359.pygtex
+OUTPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\thesis.pyg
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\thesis.pyg
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\_minted-thesis\6097C1387F966854EC621A46166206930102E502927AACB428B4F294F23E2359.pygtex
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\_minted-thesis\6097C1387F966854EC621A46166206930102E502927AACB428B4F294F23E2359.pygtex
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\_minted-thesis\6097C1387F966854EC621A46166206930102E502927AACB428B4F294F23E2359.pygtex
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\_minted-thesis\6097C1387F966854EC621A46166206930102E502927AACB428B4F294F23E2359.pygtex
+OUTPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\thesis.pyg
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\thesis.pyg
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\_minted-thesis\51FCE69323BFF2204C96C05458BCF1B80102E502927AACB428B4F294F23E2359.pygtex
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\_minted-thesis\51FCE69323BFF2204C96C05458BCF1B80102E502927AACB428B4F294F23E2359.pygtex
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\_minted-thesis\51FCE69323BFF2204C96C05458BCF1B80102E502927AACB428B4F294F23E2359.pygtex
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\_minted-thesis\51FCE69323BFF2204C96C05458BCF1B80102E502927AACB428B4F294F23E2359.pygtex
+OUTPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\thesis.pyg
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\thesis.pyg
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\_minted-thesis\9194B90CC7826CF0988041D16D31DFF80102E502927AACB428B4F294F23E2359.pygtex
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\_minted-thesis\9194B90CC7826CF0988041D16D31DFF80102E502927AACB428B4F294F23E2359.pygtex
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\_minted-thesis\9194B90CC7826CF0988041D16D31DFF80102E502927AACB428B4F294F23E2359.pygtex
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\_minted-thesis\9194B90CC7826CF0988041D16D31DFF80102E502927AACB428B4F294F23E2359.pygtex
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\CHAPTERS\Chapter-5\images\5.8.PNG
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\CHAPTERS\Chapter-5\images\5.8.PNG
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\CHAPTERS\Chapter-5\images\5.8.PNG
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\CHAPTERS\Chapter-5\images\5.8.PNG
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\CHAPTERS\Chapter-5\images\5.8.PNG
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\CHAPTERS\Chapter-5\images\5.9.PNG
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\CHAPTERS\Chapter-5\images\5.9.PNG
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\CHAPTERS\Chapter-5\images\5.9.PNG
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\CHAPTERS\Chapter-5\images\5.9.PNG
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\CHAPTERS\Chapter-5\images\5.9.PNG
+OUTPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\thesis.pyg
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\thesis.pyg
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\_minted-thesis\71BA83415F90883E1BE5AF2DB9BBBE1E0102E502927AACB428B4F294F23E2359.pygtex
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\_minted-thesis\71BA83415F90883E1BE5AF2DB9BBBE1E0102E502927AACB428B4F294F23E2359.pygtex
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\_minted-thesis\71BA83415F90883E1BE5AF2DB9BBBE1E0102E502927AACB428B4F294F23E2359.pygtex
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\_minted-thesis\71BA83415F90883E1BE5AF2DB9BBBE1E0102E502927AACB428B4F294F23E2359.pygtex
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\CHAPTERS\Chapter-5\images\5.10.PNG
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\CHAPTERS\Chapter-5\images\5.10.PNG
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\CHAPTERS\Chapter-5\images\5.10.PNG
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\CHAPTERS\Chapter-5\images\5.10.PNG
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\CHAPTERS\Chapter-5\images\5.10.PNG
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\CHAPTERS\Chapter-5\images\5.11.PNG
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\CHAPTERS\Chapter-5\images\5.11.PNG
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\CHAPTERS\Chapter-5\images\5.11.PNG
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\CHAPTERS\Chapter-5\images\5.11.PNG
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\CHAPTERS\Chapter-5\images\5.11.PNG
+OUTPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\thesis.pyg
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\thesis.pyg
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\_minted-thesis\CEE3E0A4E5D79E1D7CD24DDEEC9C62890102E502927AACB428B4F294F23E2359.pygtex
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\_minted-thesis\CEE3E0A4E5D79E1D7CD24DDEEC9C62890102E502927AACB428B4F294F23E2359.pygtex
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\_minted-thesis\CEE3E0A4E5D79E1D7CD24DDEEC9C62890102E502927AACB428B4F294F23E2359.pygtex
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\_minted-thesis\CEE3E0A4E5D79E1D7CD24DDEEC9C62890102E502927AACB428B4F294F23E2359.pygtex
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\CHAPTERS\Chapter-5\images\5.12a.jpg
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\CHAPTERS\Chapter-5\images\5.12a.jpg
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\CHAPTERS\Chapter-5\images\5.12a.jpg
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\CHAPTERS\Chapter-5\images\5.12a.jpg
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\CHAPTERS\Chapter-5\images\5.12a.jpg
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\CHAPTERS\Chapter-5\images\5.12b.jpg
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\CHAPTERS\Chapter-5\images\5.12b.jpg
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\CHAPTERS\Chapter-5\images\5.12b.jpg
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\CHAPTERS\Chapter-5\images\5.12b.jpg
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\CHAPTERS\Chapter-5\images\5.12b.jpg
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\CHAPTERS\Chapter-5\images\5.12c.jpg
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\CHAPTERS\Chapter-5\images\5.12c.jpg
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\CHAPTERS\Chapter-5\images\5.12c.jpg
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\CHAPTERS\Chapter-5\images\5.12c.jpg
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\CHAPTERS\Chapter-5\images\5.12c.jpg
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\CHAPTERS\Chapter-5\images\5.12d.jpg
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\CHAPTERS\Chapter-5\images\5.12d.jpg
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\CHAPTERS\Chapter-5\images\5.12d.jpg
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\CHAPTERS\Chapter-5\images\5.12d.jpg
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\CHAPTERS\Chapter-5\images\5.12d.jpg
 INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\thesis.bbl
 INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\thesis.bbl
 INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\thesis.aux
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\front\abbreviations.aux
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\front\abbreviations.aux
 INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\CHAPTERS\Chapter-1\Chapter-1.aux
 INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\CHAPTERS\Chapter-1\Chapter-1.aux
 INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\CHAPTERS\Chapter-2\Chapter-2.aux
@@ -508,6 +689,8 @@ INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\F
 INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\CHAPTERS\Chapter-3\Chapter-3.aux
 INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\CHAPTERS\Chapter-4\Chapter-4.aux
 INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\CHAPTERS\Chapter-4\Chapter-4.aux
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\CHAPTERS\Chapter-5\Chapter-5.aux
+INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\CHAPTERS\Chapter-5\Chapter-5.aux
 INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\thesis.out
 INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\thesis.out
 INPUT c:\Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\thesis.pyg
@@ -536,6 +719,8 @@ INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmr8.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmr8.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmsy10.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmsy10.pfb
+INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmsy6.pfb
+INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmsy6.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmsy8.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmsy8.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmti12.pfb
