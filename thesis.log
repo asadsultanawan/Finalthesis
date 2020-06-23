@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7440 64-bit) (preloaded format=pdflatex 2020.6.16)  24 JUN 2020 00:18
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7440 64-bit) (preloaded format=pdflatex 2020.6.16)  24 JUN 2020 00:28
 entering extended mode
 **"c:/Users/asads/OneDrive - Higher Education Commission/Project/FYP Thesis/Final Thesis/thesis.tex"
 ("c:/Users/asads/OneDrive - Higher Education Commission/Project/FYP Thesis/Final Thesis/thesis.tex"
@@ -1124,7 +1124,7 @@ Package pdftex.def Info: CHAPTERS/Chapter-5/images/5.6.PNG  used on input line 1
 File: CHAPTERS/Chapter-5/images/5.7.PNG Graphic file (type png)
 <use CHAPTERS/Chapter-5/images/5.7.PNG>
 Package pdftex.def Info: CHAPTERS/Chapter-5/images/5.7.PNG  used on input line 130.
-(pdftex.def)             Requested size: 308.50494pt x 154.02661pt.
+(pdftex.def)             Requested size: 359.92505pt x 179.69902pt.
  [47 <c:/Users/asads/OneDrive - Higher Education Commission/Project/FYP Thesis/Final Thesis/CHAPTERS/Chapter-5/images/5.6.PNG>]
 \openout3 = `thesis.pyg'.
 
@@ -1140,10 +1140,10 @@ Package pdftex.def Info: CHAPTERS/Chapter-5/images/5.7.PNG  used on input line 1
  ("c:/Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\_minted-thesis/71ABA66D980256412BDB68BD60A30BF50102E502927AACB428B4F294F23E2359.pygtex")
 \openout3 = `thesis.pyg'.
 
- [49] ("c:/Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\_minted-thesis/6CD1C783888792CA43864F08F12DB6C80102E502927AACB428B4F294F23E2359.pygtex")
+ [49] ("c:/Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\_minted-thesis/6CD1C783888792CA43864F08F12DB6C80102E502927AACB428B4F294F23E2359.pygtex") [50]
 \openout3 = `thesis.pyg'.
 
- [50] ("c:/Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\_minted-thesis/7E43A88A24A35197B15171769C21FF490102E502927AACB428B4F294F23E2359.pygtex")
+ ("c:/Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\_minted-thesis/7E43A88A24A35197B15171769C21FF490102E502927AACB428B4F294F23E2359.pygtex")
 \openout3 = `thesis.pyg'.
 
  ("c:/Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\_minted-thesis/6097C1387F966854EC621A46166206930102E502927AACB428B4F294F23E2359.pygtex")
@@ -1153,7 +1153,7 @@ Package pdftex.def Info: CHAPTERS/Chapter-5/images/5.7.PNG  used on input line 1
 \openout3 = `thesis.pyg'.
 
  ("c:/Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\_minted-thesis/E37EDB48FF4CE2F8749F4A8E2B78BDF90102E502927AACB428B4F294F23E2359.pygtex")
-<CHAPTERS/Chapter-5/images/5.8.PNG, id=1016, 780.66656pt x 345.54094pt>
+<CHAPTERS/Chapter-5/images/5.8.PNG, id=1015, 780.66656pt x 345.54094pt>
 File: CHAPTERS/Chapter-5/images/5.8.PNG Graphic file (type png)
 <use CHAPTERS/Chapter-5/images/5.8.PNG>
 Package pdftex.def Info: CHAPTERS/Chapter-5/images/5.8.PNG  used on input line 303.
@@ -1184,30 +1184,31 @@ File: CHAPTERS/Chapter-5/images/5.11.PNG Graphic file (type png)
 <use CHAPTERS/Chapter-5/images/5.11.PNG>
 Package pdftex.def Info: CHAPTERS/Chapter-5/images/5.11.PNG  used on input line 364.
 (pdftex.def)             Requested size: 309.55692pt x 120.45015pt.
+ [56 <c:/Users/asads/OneDrive - Higher Education Commission/Project/FYP Thesis/Final Thesis/CHAPTERS/Chapter-5/images/5.10.PNG> <c:/Users/asads/OneDrive - Higher Education Commission/Project/FYP Thesis/Final Thesis/CHAPTERS/Chapter-5/images/5.11.PNG>]
 \openout3 = `thesis.pyg'.
 
- [56 <c:/Users/asads/OneDrive - Higher Education Commission/Project/FYP Thesis/Final Thesis/CHAPTERS/Chapter-5/images/5.10.PNG> <c:/Users/asads/OneDrive - Higher Education Commission/Project/FYP Thesis/Final Thesis/CHAPTERS/Chapter-5/images/5.11.PNG>] ("c:/Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\_minted-thesis/CEE3E0A4E5D79E1D7CD24DDEEC9C62890102E502927AACB428B4F294F23E2359.pygtex")
+ ("c:/Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\_minted-thesis/CEE3E0A4E5D79E1D7CD24DDEEC9C62890102E502927AACB428B4F294F23E2359.pygtex")
 <CHAPTERS/Chapter-5/images/5.12a.jpg, id=1057, 525.965pt x 350.30875pt>
 File: CHAPTERS/Chapter-5/images/5.12a.jpg Graphic file (type jpg)
 <use CHAPTERS/Chapter-5/images/5.12a.jpg>
-Package pdftex.def Info: CHAPTERS/Chapter-5/images/5.12a.jpg  used on input line 425.
+Package pdftex.def Info: CHAPTERS/Chapter-5/images/5.12a.jpg  used on input line 423.
 (pdftex.def)             Requested size: 199.17055pt x 142.26447pt.
 <CHAPTERS/Chapter-5/images/5.12b.jpg, id=1058, 467.7475pt x 350.30875pt>
 File: CHAPTERS/Chapter-5/images/5.12b.jpg Graphic file (type jpg)
 <use CHAPTERS/Chapter-5/images/5.12b.jpg>
-Package pdftex.def Info: CHAPTERS/Chapter-5/images/5.12b.jpg  used on input line 433.
+Package pdftex.def Info: CHAPTERS/Chapter-5/images/5.12b.jpg  used on input line 431.
 (pdftex.def)             Requested size: 199.17189pt x 142.26447pt.
 <CHAPTERS/Chapter-5/images/5.12c.jpg, id=1059, 506.6428pt x 262.73157pt>
 File: CHAPTERS/Chapter-5/images/5.12c.jpg Graphic file (type jpg)
 <use CHAPTERS/Chapter-5/images/5.12c.jpg>
-Package pdftex.def Info: CHAPTERS/Chapter-5/images/5.12c.jpg  used on input line 441.
+Package pdftex.def Info: CHAPTERS/Chapter-5/images/5.12c.jpg  used on input line 439.
 (pdftex.def)             Requested size: 199.16696pt x 142.2698pt.
 <CHAPTERS/Chapter-5/images/5.12d.jpg, id=1060, 622.325pt x 350.30875pt>
 File: CHAPTERS/Chapter-5/images/5.12d.jpg Graphic file (type jpg)
 <use CHAPTERS/Chapter-5/images/5.12d.jpg>
-Package pdftex.def Info: CHAPTERS/Chapter-5/images/5.12d.jpg  used on input line 449.
+Package pdftex.def Info: CHAPTERS/Chapter-5/images/5.12d.jpg  used on input line 447.
 (pdftex.def)             Requested size: 199.16705pt x 142.26447pt.
- [57 <c:/Users/asads/OneDrive - Higher Education Commission/Project/FYP Thesis/Final Thesis/CHAPTERS/Chapter-5/images/5.12a.jpg> <c:/Users/asads/OneDrive - Higher Education Commission/Project/FYP Thesis/Final Thesis/CHAPTERS/Chapter-5/images/5.12b.jpg> <c:/Users/asads/OneDrive - Higher Education Commission/Project/FYP Thesis/Final Thesis/CHAPTERS/Chapter-5/images/5.12c.jpg> <c:/Users/asads/OneDrive - Higher Education Commission/Project/FYP Thesis/Final Thesis/CHAPTERS/Chapter-5/images/5.12d.jpg>]) [58] [59] ("c:/Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\thesis.bbl" [60
+) [57] [58 <c:/Users/asads/OneDrive - Higher Education Commission/Project/FYP Thesis/Final Thesis/CHAPTERS/Chapter-5/images/5.12a.jpg> <c:/Users/asads/OneDrive - Higher Education Commission/Project/FYP Thesis/Final Thesis/CHAPTERS/Chapter-5/images/5.12b.jpg> <c:/Users/asads/OneDrive - Higher Education Commission/Project/FYP Thesis/Final Thesis/CHAPTERS/Chapter-5/images/5.12c.jpg> <c:/Users/asads/OneDrive - Higher Education Commission/Project/FYP Thesis/Final Thesis/CHAPTERS/Chapter-5/images/5.12d.jpg>] [59] ("c:/Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\thesis.bbl" [60
 
 
 
@@ -1241,7 +1242,7 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  39i,16n,54p,1078b,637s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc} <C:\Users\asads\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmitt10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvbo8a.pfb>
-Output written on "c:/Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\thesis.pdf" (76 pages, 7562530 bytes).
+Output written on "c:/Users\asads\OneDrive - Higher Education Commission\Project\FYP Thesis\Final Thesis\thesis.pdf" (76 pages, 7562632 bytes).
 PDF statistics:
  1217 PDF objects out of 1440 (max. 8388607)
  287 named destinations out of 1000 (max. 500000)
