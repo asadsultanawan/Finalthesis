@@ -30,14 +30,14 @@
 \contentsline {figure}{\numberline {4.4}{\ignorespaces Model architecture for binary class vehicle classifier\relax }}{32}{figure.caption.47}%
 \contentsline {figure}{\numberline {4.6}{\ignorespaces Model architecture for five class vehicle classifier\relax }}{37}{figure.caption.54}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Localization and Classification of different objects in an image \relax }}{41}{figure.caption.58}%
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Working of YOLO v3 \relax }}{42}{figure.caption.59}%
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Architecture of Darknet-53\relax }}{43}{figure.caption.60}%
-\contentsline {figure}{\numberline {5.5}{\ignorespaces Absolute and Relative dimensions of a bounding box\relax }}{46}{figure.caption.62}%
-\contentsline {figure}{\numberline {5.6}{\ignorespaces Plot of some images from the dataset \relax }}{47}{figure.caption.64}%
-\contentsline {figure}{\numberline {5.7}{\ignorespaces Labelling of images using VoTT \relax }}{47}{figure.caption.65}%
-\contentsline {figure}{\numberline {5.8}{\ignorespaces Output Training log for one iteration \relax }}{52}{figure.caption.75}%
-\contentsline {figure}{\numberline {5.9}{\ignorespaces Plot of loss and mAP for validation data vs number of iterations\relax }}{54}{figure.caption.76}%
-\contentsline {figure}{\numberline {5.10}{\ignorespaces Evaluation Metrices for training data at threshold value of 0.4\relax }}{55}{figure.caption.78}%
-\contentsline {figure}{\numberline {5.11}{\ignorespaces Evaluation Metrices for testing data at threshold value of 0.4\relax }}{55}{figure.caption.79}%
-\contentsline {figure}{\numberline {5.12}{\ignorespaces }}{56}{figure.caption.81}%
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Localization and Classification of different objects in an image \relax }}{41}{figure.caption.59}%
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Working of YOLO v3 \relax }}{42}{figure.caption.60}%
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Architecture of Darknet-53\relax }}{43}{figure.caption.61}%
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Absolute and Relative dimensions of a bounding box\relax }}{46}{figure.caption.63}%
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Plot of some images from the dataset \relax }}{47}{figure.caption.65}%
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Labelling of images using VoTT \relax }}{47}{figure.caption.66}%
+\contentsline {figure}{\numberline {5.8}{\ignorespaces Output Training log for one iteration \relax }}{52}{figure.caption.76}%
+\contentsline {figure}{\numberline {5.9}{\ignorespaces Plot of loss and mAP for validation data vs number of iterations\relax }}{54}{figure.caption.77}%
+\contentsline {figure}{\numberline {5.10}{\ignorespaces Evaluation Metrices for training data at threshold value of 0.4\relax }}{55}{figure.caption.79}%
+\contentsline {figure}{\numberline {5.11}{\ignorespaces Evaluation Metrices for testing data at threshold value of 0.4\relax }}{55}{figure.caption.80}%
+\contentsline {figure}{\numberline {5.12}{\ignorespaces }}{56}{figure.caption.82}%

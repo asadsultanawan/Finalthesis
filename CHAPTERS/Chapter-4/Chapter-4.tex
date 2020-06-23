@@ -503,7 +503,7 @@ figure \ref{fig:4.6}.
   are tabulated in Table \ref{table:4.2}.
 
 \begin{table}[H]
-    \caption{Results for binary class vehicle classifier}
+    \caption{Results for five class vehicle classifier}
     \label{table:4.2}
 	  \begin{center}
 		\scalebox{0.85}
@@ -555,6 +555,27 @@ figure \ref{fig:4.7}.
     \caption[]{Test images and labels on a GUI}
     \label{fig:4.7}
   \end{figure}
+
+\section{Comparison with other Methods}
+\begin{table}[H]
+    \caption{Comparison of our DCNN based classifier with other methods}
+    \label{table:4.3}
+	  \begin{center}
+		\scalebox{1.05}
+		{\begin{tabular}{|l |l |l |l |l |l |}
+		\hline
+		S.No & Method & Author & Accuarcy \\ \hline
+		1  & HOG based classification & Gandhi \& Trivedi, 2007 & 64.3 \%
+		\\ \hline
+		2  & Shape based approach & Morris \& Trivedi, 2006a & 88.4 \% 
+        \\ \hline %
+        3   & Magnetic sensor signal &  Saowaluck Kaewkamnerd et al. & 81.69 \% 
+        \\ \hline %
+        4   & Our DCNN based method &   & 90.16 \%
+        \\ \hline %
+		\end{tabular}}
+	  \end{center}
+\end{table}
 
 \section{Limitations \& Future Work}
 
