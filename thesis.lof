@@ -26,19 +26,19 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {4.1}{\ignorespaces Plot of some images from each class\relax }}{27}{figure.caption.43}%
 \contentsline {figure}{\numberline {4.2}{\ignorespaces Training results for two class problem after 5 epochs\relax }}{34}{figure.caption.49}%
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Training results for two class problem after 20 epochs\relax }}{34}{figure.caption.50}%
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Training results for two class problem after 20 epochs\relax }}{35}{figure.caption.51}%
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Training results for five class problem after 10 epochs\relax }}{36}{figure.caption.53}%
-\contentsline {figure}{\numberline {4.7}{\ignorespaces Training results for five class problem after 20 epochs\relax }}{36}{figure.caption.54}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Training results for two class problem after 20 epochs\relax }}{35}{figure.caption.50}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Training results for two class problem after 20 epochs\relax }}{36}{figure.caption.51}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Training results for five class problem after 10 epochs\relax }}{37}{figure.caption.53}%
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Training results for five class problem after 20 epochs\relax }}{37}{figure.caption.54}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Localization and Classification of different objects in an image \relax }}{39}{figure.caption.56}%
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Working of YOLO v3 \relax }}{40}{figure.caption.57}%
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Architecture of Darknet-53\relax }}{41}{figure.caption.58}%
-\contentsline {figure}{\numberline {5.5}{\ignorespaces Absolute and Relative dimensions of a bounding box\relax }}{44}{figure.caption.60}%
-\contentsline {figure}{\numberline {5.6}{\ignorespaces Plot of some images from the dataset \relax }}{45}{figure.caption.62}%
-\contentsline {figure}{\numberline {5.7}{\ignorespaces Labelling of images using VoTT \relax }}{45}{figure.caption.63}%
-\contentsline {figure}{\numberline {5.8}{\ignorespaces Output Training log for one iteration \relax }}{50}{figure.caption.73}%
-\contentsline {figure}{\numberline {5.9}{\ignorespaces Plot of loss and mAP for validation data vs number of iterations\relax }}{52}{figure.caption.74}%
-\contentsline {figure}{\numberline {5.10}{\ignorespaces Evaluation Metrices for training data at threshold value of 0.4\relax }}{53}{figure.caption.76}%
-\contentsline {figure}{\numberline {5.11}{\ignorespaces Evaluation Metrices for testing data at threshold value of 0.4\relax }}{53}{figure.caption.77}%
-\contentsline {figure}{\numberline {5.12}{\ignorespaces }}{54}{figure.caption.79}%
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Localization and Classification of different objects in an image \relax }}{40}{figure.caption.56}%
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Working of YOLO v3 \relax }}{41}{figure.caption.57}%
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Architecture of Darknet-53\relax }}{42}{figure.caption.58}%
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Absolute and Relative dimensions of a bounding box\relax }}{45}{figure.caption.60}%
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Plot of some images from the dataset \relax }}{46}{figure.caption.62}%
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Labelling of images using VoTT \relax }}{46}{figure.caption.63}%
+\contentsline {figure}{\numberline {5.8}{\ignorespaces Output Training log for one iteration \relax }}{51}{figure.caption.73}%
+\contentsline {figure}{\numberline {5.9}{\ignorespaces Plot of loss and mAP for validation data vs number of iterations\relax }}{53}{figure.caption.74}%
+\contentsline {figure}{\numberline {5.10}{\ignorespaces Evaluation Metrices for training data at threshold value of 0.4\relax }}{54}{figure.caption.76}%
+\contentsline {figure}{\numberline {5.11}{\ignorespaces Evaluation Metrices for testing data at threshold value of 0.4\relax }}{54}{figure.caption.77}%
+\contentsline {figure}{\numberline {5.12}{\ignorespaces }}{55}{figure.caption.79}%

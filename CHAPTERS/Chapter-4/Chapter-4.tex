@@ -1,31 +1,36 @@
-\chapter{Training \& Testing of the
-Classifier}
+\chapter{Training, Testing and Hyperparameters Tuning of a Multi-class
+Vehicle Classifier}
 \label{Chapter 4}
-Recall from the last chapter that Convolutional Neural Networks (CNNs) are used
-in the training of a model for a classifier. Classification is the process
-of putting a tag on an image from a set of class labels. This chapter is about the
-training of classifier for a dataset of images of five classes.
-The step by step process of training a classifier is explained in detail in this chapter. Results obtained from the testing of the classifier by varying certain parameters are recorded and attached
-in the latter part of the chapter.
+As mentioned in earlier chapters, CNNs are predominantly used for
+image classification and detection in pattern recognition and
+computer vision problems. Recall that classification is the process of putting a tag on
+an image from a set of class labels. This chapter describes in detail
+the process of designing, training, testing and hyper-parameters
+tuning of a a five-class image classifier. The following sections
+cover in detail the step-by-step process of training a five-class vehicles
+classifier. Furthermore, results are tabulated as values of
+hyper-parameters are changed to achieve better test accuracy and reduced
+classification loss.
 \section{Formation of Dataset}
-In deep learning techniques for classification of images, we have
-images examples which are input to to the system for training purposes
-to train a model and then it is tested for a set of images to get
-label from the given classes. This set of images is called dataset.
+Deep learning based image classification works by inputting class
+image examples to a CNN; CNN is then trained for higher test accuracy
+and reduced test loss. The set of images used for this purpose is
+called a dataset.
 The dataset is divided into training and test dataset by a specific ratio.
-
-In this project we have five different classes of vehciles i.e. Bus, Car, Truck, Motorcycle
+In this project we have five different classes of vehicles i.e. Bus, Car, Truck, Motorcycle
 and Hiace. There are a total of 10000 images with 2000 images of each 
 class. These images are downloaded from Google search results and from already available
-datasets and from websites providing licensed free images like Flickr. APIs are available which
-can be used along with a simple Python script to download a lot of images.
+datasets and from websites providing licensed free images like Flickr.
+APIs along with Python
+scripts can be used to download these images from the internet.
 Using matplotlib in python, we can plot some of the images with the output as
 shown in listing \ref{listing:4.1} and plot is attached in figure
 \ref{fig:4.1}.
 \linespread{1.0}
 \begin{listing}[H]
 \begin{minted}[bgcolor=bg,
-    frame = lines,
+    linenos = true,
+    xleftmargin=20pt,
     framesep = 2mm]{python}
 import matplotlib.pyplot as plt
 from matplotlib.image import imread  
@@ -50,35 +55,50 @@ for i in range(9):
   \end{figure}
 
 \subsection{Data Augmentation}
-Increasing the size of dataset makes the deep learning model to learn and classify images more accurately. This problem of lack of sufficient data can be solved using technique of data augmentation which is used to increase the size of available set of images.
-Data augmentation is the process of applying techniques like shifting, flipping, rotating and varying the brightness etc on images to introduce variations among them.
-This technique is used within the code using Keras.
+Training deep learning CNN architectures on larger datasets
+results in more skillful models and improved classification accuracy.
+However, availability of large amount of  class-specific data is a challenge.
+This problem of lack of sufficient data can be solved using
+techniques which expand the size of available data by introducing
+modifications and variations by performing image manipulation.
+Dataaugmentation is the process of applying techniques like shifting, 
+flipping, rotating and varying the brightness etc on images to
+introduce variations in images. The Keras deep learning NN library uses
+ImageDataGenerator
+class to achieve image data augmentation and is used in our code.
+
 \section{Setting of Workspace for the Project}
 There are a lot of images to be processed. To process images, high end GPU is
 needed. Due to unavailability of an Nvidia GPU on the system, we used Google Colab.
 It is an online platform having high end GPUs free provided by Google for training
 up to 12 hours. Enabling a GPU in the notebook settings can accelerate the process of
 training.
-\section{Process of Training}
+\section{Designing and Training of DCNN for Multi-Class Classification}
+In our project we have used Keras for designing, training and testing of 
+DCCN architectures for our multi-class classification problem.
 Keras is one of the leading high level API for neural networks. It contains
 many modules such as layers, cost functions, activation functions, initialization
 schemes and regularization schemes. This project uses Keras for training purposes.
 \subsection{Conversion of Images and Labels to Numpy Arrays}
-After importing all the necessary packages, we are all set to pre process our data.
-Recall to chapter 2, where we studied the basics of an image. In Keras image has two
+After importing all the necessary packages, we are all set to pre-process our data.
+Recall to chapter 2, where we studied the basics of an image. In Keras, an image has two
 representations i.e. (width, height, color\_channels) and (color\_channels, width, height).
-First approach is called as channels first approach and the latter is called as
-channels last approach. We will use the channels last approach.
-First step is to read the images from the folder mounted from Google drive,
-Labels are assigned to classes from 0 to 4. Keras load\_img() loads image from the folder given
-target size. Target size for this project is chosen as 128 by 128. This means width and height,
-both are 128. Color channels for RGB images are 3. Images are then converted to numpy arrays using
+First approach is called as ``channels first approach" and
+the latter is called as ``channels last approach".
+We will use the ``channels last approach".
+
+First step is to read the images from the folder mounted from Google drive.
+Labels are assigned to classes from 0 to 4. Keras load\_img() routine loads image
+from the folder with given target size. Target size for this project is chosen as
+$128 \times 128$. This means that both width and height has a size of 128 pixels.
+There are 3 color channels for RGB images. Images are then converted to numpy arrays using
 Keras img\_to\_array() method. Labels are stored as 0, 1, 2, 3, 4 based on the class of image (as data is renamed).
 A section of code for this implementation is shown in listing \ref{listing:4.2}.
 
 \begin{longlisting}
     \begin{minted}[bgcolor=bg,
-        frame = lines,
+        linenos = true,
+        xleftmargin = 20pt,
         framesep = 2mm]{python}
 folder = '/content/Input_data/'
 images = np.zeros((num_of_images,img_rows,img_cols,color_channels))
@@ -109,16 +129,24 @@ for file in os.listdir(folder):
 \caption{Conversion of Images to Numpy arrays}
 \label{listing:4.2}
 \end{longlisting}
-The images array has a pattern (num\_of\_images, rows, cols, color\_channels). It
-means that it has a shape (10000, 128, 128, 3). This is a 4D tensor. There are 10000
-images with each image having 128, $128\times 3$ matrices i.e. each $128\times 3$ matrix has
-128 rows with each row containing 3 columns with information of 3 colors.
-The labels array is a 1D tensor with 10000 labels.
+In the code listing above ``images" on line 23, is a 4D tensor with
+dimensions (10000, 128, 128, 3) which means that there are 10000
+images with each image having $128\times 128\times 3$ matrices i.e.
+each image has height and width of 128 pixels and 3 RGB channels in a
+3D concurrent space. Also ,in the code listing above,
+``labels", on line 24, is a 1D tensor containing the labels
+for all the 10000 images available in our dataset.
 \subsection{Train-Test Division}
-We have to divide the data into two parts, train and test. The training data
-is used to for training purposes and when the model is trained then it is
-used to test the model using the test images and test labels. We used a ratio of 75\% and
-25\% for train and test respectively. The package used for this purpose is the
+In order to proceed with our DCNN multi-class classification model,
+we need to split our available dataset into two parts, namely test 
+dataset and train dataset. Both datasets have to be mutually-exclusive.
+The train dataset is used for training our designed CNN.
+Training involves three steps; feed forward, back propagation and
+updation of model parameters. Test dataset is used to evaluate the performance
+of our trained model on unseen data. Testing is a single step process
+comprising of feed-forward only and it results in a  class
+prediction for the input image. We used a ratio of 75\% and
+25\% for train and test datasets respectively. The package used for this purpose is the
 Scikit-learn train\_test\_split. Listing \ref{listing:4.3} shows splitting of
 data into train and test.
 
@@ -132,9 +160,9 @@ train_test_split(images, labels, test_size = 0.25, random_state = 42)
 \caption{Train-test split}
 \label{listing:4.3}
 \end{listing}
-There is another technique for splitting of data. We make two directories
-train and test and randomly divide the images into these directories and then
-convert them into numpy array. Here we have first converted the images
+There is another technique for splitting of data. In this technique, we make two directories,
+namely, train and test and we randomly divide the images into these directories and then
+convert them into numpy array. We have first converted the images
 into arrays, split them into train and test and then we can save them back into
 directories by converting them into images from array using PIL from\_array
 function.
@@ -145,7 +173,8 @@ Listing \ref{listing:4.4} illustrates the mean correction.
 
 \begin{listing}[H]
     \begin{minted}[bgcolor=bg,
-        frame = lines,
+        linenos = true,
+        xleftmargin = 20pt,
         framesep = 2mm]{python}
 train_images = train_images.astype('float32') / 255
 test_images = test_images.astype('float32') / 255
@@ -161,15 +190,16 @@ test_labels = to_categorical(test_labels,num_classes)
     \caption{Mean correction}
 \label{listing:4.4}
 \end{listing}
-\noindent The last two lines are categorical labeling for using labels fit for Keras.
-\subsection{Defining the Model}
+\noindent Lines 9 \& 10 shows the categorical labeling for using labels fit for Keras.
+\subsection{CNN Model Architecture for Multi-Class Classification}
 Recall from chapter \ref{Chapter 3}, a CNN model consists of various layers including
 conv2D, Activation, MaxPoooling2D, Flatten and Dense layer. Listing \ref{listing:4.5}
-defines the training Model.
+defines the the architecture of our CNN Model.
 
 \begin{longlisting}
     \begin{minted}[bgcolor=bg,
-        frame = lines,
+        linenos = true,
+        xleftmargin = 20pt,
         framesep = 2mm]{python}
 #Model
 model = Sequential()
@@ -198,7 +228,10 @@ metrics=['accuracy'])
     \caption{Defining the Model}
 \label{listing:4.5}
 \end{longlisting}
-Last three lines defines the compilation process of the Model. 
+\noindent Lines 22 \& 23 define the loss function,
+optimizer type and evaluation metrics used for training our CNN.
+\subsubsection{Loss Function}
+
 For more than two classes, loss is categorical\_crossentropy. For two
 classes it is binary\_crossentropy. There are many optimizers in Keras i.e.
 SGD, Adam, RMSprop, Adamax etc. Here we have used Adam. Accuracy metrics calculates how

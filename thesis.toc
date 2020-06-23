@@ -29,49 +29,50 @@
 \contentsline {subsubsection}{\numberline {3.1.2.2}Max Pooling}{24}{subsubsection.3.1.2.2}%
 \contentsline {subsection}{\numberline {3.1.3}Flatten Layer}{24}{subsection.3.1.3}%
 \contentsline {subsection}{\numberline {3.1.4}Fully Connected Layer}{25}{subsection.3.1.4}%
-\contentsline {chapter}{\numberline {4}Training \& Testing of the Classifier}{26}{chapter.4}%
+\contentsline {chapter}{\numberline {4}Training, Testing and Hyperparameters Tuning of a Multi-class Vehicle Classifier}{26}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Formation of Dataset}{26}{section.4.1}%
 \contentsline {subsection}{\numberline {4.1.1}Data Augmentation}{27}{subsection.4.1.1}%
 \contentsline {section}{\numberline {4.2}Setting of Workspace for the Project}{28}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Process of Training}{28}{section.4.3}%
+\contentsline {section}{\numberline {4.3}Designing and Training of DCNN for Multi-Class Classification}{28}{section.4.3}%
 \contentsline {subsection}{\numberline {4.3.1}Conversion of Images and Labels to Numpy Arrays}{28}{subsection.4.3.1}%
 \contentsline {subsection}{\numberline {4.3.2}Train-Test Division}{29}{subsection.4.3.2}%
 \contentsline {subsection}{\numberline {4.3.3}Mean Correction}{30}{subsection.4.3.3}%
-\contentsline {subsection}{\numberline {4.3.4}Defining the Model}{30}{subsection.4.3.4}%
-\contentsline {subsection}{\numberline {4.3.5}Fitting the Model}{31}{subsection.4.3.5}%
-\contentsline {subsection}{\numberline {4.3.6}Plotting the Accuracy and Loss}{32}{subsection.4.3.6}%
+\contentsline {subsection}{\numberline {4.3.4}CNN Model Architecture for Multi-Class Classification}{31}{subsection.4.3.4}%
+\contentsline {subsubsection}{\numberline {4.3.4.1}Loss Function}{31}{subsubsection.4.3.4.1}%
+\contentsline {subsection}{\numberline {4.3.5}Fitting the Model}{32}{subsection.4.3.5}%
+\contentsline {subsection}{\numberline {4.3.6}Plotting the Accuracy and Loss}{33}{subsection.4.3.6}%
 \contentsline {subsection}{\numberline {4.3.7}Saving Model \& Weights}{33}{subsection.4.3.7}%
-\contentsline {section}{\numberline {4.4}Evaluation of Model}{33}{section.4.4}%
-\contentsline {subsection}{\numberline {4.4.1}Two Class Problem \& Results}{33}{subsection.4.4.1}%
-\contentsline {subsection}{\numberline {4.4.2}Five Class Probem \& Results}{34}{subsection.4.4.2}%
-\contentsline {section}{\numberline {4.5}Graphical User Interface}{37}{section.4.5}%
-\contentsline {section}{\numberline {4.6}Limitations \& Future Work}{37}{section.4.6}%
-\contentsline {chapter}{\numberline {5}Training \& Testing of the Detector}{38}{chapter.5}%
-\contentsline {section}{\numberline {5.1}You Only Look Once (YOLO)}{38}{section.5.1}%
-\contentsline {subsection}{\numberline {5.1.1}YOLO v3}{39}{subsection.5.1.1}%
-\contentsline {subsubsection}{\numberline {5.1.1.1}Darknet53}{40}{subsubsection.5.1.1.1}%
-\contentsline {subsubsection}{\numberline {5.1.1.2}Multi-scale Detector}{40}{subsubsection.5.1.1.2}%
-\contentsline {subsubsection}{\numberline {5.1.1.3}Anchor Boxes}{41}{subsubsection.5.1.1.3}%
-\contentsline {subsubsection}{\numberline {5.1.1.4}Loss Function}{42}{subsubsection.5.1.1.4}%
-\contentsline {section}{\numberline {5.2}Preparation of Dataset}{44}{section.5.2}%
-\contentsline {subsection}{\numberline {5.2.1}Collection of Data}{44}{subsection.5.2.1}%
-\contentsline {subsection}{\numberline {5.2.2}Labelling of Images}{45}{subsection.5.2.2}%
-\contentsline {subsubsection}{\numberline {5.2.2.1}Conversion of labels to YOLO v3 Format}{46}{subsubsection.5.2.2.1}%
-\contentsline {section}{\numberline {5.3}Training of Detector}{46}{section.5.3}%
-\contentsline {subsection}{\numberline {5.3.1}Setting up Environment}{46}{subsection.5.3.1}%
-\contentsline {subsection}{\numberline {5.3.2}Cloning and Building Darknet}{46}{subsection.5.3.2}%
-\contentsline {subsection}{\numberline {5.3.3}Downloading pre-trained weights for transfer learning}{47}{subsection.5.3.3}%
-\contentsline {subsection}{\numberline {5.3.4}Configuring Files for training}{48}{subsection.5.3.4}%
-\contentsline {subsubsection}{\numberline {5.3.4.1}Custom config file}{48}{subsubsection.5.3.4.1}%
-\contentsline {subsubsection}{\numberline {5.3.4.2}Generating train.txt and val.txt}{48}{subsubsection.5.3.4.2}%
-\contentsline {subsubsection}{\numberline {5.3.4.3}.names and .data files}{49}{subsubsection.5.3.4.3}%
-\contentsline {subsection}{\numberline {5.3.5}Training of Model}{50}{subsection.5.3.5}%
-\contentsline {section}{\numberline {5.4}Testing of Detector}{51}{section.5.4}%
-\contentsline {subsection}{\numberline {5.4.1}Evaluation Metrices}{51}{subsection.5.4.1}%
-\contentsline {subsubsection}{\numberline {5.4.1.1}Precision}{51}{subsubsection.5.4.1.1}%
-\contentsline {subsubsection}{\numberline {5.4.1.2}Recall}{51}{subsubsection.5.4.1.2}%
-\contentsline {subsubsection}{\numberline {5.4.1.3}Mean Average Precision}{52}{subsubsection.5.4.1.3}%
-\contentsline {subsection}{\numberline {5.4.2}Testing the Model}{52}{subsection.5.4.2}%
-\contentsline {section}{\numberline {5.5}Limitations and Future Work}{54}{section.5.5}%
-\contentsline {chapter}{Appendices}{56}{section*.80}%
-\contentsline {chapter}{References}{56}{section*.81}%
+\contentsline {section}{\numberline {4.4}Evaluation of Model}{34}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Two Class Problem \& Results}{34}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}Five Class Probem \& Results}{35}{subsection.4.4.2}%
+\contentsline {section}{\numberline {4.5}Graphical User Interface}{38}{section.4.5}%
+\contentsline {section}{\numberline {4.6}Limitations \& Future Work}{38}{section.4.6}%
+\contentsline {chapter}{\numberline {5}Training \& Testing of the Detector}{39}{chapter.5}%
+\contentsline {section}{\numberline {5.1}You Only Look Once (YOLO)}{39}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}YOLO v3}{40}{subsection.5.1.1}%
+\contentsline {subsubsection}{\numberline {5.1.1.1}Darknet53}{41}{subsubsection.5.1.1.1}%
+\contentsline {subsubsection}{\numberline {5.1.1.2}Multi-scale Detector}{41}{subsubsection.5.1.1.2}%
+\contentsline {subsubsection}{\numberline {5.1.1.3}Anchor Boxes}{42}{subsubsection.5.1.1.3}%
+\contentsline {subsubsection}{\numberline {5.1.1.4}Loss Function}{43}{subsubsection.5.1.1.4}%
+\contentsline {section}{\numberline {5.2}Preparation of Dataset}{45}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Collection of Data}{45}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}Labelling of Images}{46}{subsection.5.2.2}%
+\contentsline {subsubsection}{\numberline {5.2.2.1}Conversion of labels to YOLO v3 Format}{47}{subsubsection.5.2.2.1}%
+\contentsline {section}{\numberline {5.3}Training of Detector}{47}{section.5.3}%
+\contentsline {subsection}{\numberline {5.3.1}Setting up Environment}{47}{subsection.5.3.1}%
+\contentsline {subsection}{\numberline {5.3.2}Cloning and Building Darknet}{47}{subsection.5.3.2}%
+\contentsline {subsection}{\numberline {5.3.3}Downloading pre-trained weights for transfer learning}{48}{subsection.5.3.3}%
+\contentsline {subsection}{\numberline {5.3.4}Configuring Files for training}{49}{subsection.5.3.4}%
+\contentsline {subsubsection}{\numberline {5.3.4.1}Custom config file}{49}{subsubsection.5.3.4.1}%
+\contentsline {subsubsection}{\numberline {5.3.4.2}Generating train.txt and val.txt}{49}{subsubsection.5.3.4.2}%
+\contentsline {subsubsection}{\numberline {5.3.4.3}.names and .data files}{50}{subsubsection.5.3.4.3}%
+\contentsline {subsection}{\numberline {5.3.5}Training of Model}{51}{subsection.5.3.5}%
+\contentsline {section}{\numberline {5.4}Testing of Detector}{52}{section.5.4}%
+\contentsline {subsection}{\numberline {5.4.1}Evaluation Metrices}{52}{subsection.5.4.1}%
+\contentsline {subsubsection}{\numberline {5.4.1.1}Precision}{52}{subsubsection.5.4.1.1}%
+\contentsline {subsubsection}{\numberline {5.4.1.2}Recall}{52}{subsubsection.5.4.1.2}%
+\contentsline {subsubsection}{\numberline {5.4.1.3}Mean Average Precision}{53}{subsubsection.5.4.1.3}%
+\contentsline {subsection}{\numberline {5.4.2}Testing the Model}{53}{subsection.5.4.2}%
+\contentsline {section}{\numberline {5.5}Limitations and Future Work}{55}{section.5.5}%
+\contentsline {chapter}{Appendices}{57}{section*.80}%
+\contentsline {chapter}{References}{57}{section*.81}%
