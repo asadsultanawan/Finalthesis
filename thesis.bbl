@@ -107,4 +107,17 @@ J.~Redmon, S.~Divvala, and A.~Farhadi, ``Yolo9000: Better, faster, stronger,''
 J.~Redmon, S.~Divvala, and A.~Farhadi, ``Yolov3: An incremental improvement,''
   04 2018.
 
+\bibitem{chap_5_article:4}
+S.-C. Hsu, C.-L. Huang, and C.-H. Chuang, ``Vehicle detection using simplified
+  fast r-cnn,'' pp.~1--3, 01 2018.
+
+\bibitem{chap_5_article:5}
+K.-H. Chen, T.~Shou, J.~Li, and C.-M. Tsai, ``Vehicles detection on expressway
+  via deep learning: Single shot multibox object detector,'' pp.~467--473, 07
+  2018.
+
+\bibitem{chap_5_article:6}
+Q.~Fan, L.~Brown, and J.~Smith, ``A closer look at faster r-cnn for vehicle
+  detection,'' pp.~124--129, 06 2016.
+
 \end{thebibliography}

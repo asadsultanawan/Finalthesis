@@ -5,10 +5,7 @@ CNNs are types of artificial neural networks used
 for object detection and image classification etc. Neural Networks 
 are brain-inspired set of algorithms that are expected to mimic the working 
 of human brain. Billions of neurons in our brain process information through 
-electrical signals. Dendrites receive external information or stimuli in form of 
-electrical impulses which is further processed in the cell body where it integrates 
-all the signals coming in and the output is carried away to the downstream neurons 
-through Axons \cite{chap_3_article:1}. The neuron chooses to either reject or accept the signal depending on the signal strength. Likewise, an artificial neural network has large  number of interconnected nodes called as neurons. The computational node and cell body of neuron works in kind of a similar way where we have large number of signals coming as inputs to neuron. Each signal has a weight W associated with it and the 
+electrical signals. Dendrites receive external information or stimuli in the form of electrical impulses which are further processed in the cell body. The neuron integrates all the signals coming in and the output is carried away to the downstream neurons through Axons \cite{chap_3_article:1}. The neuron chooses to either reject or accept the signal depending on the signal strength. Likewise, an artificial neural network has large  number of interconnected nodes called neurons. The computational node and cell body of neuron works in kind of a similar way where we have large number of signals coming as inputs to neuron. Each signal has a weight W associated with it and the 
 summation of these weighted inputs is passed to the activation function where 
  non-linearity is introduced in the output. Neural networks have the ability to gradually 
 update the weights of the interconnections of the neuron until desirable results 
@@ -22,12 +19,11 @@ are obtained during the training phase of network.
 \end{figure}
 
 These neurons or computational nodes are organized 
-into layer where there are highly interconnected to the neurons 
-of following layer. The input layer of the feed forward neural 
-networks feeds the information to the network and no kind of mathematical 
-computation is performed. The hidden layer also known as distillation layer 
+into layers. The neurons in each preceding layer are interconnected to the neurons of following layer. The input layer of the feed forward neural 
+networks feeds the information to the network and mathematical 
+computation is performed on this layer. The hidden layer also known as distillation layer 
 acts like a cell body and performs computation to extract salient features and 
-patterns from the input data. Figure \ref{fig:3.2} a simple 
+patterns from the input data. Figure \ref{fig:3.2} illustrates a simple 
 feed forward neural network having one 
 hidden layer \cite{chap_3_article:2}.
 The output layer simply provides the results for given information. 
@@ -42,14 +38,12 @@ The output layer simply provides the results for given information.
 The pixels of the image are arranged in a particular 
 way i.e. the appearance of the picture will be changed 
 if we change the coordinate of one pixel. However, simple feed 
-forward neural network loses to learn the inherent spatial 
+forward neural network is unable to learn the inherent spatial 
 relationships within images and fails to extract high level features 
-needed for image classification. CNNs are types 
+needed for image classification. CNNs are class
 of neural networks that learn visual filters to recognize higher level 
-image features and the spatial information is preserved. As a result, you 
-end up learning this hierarchy of filters where filters at the early stage 
-usually represents low level features like edge detection, gradient orientation 
-and learning more and more complex features in the later stages.
+image features and the spatial information is preserved. As a result, CNN ends up learning this hierarchy of filters where filters at the early stage 
+usually represents low level features like edge detection, gradient orientation; and filters in the later stages represent more complex features specific to the image.
 
 \section{Convolutional Neural Networks Architecture}
 
@@ -66,11 +60,11 @@ architecture of CNNs with two convolutional layers is shown in \ref{fig:3.3} \ci
 \subsection{Convolutional Layer}
 Convolutional layers are integral part of CNNs and when these layers are stacked
 together, we start extracting more simple 
-features and then aggregating these into more complex features later 
-on. There is a set of learnable filters also called as kernels whose
-height and width are smaller than the input image and always extend 
+features. These features are aggregated into more complex features later 
+on. There is a set of learnable filters also called kernels having
+height and width smaller than the input image. These filters extend 
 to the full depth of the input volume. We slide the filter over entire 
-image to perform the operation of convolution i.e. multiplying each element of input image with the feature detector. The resultants are 
+image to perform the operation of convolution i.e. multiplying each element of input image with the filter weights. The resultants are 
 summed up and the value is assigned to the top left corner of receptive field 
 as shown in figure 3.4 \cite{chap_3_article:4}.
 
@@ -83,10 +77,10 @@ as shown in figure 3.4 \cite{chap_3_article:4}.
 
 The kernel window slides right or downward by a 
 certain value known as stride value in each step and we repeat the process
-whole image is processed. Stride value of
+till the whole image is processed. Stride value of
 1 moves the filter 1 pixel in each step. This results in a feature map with 
-much smaller size than the input image and keeps on shrinking at every layer 
-which is usually not desirable. Thus, dimensionality of the input image can be 
+much smaller size than the input image. The size of the resultant feature map keeps on shrinking at every layer 
+which may not be  desirable. However, dimensionality of the input image can be 
 preserved by padding zero-pixel values across every side of image.
 
 \begin{figure}[H]
@@ -112,7 +106,7 @@ shows the no. of filters applied on the image.
 
 \subsubsection{Activation Functions}
 
-It is like mathematical function that we apply to every neuron present in the network and it decides that whether to activate the neuron 
+An activation function is a mathematical function that is applied  to every neuron present in the network and it decides whether to activate the neuron 
 or not depending on how much neuron’s input is relevant to model’s prediction. 
 In this way, a non-linearity is introduced in the output with the help of activation function. Without activation function, our network will be reduced to a simple 
 regression model which would be unable to model and learn complex and complicated 
@@ -128,12 +122,12 @@ function should have the following properties:
 \end{itemize}
 
 \paragraph*{Sigmoid Function:}
-A sigmoid function can be represented by the mathematical function:
+A sigmoid function is represented by the mathematical function:
 \begin{equation}
 	sig(z) = \frac{1}{1+e^{-z}}
 \end{equation}
 This function takes input a real value and squeezes 
-it between 0 and -1 i.e. very large values. It is often called
+it between 0 and -1. It is often called
 as squashing function as the large negative and positive 
 values becomes 0 and 1 respectively \cite{chap_3_article:5} . But the sigmoid function 
 output is not zero-centered, and it also kills the neurons as function 
@@ -147,12 +141,11 @@ not preferred in neural networks because of these drawbacks.
 	\label{fig:3.7}
 \end{figure}
 \paragraph*{Tanh Function:}
-A tanh sigmoid function can be represented by the following mathematical function:
+A tanh sigmoid function is represented by the following mathematical function:
 \begin{equation}
 	tanh(z) = \frac{e^{z}-e^{-z}}{e^{z}+e^{-z}}
 \end{equation}
-
-It takes the real input value and squashed it between -1 and 1 i.e. very 
+It takes the real input value and squashes it between -1 and 1 i.e. very 
 large negative and positive values are mapped into -1 and 1 respectively \cite{chap_3_article:5}. As 
 a result, this non-linear activation function gives zero-mean data, but it 
 still gets saturated at higher values as shown in \ref{fig:3.8}. However, tanh 
@@ -171,7 +164,6 @@ ReLU stands for Rectified Linear unit and is represented by the following equati
 \begin{equation}
 	ReLU(z) = max(0,z)
 \end{equation}
-
 It takes real values as an input and sets all the negative 
 values equal to zero \cite{chap_3_article:3}. It is computationally very efficient as no 
 complicated math need to be performed. And it is the most frequently used 
@@ -181,7 +173,7 @@ functions. However, the function doesn’t get saturated for larger values of
 inputs, but the neurons often stuck in a negative side giving zero local gradient 
 and neuron will never get a chance to update in gradient descent learning process. 
 This problem is also known as dying ReLU and it often occurs due to high learning 
-rate or there is a large negative bias. Leaky ReLU can be used to avoid this 
+rate or a large negative bias. Leaky ReLU can be used to avoid this 
 situation. Leaky ReLU is very similar to original ReLU and the only difference 
 is that now instead of being flat in the negative regime, we are going to give 
 slight negative slope here. This solves a lot of problems we mentioned earlier
@@ -217,8 +209,7 @@ as it doesn’t saturate in the negative space and still very computationally ef
 \subsection{Pooling Layer}
 Pooling layer follows the non-linear function introduced in convolutional layer 
 in CNN. It simply down samples the feature map to 
-speed up the computation as well as make some of the features it detects a bit 
-more robust \cite{chap_3_article:4}. Rest of the operations will be performed on the summarized features so that the feature map is no more sensitive to the
+speed up the computation as well as make some of the detected features a bit more robust \cite{chap_3_article:4}. Rest of the operations will be performed on the summarized features so that the feature map is no more sensitive to the
  precise location of features in the input. Two most 
 commonly used pooling techniques are described below:
 
@@ -275,4 +266,4 @@ classes are obtained using Softmax activation function which simply squashes the
 Thus we conclude that CNNs are divided into two separate categories i.e. feature learning and classification. In feature learning part,
  data is passed through convolutional layer, activation function and pooling layer over and over again to extract several types
 of features from the images. The resulting feature matrix is passed to classification
-layer where it is flattened to a single vector and get probability for each class as an output of fully connected layer.
+layer where it is flattened to a single vector and generates probability for each class as an output of fully connected layer.

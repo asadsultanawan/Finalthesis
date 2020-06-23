@@ -1,4 +1,3 @@
 \begin{Verbatim}[commandchars=\\\{\}]
 \PYG{err}{!}\PYG{o}{./}\PYG{n}{darknet} \PYG{n}{detector} \PYG{n}{train} \PYG{n}{data}\PYG{o}{/}\PYG{n}{yolo}\PYG{o}{.}\PYG{n}{data} \PYG{n}{cfg}\PYG{o}{/}\PYG{n}{yolov3\PYGZus{}custom}\PYG{o}{.}\PYG{n}{cfg} \PYG{n}{darknet53}\PYG{o}{.}\PYG{n}{conv}\PYG{o}{.}\PYG{l+m+mi}{74}
-\PYG{o}{\PYGZhy{}}\PYG{n}{dont\PYGZus{}show}
 \end{Verbatim}
