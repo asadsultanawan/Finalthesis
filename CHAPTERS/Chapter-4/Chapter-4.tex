@@ -5,9 +5,9 @@ As mentioned in earlier chapters, CNNs are predominantly used for
 image classification and detection in pattern recognition and
 computer vision problems. Recall that classification is the process of putting a tag on
 an image from a set of class labels. This chapter describes in detail
-the process of designing, training, testing and hyper-parameters
-tuning of a a five-class image classifier. The following sections
-cover in detail the step-by-step process of training a five-class vehicles
+the process of designing, training, testing, and hyper-parameters
+tuning of a five-class image classifier. The following sections
+cover in detail the step-by-step process of training a five-class vehicle
 classifier. Furthermore, results are tabulated as values of
 hyper-parameters are changed to achieve better test accuracy and reduced
 classification loss. An overview of the system is given in
@@ -25,10 +25,8 @@ Deep learning based image classification works by inputting class
 image examples to a CNN; CNN is then trained for higher test accuracy
 and reduced test loss. The set of images used for this purpose is
 called a dataset.
-The dataset is divided into training and test dataset by a specific ratio.
-In this project we have five different classes of vehicles i.e. Bus, Car, Truck, Motorcycle
-and Hiace. There are a total of 10000 images with 2000 images of each 
-class. These images are downloaded from Google search results and from already available
+The dataset is divided into training and test datasets by a specific ratio.
+In this project, we have five different classes of vehicles i.e., Bus, Car, Truck, Motorcycle, and Hiace. There are a total of 10000 images with 2000 images of each class. These images are downloaded from Google search results and already available
 datasets and from websites providing licensed free images like Flickr.
 APIs along with Python
 scripts can be used to download these images from the internet.
@@ -64,44 +62,44 @@ for i in range(9):
   \end{figure}
 
 \subsection{Data Augmentation}
-Training deep learning CNN architectures on larger datasets
+Training deep learning CNN architectures on more massive datasets
 results in more skillful models and improved classification accuracy.
-However, availability of large amount of  class-specific data is a challenge.
+However, the availability of a large amount of class-specific data is a challenge.
 This problem of lack of sufficient data can be solved using
 techniques which expand the size of available data by introducing
 modifications and variations by performing image manipulation.
-Dataaugmentation is the process of applying techniques like shifting, 
-flipping, rotating and varying the brightness etc on images to
+Data augmentation is the process of applying techniques like shifting, 
+flipping, rotating and varying the brightness, etc. on images to
 introduce variations in images. The Keras deep learning NN library uses
 ImageDataGenerator
 class to achieve image data augmentation and is used in our code.
 
 \section{Setting of Workspace for the Project}
-There are a lot of images to be processed. To process images, high end GPU is
-needed. Due to unavailability of an Nvidia GPU on the system, we used Google Colab.
-It is an online platform having high end GPUs free provided by Google for training
+There are a lot of images to be processed. To process images, a high-end GPU is
+needed. Due to the unavailability of an Nvidia GPU on the system, we used Google Colab.
+It is an online platform with high-end GPUs free provided by Google for training
 up to 12 hours. Enabling a GPU in the notebook settings can accelerate the process of
 training.
 \section{Designing and Training of DCNN for Multi-Class Classification}
-In our project we have used Keras for designing, training and testing of 
+In our project, we have used Keras for designing, training, and testing of 
 DCCN architectures for our multi-class classification problem.
-Keras is one of the leading high level API for neural networks. It contains
-many modules such as layers, cost functions, activation functions, initialization
-schemes and regularization schemes. This project uses Keras for training purposes.
+Keras is one of the leading high-level API for neural networks. It contains
+modules such as layers, cost functions, activation functions, initialization
+schemes, and regularization schemes. 
 \subsection{Conversion of Images and Labels to Numpy Arrays}
 After importing all the necessary packages, we are all set to pre-process our data.
 Recall to chapter 2, where we studied the basics of an image. In Keras, an image has two
-representations i.e. (width, height, color\_channels) and (color\_channels, width, height).
-First approach is called as ``channels first approach" and
-the latter is called as ``channels last approach".
+representations, i.e. (width, height, color\_channels) and (color\_channels, width, height).
+The first approach is called ``channels first approach," and
+the latter is called ``channels last approach."
 We will use the ``channels last approach".
 
-First step is to read the images from the folder mounted from Google drive.
+The first step is to read the images from the folder mounted from Google drive.
 Labels are assigned to classes from 0 to 4. Keras load\_img() routine loads image
-from the folder with given target size. Target size for this project is chosen as
-$128 \times 128$. This means that both width and height has a size of 128 pixels.
-There are 3 color channels for RGB images. Images are then converted to numpy arrays using
-Keras img\_to\_array() method. Labels are stored as 0, 1, 2, 3, 4 based on the class of image (as data is renamed).
+from the folder with a given target size. The target size for this project is chosen as
+$128 \times 128$. This means that both width and height have a size of 128 pixels.
+There are 3 color channels for RGB images. Images are then converted to NumPy arrays using
+Keras img\_to\_array() method. Labels are stored as 0, 1, 2, 3, 4, based on the class of image (as data is renamed).
 Figure \ref{fig:class_labels} shows all the classes and corresponding labels.
 
 \begin{figure}[H]
@@ -149,30 +147,30 @@ for file in os.listdir(folder):
 \caption{Conversion of Images to Numpy arrays}
 \label{listing:4.2}
 \end{longlisting}
-In the code listing above ``images" on line 23, is a 4D tensor with
+In the code listing above, ``images" on line 23, is a 4D tensor with
 dimensions (10000, 128, 128, 3) which means that there are 10000
 images with each image having $128\times 128\times 3$ matrices i.e.
-each image has height and width of 128 pixels and 3 RGB channels in a
-3D concurrent space. Also ,in the code listing above,
+each image has a height and width of 128 pixels and 3 RGB channels in a
+3D concurrent space. Also, in the code listing above,
 ``labels", on line 24, is a 1D tensor containing the labels
 for all the 10000 images available in our dataset.
 \subsection{Train-Test Division}
-In order to proceed with our DCNN multi-class classification model,
-we need to split our available dataset into two parts, namely test 
-dataset and train dataset. Both datasets have to be mutually-exclusive.
-The train dataset is used for training our designed CNN.
-Training involves three steps; feed forward, back propagation and
-updation of model parameters. Test dataset is used to evaluate the performance
+To proceed with our DCNN multi-class classification model,
+we need to split our available dataset into two parts, namely test dataset and train dataset. Both datasets have to be mutually exclusive.
+The training dataset is used for training our designed CNN.
+Training involves three steps; feed-forward, backpropagation, and
+updation of model parameters. The test dataset is used to evaluate the performance
 of our trained model on unseen data. Testing is a single step process
-comprising of feed-forward only and it results in a  class
+comprising of feed-forward only, and it results in a  class
 prediction for the input image. We used a ratio of 75\% and
-25\% for train and test datasets respectively. The package used for this purpose is the
-Scikit-learn train\_test\_split. Listing \ref{listing:4.3} shows splitting of
+25\% for train and test datasets, respectively. The package used for this purpose is the
+Scikit-learn train\_test\_split. Listing \ref{listing:4.3} shows the splitting of
 data into train and test.
 
 \begin{listing}[H]
     \begin{minted}[bgcolor=bg,
-        frame = lines,
+        linenos = true,
+        xleftmargin = 20pt,
         framesep = 2mm]{python}
 train_images, test_images, train_labels, test_labels = 
 train_test_split(images, labels, test_size = 0.25, random_state = 42)
@@ -188,7 +186,7 @@ directories by converting them into images from array using PIL from\_array
 function.
 
 \subsection{Mean Correction}
-After converting to float 32 and normalizing by 255, we have to subtract mean pixel.
+After converting to float 32 and normalizing by 255, we have to subtract the mean pixel.
 Listing \ref{listing:4.4} illustrates the mean correction.
 
 \begin{listing}[H]
@@ -250,41 +248,49 @@ model.add(Dropout(0.5))
 model.add(Dense(num_classes))
 model.add(Activation('softmax'))
 
-model.compile(loss='categorical_crossentropy', optimizer='adam',
+model.compile(loss='binary_crossentropy', optimizer='adam',
 metrics=['accuracy'])
     \end{minted}
     \caption{Defining the Model}
 \label{listing:4.5}
 \end{longlisting}
 \noindent Lines 22 \& 23 define the loss function,
-optimizer type and evaluation metrics used for training our CNN.
-\subsubsection{Loss Function}
-
-For more than two classes, loss is categorical\_crossentropy. For two
-classes it is binary\_crossentropy. There are many optimizers in Keras i.e.
-SGD, Adam, RMSprop, Adamax etc. Here we have used Adam. Accuracy metrics calculates how
+optimizer type, and evaluation metrics used to train our CNN.
+\subsubsection*{Loss Function}
+Loss functions used in Keras are probabilistic and regression losses. 
+Among probabilistic losses, we have used binary\_crossentropy and
+categorical\_crossentropy. Binary\_crossentropy and categorical\_crossentropy
+compute the cross-entropy loss between the labels and predictions.
+For two classes, we use binary\_crossentropy, and for more than two classes, we use categorical\_crossentropy. For two
+classes, it is binary\_crossentropy. 
+\subsubsection*{Optimizers}
+One of the two arguments for compiling the Keras model is
+an optimizer. There are many optimizers in Keras i.e.
+SGD, Adam, RMSprop, Adamax, etc. For two classes, we have used Adam. For five classes,
+we have used RMS prop.
+\subsubsection*{Accuracy Metrics}
+Accuracy metrics calculate how
 often prediction equals labels.
 \subsection{Fitting the Model}
 Here the process of training starts. We have two functions used in Keras. One
 is `model.fit' and other is `model.fit\_generator'. We have implemented data augmentation using a\
 in our code using an if-else logic. We have also defined a validation set.
-Validation data evalautes the behavior of the trained model to an unseen data.
+Validation data evaluates the behavior of the trained model to unseen data.
 
 An `epoch' is defined as a ``complete pass over an entire dataset" during the training process.
 We have to determine the specific number of epochs for which the training process has to
-run. If we pass over the entire dataset too many times,
-it may result it increased training accuracy and reduced training loss
-but it may also result in reduced validation accuracy and higher validation loss.
+run. If we pass over the entire dataset too often,
+it may increase training accuracy and reduced training loss. Still, it may also result in reduced validation accuracy and higher validation loss.
 This specific scenario where validation accuracy is lower
-than training accuracy or validation loss is higher  than
+than training accuracy or validation loss is higher than
 training loss is called ``overfitting''. Over-fitting means that our
-CNN model has actually memorized the training examples or ``seen data"
+CNN model has memorized the training examples or ``seen data."
 instead of learning discernable parameters from it,
-and it will not work well on `unseen data'. We have to avoid the overfitting. For this we have to search for
+and it will not work well on `unseen data.' We have to avoid overfitting. For this, we have to search for
 optimum values hyper-parameters of or model such as epochs,
 batch size, optimizers, convolutional layers,
-layer filters,filter sizes, drop-out layers etc.
-Listing \ref{listing:4.6} shows the code for training process.
+layer filters, filter sizes, drop-out layers, etc.
+Listing \ref{listing:4.6} shows the code for the training process.
 
 \begin{longlisting}
     \begin{minted}[bgcolor=bg,
@@ -359,10 +365,9 @@ plt.show()
 \end{longlisting}
 
 \subsection{Saving Model \& Weights}
-After successful training of model, we have to resuse it
+After successful training of the model, we have to reuse it
 at evaluation or testing time. For this, the trained model is saved to our disk.
-At testing time, this model can be loaded into Keras 
-from our workspace. The Model is stored as .h5 file in the root directory.
+At testing time, this model can be loaded into Keras from our workspace. The Model is stored as .h5 file in the root directory.
 Listing \ref{listing:4.8} shows the script for saving the weights.
 
 \begin{listing}[H]
@@ -408,9 +413,8 @@ print('Accuarcy of the model:', test_acc)
 We started with two class problem, Bus \& Car and recorded the results from 5
 to 30 epochs.
 The loss was binary\_crossentropy in this case. 
-The training accuracy recorded after 25 epochs was 95.77\% and training
-loss was 0.1269. The test set was choosen as validation data and validation accuracy after 5 epochs 
-was 95.40\% and validation loss was 0.1271.
+The training accuracy recorded after 25 epochs were 95.77\%, and training
+loss was 0.1269. The test set was chosen as validation data, and validation accuracy after five epochs was 95.40\%, and validation loss was 0.1271.
 After 25 epochs for this model, the validation loss increases which indicate
 that we have to train that model up to 20 epochs. The values of training
 and validation accuracy \& training and validation loss
@@ -419,25 +423,25 @@ are tabulated in table \ref{table:4.1}.
 \begin{table}[H]
     \caption{Results for binary class vehicle classifier}
     \label{table:4.1}
-	  \begin{center}
-		\scalebox{0.85}
-		{\begin{tabular}{|l |l |l |l |l |l |}
-		\hline
-		S.No & Number of epochs & Training accuracy & Validation accuracy & Training loss & Validation loss\\ \hline
-		1  & 5 & 0.8783 & 0.9140 & 0.3083 & 0.2398
-		\\ \hline
-		2  & 10 & 0.9040 & 0.9440 & 0.2538 & 0.1585 
-		\\ \hline
-		3   & 15 & 0.9197  &  0.9410 & 0.2029 & 0.1652
+      \begin{center}
+        \scalebox{0.85}
+        {\begin{tabular}{|l |l |l |l |l |l |}
+        \hline
+        S.No & Number of epochs & Training accuracy & Validation accuracy & Training loss & Validation loss\\ \hline
+        1  & 5 & 0.8783 & 0.9140 & 0.3083 & 0.2398
+        \\ \hline
+        2  & 10 & 0.9040 & 0.9440 & 0.2538 & 0.1585 
+        \\ \hline
+        3   & 15 & 0.9197  &  0.9410 & 0.2029 & 0.1652
         \\ \hline %
         4   & 20 &  0.9513 & 0.9650  &0.1408  & 0.0882
         \\ \hline %
         5   & 25 &  0.9577 & 0.9540  &0.1269  & 0.1271
         \\ \hline %
         6   & 30 &  0.9593 & 0.9550  &0.1126  & 0.1337
-		\\ \hline %
-		\end{tabular}}
-	  \end{center}
+        \\ \hline %
+        \end{tabular}}
+      \end{center}
 \end{table}
 \noindent The plot of training and validation accuracy and training and validation
 losses for 30 epochs are plotted using Python matplotlib shown in figure \ref{fig:4.4}.
@@ -459,14 +463,13 @@ losses for 30 epochs are plotted using Python matplotlib shown in figure \ref{fi
 
 
 \subsection{Five Class Probem \& Results}
-We started with two class problem and extended the model to five classes
-which is our desired task. The loss function in this case is categorical\_crossentropy.
+We started with a two-class problem and extended the model to five classes, our desired task. The loss function, in this case, is categorical\_crossentropy.
 The model used for five class is a customized VGG-16. The details of the
 model are shown in figure \ref{model_summary}.
 \begin{figure}[H]
     \centering
     \captionsetup{justification = centering}
-    \includegraphics[scale = 0.8]{CHAPTERS/Chapter-4/Images/summary.jpg}
+    \includegraphics[scale = 0.85]{CHAPTERS/Chapter-4/Images/summary.jpg}
     \caption{Model architecture for five class vehicle classifier} 
     \label{model_summary}
 \end{figure}
@@ -493,41 +496,38 @@ figure \ref{fig:4.6}.
     \label{fig:4.6}
   \end{figure}
   The loss was categorical\_crossentropy in this case. 
-  The training accuracy recorded after 20 epochs was 90.2\% and training
-  loss was 0.2778. The test set was choosen as validation data and
-  validation accuracy after 20 epochs 
-  was 90.16\% and validation loss was 0.2675.
+  The training accuracy recorded after 20 epochs were 90.2\%, and training loss was 0.2778. The test set was chosen as validation data, and validation accuracy after 20 epochs was 90.16\%, and validation loss was 0.2675.
   The values of training
   and validation accuracy \& training and validation loss
-  against number of epochs for five class vehicle classifier
+  against the number of epochs for five class vehicle classifier
   are tabulated in table \ref{table:4.2}.
 
 \begin{table}[H]
     \caption{Results for five class vehicle classifier}
     \label{table:4.2}
-	  \begin{center}
-		\scalebox{0.85}
-		{\begin{tabular}{|l |l |l |l |l |l |}
-		\hline
-		S.No & Number of epochs & Training accuracy & Validation accuracy & Training loss & Validation loss\\ \hline
-		1  & 5 & 0.6689 & 0.7644 & 0.8381 & 0.6587
-		\\ \hline
-		2  & 10 & 0.8253 & 0.8680 & 0.4851 & 0.3689
+      \begin{center}
+        \scalebox{0.85}
+        {\begin{tabular}{|l |l |l |l |l |l |}
+        \hline
+        S.No & Number of epochs & Training accuracy & Validation accuracy & Training loss & Validation loss\\ \hline
+        1  & 5 & 0.6689 & 0.7644 & 0.8381 & 0.6587
+        \\ \hline
+        2  & 10 & 0.8253 & 0.8680 & 0.4851 & 0.3689
         \\ \hline %
         3   & 15 &  0.8741 & 0.8928  &0.3639  & 0.3084
         \\ \hline %
         4   & 20 &  0.9020 & 0.9016  &0.2778  & 0.2675
         \\ \hline %
-		\end{tabular}}
-	  \end{center}
+        \end{tabular}}
+      \end{center}
 \end{table}
 
 \section{Graphical User Interface}
-In order to observe the results visually we have developed a Graphical User
-Interface (GUI) using tkinter package of 
+To observe the results visually, we have developed a Graphical User
+Interface (GUI) using the Tkinter package of 
 Python. The test images are given as inputs to our trained
-model one-by-one and corresponding labels are generated.
-Since we cannot run tkinter on Google Colab,
+model one-by-one, and corresponding labels are generated.
+Since we cannot run Tkinter on Google Colab,
 so we saved our trained model in the local disk of our computer.
 To visually display the testing results, all the images in the test dataset are used as inputs to the trained model that we have loaded  from our workspace
 and the predicted class labels are displayed on the GUI accordingly.
@@ -560,37 +560,37 @@ figure \ref{fig:4.7}.
 \begin{table}[H]
     \caption{Comparison of our DCNN based classifier with other methods}
     \label{table:4.3}
-	  \begin{center}
-		\scalebox{1.05}
-		{\begin{tabular}{|l |l |l |l |l |l |}
-		\hline
-		S.No & Method & Author & Accuarcy \\ \hline
-		1  & HOG based classification & Gandhi \& Trivedi, 2007 & 64.3 \%
-		\\ \hline
-		2  & Shape based approach & Morris \& Trivedi, 2006a & 88.4 \% 
+      \begin{center}
+        \scalebox{1.05}
+        {\begin{tabular}{|l |l |l |l |l |l |}
+        \hline
+        S.No & Method & Author & Accuarcy \\ \hline
+        1  & HOG based classification & Gandhi \& Trivedi, 2007 & 64.3 \%
+        \\ \hline
+        2  & Shape based approach & Morris \& Trivedi, 2006a & 88.4 \% 
         \\ \hline %
         3   & Magnetic sensor signal &  Saowaluck Kaewkamnerd et al. & 81.69 \% 
         \\ \hline %
-        4   & Our DCNN based method &   & 90.16 \%
+        4   & DCCN based  & Our Model & 90.16 \%
         \\ \hline %
-		\end{tabular}}
-	  \end{center}
+        \end{tabular}}
+      \end{center}
 \end{table}
 
 \section{Limitations \& Future Work}
 
-For binary classification problem, the proposed model does not work on high resolution images.
-Processing high resolution imagery might be a requirement in biomedical imaging,
-since changing resolution might change the
-local and global parameters content in the image. For high resolution images, we use Res-Net architecture which is complex and
+For a binary classification problem, the proposed model does not work on high-resolution images.
+Processing high-resolution imagery might be a requirement in biomedical imaging
+since changing resolution might change the content of the
+local and global parameters in the image. For high-resolution images, we use Res-Net architecture, which is complex and
 requires high computational power. We have used a variant of VGG-16 for
-our five class problem. Highly complex model may cause overfitting.
-For future work, the detailed study
-about tuning of hyperparameters is included.
-Problem of overfitting can be eliminated by performing an
+our five class problem. A highly complex model may cause overfitting.
+For future work, a detailed study
+about the tuning of hyperparameters is included.
+The problem of overfitting can be eliminated by performing an
 extensive search over hyper-parameters space to obtain optimum 
 values of these parameters for our model.
-Hyper-parameters include, no of convolutional layers, layer filters,
-filter depth, pooling type, activation functions, length and number
-of dense layers, drop-outs, batch-size,epochs, optimizers and loss
+Hyper-parameters include no of convolutional layers, layer filters,
+filter depth, pooling type, activation functions, length, and number
+of dense layers, drop-outs, batch-size, epochs, optimizers and loss
 functions etc.

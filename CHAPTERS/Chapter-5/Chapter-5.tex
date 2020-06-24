@@ -1,11 +1,11 @@
 \chapter{Training \& Testing of the
 Detector}
 \label{Chapter 5}
-In this chapter we are going to discuss the training and testing of a detector. Detection is a process of identifying and localizing an object present within an image i.e. where and what are the objects present in an image. Many state-of-the-art algorithms exist for object detection such as RCNN, Fast RCNN, Faster RCNN, YOLO and SSD etc. YOLO is considered faster and more accurate amongst the object detectors mentioned here. Before discussing training and testing of an object detector, YOLO  is explained in detail.
+In this chapter, we are going to discuss the training and testing of a detector. Detection is a process of identifying and localizing an object present within an image i.e., where and what are the objects present in an image. Many state-of-the-art algorithms exist for object detection such as RCNN, Fast RCNN, Faster RCNN, YOLO, SSD, etc. YOLO is considered faster and more accurate amongst the object detectors mentioned here. Before discussing the training and testing of an object detector, YOLO  is explained in detail.
 \section{You Only Look Once (YOLO)}
-YOLO is a real time, state-of-the-art object detection algorithm. Unlike other object detection algorithms that use the region based and sliding window techniques, YOLO reads the whole image all at once during training and testing making it extremely fast as compared to other algorithms. The whole image is divided into total of $S \times S$ grids. Image classification and localization is applied on each grid.If there are $N$ classes in the image, YOLO will predict N bounding boxes for each class. Each bounding box is associated with the probability of the object it has detected. In this way, bounding boxes with less probability of having the required object are removed and we get a single box in the end from the remaining bounding boxes with the most shaded area as shown in figure \ref{fig:5.1}.
+YOLO is a real-time, state-of-the-art object detection algorithm. Unlike other object detection algorithms that use the region-based and sliding window techniques, YOLO reads the whole image all at once during training and testing, making it extremely fast compared to other algorithms. The entire picture is divided into a total of $S \times S$ grids. Image classification and localization are applied on each grid. If there are $ N $ classes in the image, YOLO will predict N bounding boxes. Each bounding box is associated with the probability of the object it has detected. In this way, bounding boxes with less probability of having the required object are removed, and we get a single box in the end from the remaining bounding boxes with the most shaded area, as shown in figure \ref{fig:5.1}.
 
-The first version i.e. YOLO v1 has 24 convolutional layers and 2 fully connected layers. One of the major disadvantages of this version is its disability to detect very small objects \cite{chap_5_article:1}. So, a 30 layered YOLO v2 version was introduced after some time and  layers of batch normalization were introduced after every convolutional layer in this model. The fully connected layers were removed and anchor boxes to enable multiple detection in an image were introduced \cite{chap_5_article:2}. In case there lies more than one objects to be detected in the same grid cell, then these anchor boxes help the grid cells to detect multiple objects. After two years, the third version is introduced that takes us to YOLO v3 which we are using in this project.
+The first version i.e., YOLO v1, has 24 convolutional layers and two fully connected layers. One of the major disadvantages of this version is its disability to detect very small objects \cite{chap_5_article:1}. So, a 30 layered YOLO v2 version was introduced after some time, and layers of batch normalization were introduced after every convolutional layer in this model. The fully connected layers were removed, and anchor boxes to enable multiple detections in an image were introduced \cite{chap_5_article:2}. In case there lies more than one object to be detected in the same grid cell, then these anchor boxes help the grid cells to detect multiple objects. After two years, the third version is introduced that takes us to YOLO v3, which we are using in this project.
 \begin{figure}[H]
     \centering
     \captionsetup{justification = centering}
@@ -14,7 +14,7 @@ The first version i.e. YOLO v1 has 24 convolutional layers and 2 fully connected
     \label{fig:5.1}
   \end{figure}
   \subsection{YOLO v3}
-  It is latest version of YOLO with lot of improvements over the previous networks. It is considered to be three times faster than SSD (Single Shot Detector) giving the same accuracy. To understand the working, whole model can be split into two parts i.e. feature extractor and detector. YOLO v3 has total of 53 convolutional layers in feature extractor part also known as Darknet-53. First, the image goes through the feature extractor. As a result, feature maps at three different scales are obtained. These feature maps are then fed to branches of detector and we get the final output in the form of class information and bounding boxes as shown in figure \ref{fig:5.2} \cite{chap_5_article:3}.
+  It is the latest version of YOLO, with a lot of improvements over the previous networks. It is considered three times faster than SSD (Single Shot Detector), giving the same accuracy. To understand the working, the whole model can be split into two parts i.e., feature extractor and detector. YOLO v3 has a total of 53 convolutional layers in the feature extractor part, also known as Darknet-53. First, the image goes through the feature extractor. As a result, feature maps at three different scales are obtained. These feature maps are then fed to branches of the detector, and we get the final output in the form of class information and bounding boxes, as shown in figure \ref{fig:5.2} \cite{chap_5_article:3}.
   \begin{figure}[H]
     \centering
     \captionsetup{justification = centering}
@@ -22,10 +22,10 @@ The first version i.e. YOLO v1 has 24 convolutional layers and 2 fully connected
     \caption{Working of YOLO v3 } 
     \label{fig:5.2}
   \end{figure}
-  \subsubsection{Darknet53}
-    Darknet-53 has total of 53 convolutional layers in the feature extractor part and its architecture is shown in figure \ref{fig:5.3}. The whole architecture of darknet-53 can be thought of as multiple blocks of two convolutional layers. These blocks are usually known as residual blocks. Convolutional layers of stride 2 are used in between these blocks that reduce the size of feature maps as shown in \ref{fig:5.3} As YOLO v3 is a multi-scale detector, feature maps from the last three residual blocks will be used and fed to the next stage. The output feature vectors will be of dimensions 52$\times$52, 26$\times$26 and 13$\times$13 if we assume the image size to be 416$\times$416. However, the output feature map size can vary depending on the input image size.
-\subsubsection{Multi-scale Detector}
-  Now, unlike classification detection head is introduced after the feature extractor instead of classification head. YOLO v3 is designed as multi-scaled detector so that outputs of last three residual blocks are used in the detection part. Now these three feature outputs from the darknet-53 are fed into the three branches of detector consisting of multiple 1x1 and 3x3 convolutional layers before arriving at final 1$\times$1 conv layer. Thus, the output vectors will be of the shape ((52 x$\times$52 $\times$ 3 $\times$ (4+1+number of classes)),  ((26 $\times$ 26 $\times$ 3 $\times$ (4+1+number of classes)), ((13 $\times$ 13 $\times$ 3 $\times$ (4+1+number of classes)). Now, to learn what these vector means we have to understand the concept of anchor boxes.
+  \subsubsection*{Darknet53}
+    Darknet-53 has a total of 53 convolutional layers in the feature extractor part, and its architecture is shown in figure \ref{fig:5.3}. The whole architecture of darknet-53 can be thought of as multiple blocks of two convolutional layers. These blocks are usually known as residual blocks. Convolutional layers of stride two are used in between these blocks that reduce the size of feature maps, as shown in \ref{fig:5.3}. As YOLO v3 is a multi-scale detector, feature maps from the last three residual blocks will be used and fed to the next stage. The output feature vectors will be of dimensions 52$\times$52, 26$\times$26, and 13$\times$13 if we assume the image size to be 416$\times$416. However, the output feature map size can vary depending on the input image size.
+\subsubsection*{Multi-scale Detector}
+  Now, unlike classification detection, the head is introduced after the feature extractor instead of the classification head. YOLO v3 is designed as a multi-scaled detector so that outputs of the last three residual blocks are used in the detection part. These three feature outputs from the darknet-53 are fed into the three branches of detector consisting of multiple 1x1 and 3x3 convolutional layers before arriving at the final 1$\times$1 conv layer. Thus, the output vectors will be of the shape ((52 x$\times$52 $\times$ 3 $\times$ (4+1+number of classes)),  ((26 $\times$ 26 $\times$ 3 $\times$ (4+1+number of classes)), ((13 $\times$ 13 $\times$ 3 $\times$ (4+1+number of classes)). Now, to learn what these vectors mean, we have to understand the concept of anchor boxes.
   \begin{figure}[H]
     \centering
     \captionsetup{justification = centering}
@@ -33,8 +33,8 @@ The first version i.e. YOLO v1 has 24 convolutional layers and 2 fully connected
     \caption{Architecture of Darknet-53} 
     \label{fig:5.3}
   \end{figure}
-\subsubsection{Anchor Boxes}
-Anchor boxes are predefined aspect ratios which are determined by running K-means on the whole dataset before training. Now these anchor boxes are allotted to all of the grid cells sharing the same centroid. Then we determine which anchor box overlap with the ground truth box and decide the one which has highest value of IoU. Intersection over union (IoU) is defined as the ratio of area of overlap between both boxes as shown in figure \ref{fig:5.4a} to the area of union i.e. the total area occupied by both the ground truth box and anchor box as shown in figure \ref{fig:5.4b}.
+\subsubsection*{Anchor Boxes}
+Anchor boxes are predefined aspect ratios determined by running K-means on the whole dataset before training. Now, these anchor boxes are allotted to all of the grid cells sharing the same centroid. Then we determine which anchor box overlaps with the ground truth box and decides the one with the highest value of IoU. Intersection over Union (IoU) is defined as the ratio of the area of overlap between both boxes, as shown in figure \ref{fig:5.4a} to the area of union i.e., the total area occupied by both the ground truth box and anchor box as shown in figure \ref{fig:5.4b}.
 \begin{equation}
     IoU = \frac{Area of overlap}{Area of Union}
 \end{equation}
@@ -55,7 +55,7 @@ Anchor boxes are predefined aspect ratios which are determined by running K-mean
   \label{fig:11.4}
 \end{figure}
 YOLO v3 has three anchor boxes per grid cell so there will be 52 $\times$ 52 $\times$3, 26 $\times$ 26 $\times$ 3 and 13 $\times$13 $\times$3 anchor boxes for each scale. Now for each anchor box the model has to predict three things. Firstly the 4 values to define the location of anchor box. Secondly, one value to indicate whether object is present in it or not. Thirdly, the values for probabilities  for all classes to define this anchor box belongs to which class. Thus, total number of values the model is going to predict against each anchor box becomes (4+1+number\_of\_classes). 
-\subsubsection{Loss Function}
+\subsubsection*{Loss Function}
 Now we have obtained the final output of detection model we can compute the loss by comparing it to the ground truth label. The total loss function in YOLO v3 is equal to the sum of four type of losses i.e. centroid loss, height and width loss, classification loss and objectness loss i.e. whether there is any object in the bounding box or not. Thus, the overall loss function can be defined by the following equation:
 \begin{equation}
 \begin{split}
@@ -75,14 +75,14 @@ Now in the centroid loss, relative location of ground truth box centroid with re
     b_y = sigmoid(t_y) + C_y
 \end{equation}
 
-In these equations bx and by denotes the absolute values of the centroid locations. The $t_{x}$ and $t_{y}$ are the centroid location with respect to the top left corner of the grid cell. That is why we need to add $C_{x}$ and $C_{y}$ which represent the absolute top left position of grid cell. In this way original ground truth label can be simply converted into the required target labels by inverting the formula to find out $t_{x}$ and $t_{y}$from $b_{x}$ and $b_{y}$ respectively. Similarly, in case of  width and height loss $t_w$ and $t_h$ can be found out from the absolute values of width $b_w$ and height $b_h$ respectively using the following equations:
+In these equations, $b_{x}$ and $b_{y}$ denotes the absolute values of the centroid locations. The $t_{x}$ and $t_{y}$ are the centroid location with respect to the top left corner of the grid cell. That is why we need to add $C_{x}$ and $C_{y}$, which represents the absolute top left position of the grid cell. In this way, the original ground-truth label can be simply converted into the required target labels by inverting the formula to find out $t_{x}$ and $t_{y}$from $b_{x}$ and $b_{y}$ respectively. Similarly, in case of  width and height loss $t_w$ and $t_h$ can be found out from the absolute values of width $b_w$ and height $b_h$ respectively using the following equations:
 \begin{equation}
     b_w = exp(t_w) + p_w
 \end{equation}
 \begin{equation}
     b_y = exp(t_h) + p_h
 \end{equation}
-In the third part of equation, binary cross-entropy is used to find out whether the required object is present in the cell or not rather than mean square error which was used in YOLO v2. Now, we do not want to network to cheat us by proposing objects everywhere. That is why non-object loss is used to compensate these false positive claims. $\lambda_{noobj}$ is taken equal to 0.5 to make sure the model is not dominated by the cells that does not contain objects. Lastly, Binary cross-entropy is used to determine the classification loss.
+In the third part of the equation, binary cross-entropy is used to determine whether the required object is present in the cell or not rather than mean square error, which was used in YOLO v2. Now, we do not want to network to cheat us by proposing objects everywhere. That is why non-object loss is used to compensate for these false positive claims. $\lambda_{noobj}$ is taken equal to 0.5 to make sure the model is not dominated by the cells that do not contain objects. Lastly, Binary cross-entropy is used to determine classification loss.
   \begin{figure}[H]
     \centering
     \captionsetup{justification = centering}
@@ -93,7 +93,7 @@ In the third part of equation, binary cross-entropy is used to find out whether 
   
   \section{Preparation of Dataset}
   \subsection{Collection of Data}
-  A deep learning  detection algorithm requires a set of labelled images from which it can learn to localize and classify the objects present within an image. We are going to detect four classes of vehicles i.e. Bus, Car, Truck and Motorcycle in this project. There are total of 4000 images with 1000 images of each class. Most of the images are downloaded from the Google Open Images V6 using the OIDv4 toolkit. It contains approximately 16 M bounding boxes on almost 1.9 M diverse images for 600 different classes. Moreover, some of the images are taken from the dataset used in classification. We can plot some of the images from the dataset to have a look at them using the python script given in listing \ref{listing:10}. The plot of the images is shown in figure \ref{fig:5.6}
+  A deep learning detection algorithm requires a set of labeled images from which it can learn to localize and classify the objects present within an image. We will detect four classes of vehicles i.e., Bus, Car, Truck, and Motorcycle in this project. There are a total of 4000 images with 1000 images of each class. Most of the images are downloaded from the Google Open Images V6 using the OIDv4 toolkit. It contains approximately 16 M bounding boxes on almost 1.9 M diverse images for 600 different classes. Moreover, some of the images are taken from the dataset used in classification. We can plot some of the images from the dataset to look at them using the python script given in listing \ref{listing:10}. The plot of the images is shown in figure \ref{fig:5.6}.
 \linespread{1.0}
 \begin{longlisting}
 \begin{minted}[bgcolor=bg,
@@ -123,19 +123,26 @@ for i in range(1,10):
  \label{fig:5.6}
  \end{figure}
  \subsection{Labelling of Images}
- In order to learn from images, the detection model needs to know where and what are the objects present in all the images. For this purpose, we need to draw bounding box around all the objects present in the dataset and label them accordingly. The images downloaded from Google Open Images V6 are already labelled so their annotation files are downloaded alongside the images. However, all the other images downloaded from other sources need to be annotated. We used the open source labelling and annotating tool for image and video known as VoTT (Visual Object Tagging Tool). After setting up the project the bounding boxes around the images can be drawn as shown in figure \ref{fig:5.7}.
-\begin{figure}[H]
+ To learn from images, the detection model needs to know where and what are the objects present in all the images. For this purpose, we need to draw a bounding box around all the objects present in the dataset and label them accordingly. The images downloaded from Google Open Images V6 are already labeled, so their annotation files are downloaded alongside the images. However, all the other images downloaded from other sources need to be annotated. We used the open-source labeling and annotating tool for image and video known as VoTT (Visual Object Tagging Tool). After setting up the project, the bounding boxes around the images can be drawn, as shown in figure \ref{fig:5.7}.
+\begin{figure}
 \centering
 \captionsetup{justification = centering}
 \includegraphics[scale= 0.35]{CHAPTERS/Chapter-5/images/5.7.PNG}
 \caption{Labelling of images using VoTT } 
 \label{fig:5.7}
 \end{figure}
-\noindent Once all images are labelled, all the annotations are exported into the PASCAL VOC format. All the information about labels and position of bounding boxes is stored in these xml files.
-\subsubsection{Conversion of labels to YOLO v3 Format}
-The YOLO v3 model does not accept the annotation files in .xml format. Thus, we need to convert the annotations to the type that YOLO accepts. YOLO v3 needs a .txt file with the information of label and coordinates of bounding boxes. So, these annotation files in .xml format are converted into YOLO v3 format using a python script. 
+Once all images are labeled, all the annotations are exported into the PASCAL VOC format. All the information about labels and position of bounding boxes is stored in these XML files.
+\subsubsection*{Conversion of labels to YOLO v3 Format}
+The YOLO v3 model does not accept the annotation files in .xml format.
+Thus, we need to convert the annotations to the type that YOLO accepts.
+YOLO v3 needs a .txt file with the information of label and coordinates
+of bounding boxes. So, these annotation files in .xml format are converted
+into YOLO v3 format using a python script. 
 
-The output .txt files has label information in the first column in the form 0,1,2,3 depending upon the number of classes and the remaining columns contain the normalized coordinates of bounding boxes as shown in the listing \ref{listing:11}
+The output .txt files have label information in the first column
+in the form 0,1,2,3 depending upon the number of classes and the
+remaining columns contain the normalized coordinates of the bounding
+boxes, as shown in the listing \ref{listing:11}.
 
 \begin{longlisting}
 \begin{minted}[bgcolor=bg,
@@ -197,7 +204,7 @@ Now we can build the darknet model using the command given is listing \ref{listi
 \end{longlisting}
 
 \subsection{Downloading pre-trained weights for transfer learning}
-Just as what human beings learn while doing one task can be utilized in solving the related problems. In most of the cases, human beings do not learn everything from scratch. We use and transfer a little bit of knowledge we have learned already from doing other related tasks. Similarly, transfer learning is a technique in which model is developed for one task then the parameters learned in this way can be used as a starting point for another task. In other words, we can use the weights of the model trained on the one dataset as starting point in training the model to detect the objects we want. It makes the training process faster and more accurate comparatively. In this project, we are going to download pre-trained weights for the convolutional layers to make our model more accurate and converge faster. This pre-trained weight file can be downloaded in the cloud using the command given in \ref{listing:15}
+Just as what human beings learn while doing one task can be utilized in solving the related problems. In most of the cases, human beings do not learn everything from scratch. We use and transfer a little bit of knowledge we have learned already from doing other related tasks. Similarly, transfer learning is a technique in which model is developed for one task then the parameters learned in this way can be used as a starting point for another task. In other words, we can use the weights of the model trained on the one dataset as starting point in training the model to detect the objects we want. It makes the training process faster and more accurate comparatively. In this project, we are going to download pre-trained weights for the convolutional layers to make our model more accurate and converge faster. This pre-trained weight file can be downloaded in the cloud using the command given in listing \ref{listing:15}.
 \begin{longlisting}
 \begin{minted}[bgcolor=bg,
         linenos = true,
@@ -211,19 +218,19 @@ Just as what human beings learn while doing one task can be utilized in solving 
 \label{listing:15}
 \end{longlisting}
 \subsection{Configuring Files for training}
-\subsubsection{Custom config file}
+\subsubsection*{Custom config file}
 There a comes a configuration file for training the detector with the darknet. This file needs to be configured according to the requirement. Firstly, set the batch size and subdivisions equal to 64 and 16 respectively for training the detector. The number of classes of vehicles we are going to detect are 4 as mentioned before. The general formula to decide the number of max\_batches so that it gets enough number of iterations to complete the training process is given below:
 \begin{equation} 
 max batches = 2000 * number of classes
 \end{equation}
-So, we will set max\_batches = 8000 for classes.Now after setting maximum number of batches set steps equal to 80 and 90 percent of max batches respectively. Lastly, we need to decide the number of filters in convolutional layers. The general formula usually followed for deciding the number of filters is given below:
+So, we will set max\_batches = 8000 for classes. Now after setting maximum number of batches set steps equal to 80 and 90 percent of max batches respectively. Lastly, we need to decide the number of filters in convolutional layers. The general formula usually followed for deciding the number of filters is given below:
 \begin{equation} 
 Number of filters = (5 + number of classes) *3
 \end{equation}
 \begin{equation*} 
 Number of filters= 27
 \end{equation*}
-\subsubsection{Generating train.txt and val.txt}
+\subsubsection*{Generating train.txt and val.txt}
 Train.txt contains paths to all the training images. This file is generated using the python script shown in listing \ref{listing:16}. Once the train.txt is generated, then we split the data into 80\% training and 20\% validation.
 20\% of entries from the train.txt were manually selected to make val.txt file.
 \begin{longlisting}
@@ -249,8 +256,8 @@ os.chdir("..")
 \caption{Python script to generate train.txt file}
 \label{listing:16}
 \end{longlisting}
-\subsubsection{.names and .data files}
-In the yolo.names files, write the name of classes in the same order they were written when the xml files were converted into YOLO v3 format because in the annotation files the class labels are assigned as integer values i.e. 0 for Bus, 1 for Car, 2 for Truck and 3 for Motorcycle. The yolo.names file is shown in the listing \ref{listing:17}
+\subsubsection*{.names and .data files}
+In the yolo.names files, write the name of classes in the same order they were written when the xml files were converted into YOLO v3 format because in the annotation files the class labels are assigned as integer values i.e. 0 for Bus, 1 for Car, 2 for Truck and 3 for Motorcycle. The yolo.names file is shown in the listing \ref{listing:17}.
 \begin{longlisting}
 \begin{minted}[bgcolor=bg,
         linenos = true,
@@ -265,7 +272,7 @@ Motorcycle
 \caption{yolo.names}
 \label{listing:17}
 \end{longlisting}
-Similarly, yolo.data file simply contains locations of the files we are going to use while training like train.txt, val.txt, yolo.names and to the backup folder where weights of the model will be saved during the training process in case runtime is disconnected. The file is shown in listing \ref{listing:18}
+Similarly, yolo.data file simply contains locations of the files we are going to use while training like train.txt, val.txt, yolo.names and to the backup folder where weights of the model will be saved during the training process in case runtime is disconnected. The file is shown in listing \ref{listing:18}.
 \begin{longlisting}
 \begin{minted}[bgcolor=bg,
         linenos = true,
@@ -295,48 +302,61 @@ is initiation  of the training process. The training is initiated using the comm
 \caption{Python Script to start the training of detector}
 \label{listing:19}
 \end{longlisting}
-The biggest disadvantage of the Google Colab is that run time gets disconnected if your computer is idle for some time. To overcome this problem, we made a backup folder in google drive  where weights of the model are stored after every 100th iteration. In this way, we can resume the training process with the help of weights stored in backup folder in case anything happens. The output for one iteration of the training process is shown in figure \ref{fig:5.8} . To get an accurate model, training process can be stopped once the average loss becomes less than 1. 
+The most significant disadvantage of Google Colab is that run time gets disconnected if your computer is idle for some time. To overcome this problem, we made a backup folder in google drive where the weights of the model are stored after every 100th iteration. In this way, we can resume the training process with the help of weights stored in the backup folder if anything happens. The output for one iteration of the training process is shown in figure \ref{fig:5.8}. To get an accurate model, the training process can be stopped once the average loss becomes less than 1. 
 
-\begin{figure}[H]
+\begin{figure}
 \centering
 \captionsetup{justification = centering}
-\includegraphics[scale= 0.6]{CHAPTERS/Chapter-5/images/5.8.PNG}
+\includegraphics[scale= 0.55]{CHAPTERS/Chapter-5/images/5.8.PNG}
 \caption{ Output Training log for one iteration } 
 \label{fig:5.8}
 \end{figure}
 
 \section{Testing of Detector}
 \subsection{Evaluation Metrices}
-Before testing the detection model, we need to understand some evaluation matrices which are used to determine the performance of the detector. In case of classification it is easy to determine the accuracy of the model by simply finding out whether label predicted by the model is correct or not. However, it is not easy to evaluate the detector as we have to take into account the prediction of bounding boxes as well and whether the model detected the object or not. Most common metrices that are used to evaluate the detector are recall, mAP and precision. Firstly, we need to grab the concept of some commonly used terms described below to understand the evaluation metrices.
+Before testing the detection model, we need to understand some evaluation matrices used to determine the detector's performance. In the case of classification, it is easy to determine the accuracy of the model by simply finding out whether the label predicted by the model is correct or not. However, it is not easy to evaluate the detector as we have to consider the prediction of bounding boxes as well and whether the model detected the object. The most common metrics that are used to evaluate the detector are recall, mAP, and precision. Firstly, we need to grab the concept of some commonly used terms described below to understand the evaluation metrics.
 \begin{itemize}
     \item  A prediction will be True Positive if the bounding box and label predicted by the detection model is correct.
     \item A prediction will be False Positive if the predicted bounding box and label is not correct.
-    \item A prediction will be False Negative if the model predicts there is no object but there is one according to the ground truth label.
+    \item A prediction will be False Negative if the model predicts there is no object, but there is one according to the ground truth label.
 \end{itemize}
-\subsubsection{Precision}
-Precision tells us about the number of bounding boxes predicted correctly out of total number of the predicted boxes. Ideally, its value should be 1. Mathematically, we can write:
+\subsubsection*{Precision}
+Precision tells us about the number of bounding boxes predicted correctly from the total number of the predicted boxes. Ideally, its value should be 1. Mathematically, we can write:
 \begin{equation}
     Precision = \frac{TP}{TP + FP}
 \end{equation}
-\subsubsection{Recall}
+\subsubsection*{Recall}
 Recall tells us about the number of correctly predicted bounding boxes out of all the ground truth labels. Its value lies between 0 and 1. Mathematically, we can write:
 \begin{equation}
     Recall = \frac{TP}{TP + FN}
 \end{equation}
-\subsubsection{Mean Average Precision}
+\subsubsection*{Mean Average Precision}
 Mean Average Precision also known as mAP is the most commonly used parameter to determine the
-performance of a detector. The precision and recall are usually inversely related to each other . Increasing the threshold value usually increases the precision and decreases the recall parameter. Threshold value is the minimum allowed value of confidence the model has on the detected object. Firstly, we need to find out the value of Average Precision to compute mAP. Changing the value of threshold gives us a Precision-Recall curve with recall on x-axis. Now, AP is can be easily computed by calculating area under the PR curve. Once it is calculated, mean Average Precision (mAP) can be found out by taking the mean value of AP over all classes we want our model to detect.
+performance of a detector. The precision and recall are usually inversely related to each other. Increasing the threshold value usually increases the precision and decreases the recall parameter. The threshold value is the minimum allowed value of confidence the model has on the detected object. Firstly, we need to find out the value of Average Precision to compute mAP. Changing the value of the threshold gives us a Precision-Recall curve with recall on the x-axis. Now, AP can be easily computed by calculating the area under the PR curve. Once it is calculated, mean Average Precision (mAP) can be found by taking the mean value of AP over all classes; we want our model to detect.
 \subsection{Testing the Model}
-The graph of loss and mAP for the validation data was plotted against the number of iterations during the training process. The plot is shown in figure \ref{fig:5.9}. The training process was stopped when the loss is under 1 and there is no larger variation in the value of mean Average position.
-\begin{figure}[H]
+The graph of loss and mAP for the validation data was plotted against
+the number of iterations during the training process. The plot is
+shown in figure \ref{fig:5.9}. The training process was stopped when
+the loss is under 1, and there is no larger variation in the value of
+mean average position.
+\begin{figure}
 \centering
 \captionsetup{justification = centering}
 \includegraphics[scale= 0.25]{CHAPTERS/Chapter-5/images/5.9.PNG}
-\caption{Plot of loss and mAP for validation data vs number of iterations}
+\caption{Plot of loss and mAP for validation data vs. the number of iterations}
 \label{fig:5.9}
 \end{figure}
-\noindent
-Now to determine the other evaluation parameters like precision and recall, the python command shown in listing \ref{listing:20} is used firstly on the training data and the results obtained are shown in figure \ref{fig:5.10}. It can be seen that precision comes out to be 90\% at the threshold value of 0.4. Increasing the value of threshold increases the precision but the value of recall parameter is decreased. Thus, we have to trade-off between them. After trying various values of threshold, we came to the conclusion that 40\% threshold value gives the optimal value of both precision and recall. The value of mAP is also shown in the \ref{fig:5.10} that comes out to be 86.81\%.
+
+\noindent Now to determine the other evaluation parameters like precision
+and recall, the python command shown in listing \ref{listing:20} is
+used firstly on the training data and the results obtained are shown
+in figure \ref{fig:5.10}. It can be seen that precision comes out to
+be 90\% at the threshold value of 0.4. Increasing the value of threshold 
+increases the precision but the value of recall parameter is decreased.
+Thus, we have to trade-off between them. After trying various values of 
+threshold, we came to the conclusion that 40\% threshold value gives the
+optimal value of both precision and recall. The value of mAP is also shown
+in the \ref{fig:5.10} that comes out to be 86.81\%.
 \begin{longlisting}
 \begin{minted}[bgcolor=bg,
         linenos = true,
@@ -353,55 +373,55 @@ Now to determine the other evaluation parameters like precision and recall, the 
 \centering
 \captionsetup{justification = centering}
 \includegraphics[scale= 0.8]{CHAPTERS/Chapter-5/images/5.10.PNG}
-\caption{Evaluation Metrices for training data at threshold value of 0.4}
+\caption{Evaluation Metrics for training data at threshold value of 0.4}
 \label{fig:5.10}
 \end{figure}
 \noindent
-Similarly, the evaluation metrices are determined for the test data and the output results are shown in figure \ref{fig:5.11}. The precision comes out to be 82\% and is less than training data. Since the test precision is less than the train precision the phenomenon is indicative of "overfitting".
+Similarly, the evaluation metrics are determined for the test data and the output results are shown in figure \ref{fig:5.11}. The precision comes out to be 82\% and is less than training data. Since the test precision is less than the train precision the phenomenon is indicative of "overfitting".
 \begin{figure}[H]
 \centering
 \captionsetup{justification = centering}
 \includegraphics[scale= 0.8]{CHAPTERS/Chapter-5/images/5.11.PNG}
-\caption{Evaluation Metrices for testing data at threshold value of 0.4}
+\caption{Evaluation Metrics for testing data at threshold value of 0.4}
 \label{fig:5.11}
 \end{figure}
 The overall results are summarized in table \ref{table:5.1} and \ref{table:5.2}:
 \begin{table}[H]
-	\caption{Value of Average Precision for each class at threshold value of 0.4}
-	\label{table:5.1}
-	  \begin{center}
-		\scalebox{1.1}
-		{\begin{tabular}{|l |l |l |l |}
-	    \hline
-	    Class Name  & Class label  & AP for Training Data & AP for Testing Data
-		\\ \hline
-		Bus &  0 & 91\% & 78.82\%
-		\\ \hline
-		Car & 1 & 73.67\% & 47\%
-		\\ \hline  
-		Truck & 2 & 91.26\% & 70.59\%
-		\\ \hline  
-	    Motorcycle & 3 & 90.84\% & 68.98\%
-	    \\ \hline 
-		\end{tabular}}
-	  \end{center}
+    \caption{Value of Average Precision for each class at threshold value of 0.4}
+    \label{table:5.1}
+      \begin{center}
+        \scalebox{1.1}
+        {\begin{tabular}{|l |l |l |l |}
+        \hline
+        Class Name  & Class label  & AP for Training Data & AP for Testing Data
+        \\ \hline
+        Bus &  0 & 91\% & 78.82\%
+        \\ \hline
+        Car & 1 & 73.67\% & 47\%
+        \\ \hline  
+        Truck & 2 & 91.26\% & 70.59\%
+        \\ \hline  
+        Motorcycle & 3 & 90.84\% & 68.98\%
+        \\ \hline 
+        \end{tabular}}
+      \end{center}
 \end{table}
 
 \begin{table}[H]
-	\caption{Evaluation Metrices for training and testing dataset}
-	\label{table:5.2}
-	  \begin{center}
-		\scalebox{1.1}
-		{\begin{tabular}{|l |l |l |l |}
-	    \hline
-	    Dataset   & Precision & Recall &  mAP @ 0.5
-		\\ \hline
-		Training & 90\% & 71\% & 86.81\%
-		\\ \hline
-		Testing  & 82\%& 50\% & 65\%
-		\\ \hline  
-		\end{tabular}}
-	  \end{center}
+    \caption{Evaluation Metrics for training and testing dataset}
+    \label{table:5.2}
+      \begin{center}
+        \scalebox{1.1}
+        {\begin{tabular}{|l |l |l |l |}
+        \hline
+        Dataset   & Precision & Recall &  mAP @ 0.5
+        \\ \hline
+        Training & 90\% & 71\% & 86.81\%
+        \\ \hline
+        Testing  & 82\%& 50\% & 65\%
+        \\ \hline  
+        \end{tabular}}
+      \end{center}
 \end{table}
 \noindent
 Now to observe the working of the detector, we have to pass images to the detector model one by one and it will localize and label the classes of vehicles in return. The latest model weights were saved in the backup folder so we will pass the location of weight file and test images 1 by 1. A labelled image will be displayed on the window after processing. The python command that is used to detect the images is shown in listing \ref{listing:21} and the output images are shown in figure \ref{fig:5.12}.
@@ -449,35 +469,35 @@ imShow('predictions.jpg')
         {{\small }}    
         \label{fig:mean and std of net44}
     \end{subfigure}
-    \caption[ ]
+    \caption[Output images from the Detection Model]
     {\small Output images from the Detection Model}
     \label{fig:5.12}
 \end{figure*}
  The precision obtained by other researchers while working on the detection of vehicles are 
- compiled in table \ref{table:5.3}.  All of them used different techniques to improve the precision of detector.Their results are better than our model because they have worked only on detection of vehicle rather than classifying them into different classes such as Bus, Car and Truck etc. Moreover, they have trained data on large number of images. Some limitations of our model and how it can be improved are discussed will be discussed in the below section.
+ compiled in table \ref{table:5.3}.  All of them used different techniques to improve the precision of detector.Their results are better than our model because they have worked only on detection of vehicle rather than classifying them into different classes such as Bus, Car and Truck etc. Moreover, they have trained data on large number of images. Some limitations of our model and how it can be improved will be discussed in the later section.
  \begin{table}[H]
-	\caption{Comparison with other techniques}
-	\label{table:5.3}
-	  \begin{center}
-		\scalebox{1.1}
-		{\begin{tabular}{|l |l |l |l |}
-	    \hline
-	    Authors  & Technique used &  Precision
-		\\ \hline
-		Shih-Chung Hsu et al \cite{chap_5_article:4} & Simplified Fast RCNN & 89.2\%
-		\\ \hline
-		KUANG-HSUAN CHEN et al \cite{chap_5_article:5} & Single Shot Detector & 85.5\%
-		\\ \hline  
-		Quanfu Fan et al \cite{chap_5_article:6} & Faster RCNN & 83.73\%
-		\\ \hline
-		Our Model & YOLO v3 & 82\%
-		\\ \hline
-		
-		\end{tabular}}
-	  \end{center}
+    \caption{Comparison with other techniques}
+    \label{table:5.3}
+      \begin{center}
+        \scalebox{1.1}
+        {\begin{tabular}{|l |l |l |l |}
+        \hline
+        Authors  & Technique used &  Precision
+        \\ \hline
+        Shih-Chung Hsu et al \cite{chap_5_article:4} & Simplified Fast RCNN & 89.2\%
+        \\ \hline
+        KUANG-HSUAN CHEN et al \cite{chap_5_article:5} & Single Shot Detector & 85.5\%
+        \\ \hline  
+        Quanfu Fan et al \cite{chap_5_article:6} & Faster RCNN & 83.73\%
+        \\ \hline
+        Our Model & YOLO v3 & 82\%
+        \\ \hline
+        
+        \end{tabular}}
+      \end{center}
 \end{table}
 
 \section{Limitations and Future Work}
-It is a well-known fact that deep learning algorithms learn better from large number of images in dataset. The deep learning model which is trained on large number of images will learn and detect images better than the one trained on smaller dataset. Although we implemented the detector model with 90\% precision, but it has certain limitations. The model does not detect all the vehicles when the image is crowded or taken from a large distance. One of the main reasons is the lack of such images in the dataset. Almost 80\% of the images in the dataset has only one or two vehicles in it. The model needs very clear pictures of vehicles to train taken at a good distance at which it can differentiate between the required classes which are not available online. Moreover, we could not train the model on more than 3000-4000 images due to the limitations of resources and time. 
+It is a well-known fact that deep learning algorithms learn better from many images in the dataset. The deep learning model trained on a large number of images will learn and detect images better than the one trained on a smaller dataset. Although we implemented the detector model with 90\% precision, it has certain limitations. The model does not detect all the vehicles when the image is crowded or taken from a considerable distance. One of the main reasons is the lack of such images in the dataset. Almost 80\% of the images in the dataset has only one or two vehicles in it. The model needs very clear pictures of vehicles to train taken at a reasonable distance at which it can differentiate between the required classes which are not available online. Moreover, we could not train the model on more than 3000-4000 images due to the limitations of resources and time. 
 \noindent
-In the future work, the detection model can be trained with the larger number of images to overcome its limitations. The images of the vehicles can be obtained using cameras on National Highways from the corresponding department. It will help in improving the performance of detector by increasing its precision, mAP, and other evaluation metrics. The problem of overfitting can be eliminated by trying out different techniques for transfer learning using YOLO as the base detector. Moreover, the detection model can be used in future for detection and tracking of vehicles in automatic driving and traffic surveillance purposes.
+In future work, the detection model can be trained with a more significant number of images to overcome its limitations. The images of the vehicles can be obtained using cameras on National Highways from the corresponding department. It will help improve the performance of the detector by increasing its precision, mAP, and other evaluation metrics. The problem of overfitting can be eliminated by trying out different transfer learning techniques using YOLO as the base detector. Moreover, the detection model can be used in the future to detect and track vehicles in automatic driving and traffic surveillance purposes.

@@ -2,65 +2,48 @@
 \label{1}
 \section{Motivation}
 
-Rising traffic in the country gives birth to rising accidents. To 
-avoid/minimize the accidents, proper surveillance is required. Detection 
-and tracking of vehicles have become a key component in traffic 
-surveillance and automatic driving. Traditional algorithms like Gaussian 
-Mixed Model (GMM) have achieved encouraging success in this field \cite{chap_1_article:1} but due 
-to variation in illumination, occlusion, background clutter etc. detection 
-of vehicles is still a challenge. 
-Deep Neural Networks (DNNs) have gained a lot of attention in 
-past few years. Due to the advancement  in deep learning research, object 
-detection has achieved major advancements in recent years. The work 
-in this project is based on DNNs to detect and classify vehicles from 
-a dataset collected from images and videos.
+Rising traffic in the country gives birth to increasing accidents. To avoid/minimize accidents, proper surveillance is required. Detection and tracking of vehicles have become a key component in traffic surveillance and automatic driving. Traditional algorithms like Gaussian 
+Mixed Model (GMM) have achieved encouraging success in this field \cite{chap_1_article:1}, but due to variations in illumination, occlusion, background clutter, etc. detection of vehicles is still a challenge. 
+Deep Neural Networks (DNNs) have gained much attention in the past few years. Due to the advancement in deep learning research, object detection has achieved significant progress in recent years. This project's work is based on DNNs to detect and classify vehicles from a dataset collected from images and videos.
 
 \section{Background}
 
-Classical methods of vehicle detection were based on some 
-sort of features like symmetry, edges, texture, underbody shadows 
-and corners \cite{chap_1_article:2}. These methods were computationally less demanding and
-worked well with certain environmental settings. However, these methods fail in many situations 
-in scenarios like less illuminated highways. With the advent of 
-deep learning which is a subset of machine learning, object detection and 
-object classification have dramatically improved. Machine learning 
-and deep learning are sub-branches of artificial intelligence which  
-have been applied to fields including computer vision, machine vision,
+Classical vehicle detection methods were based on features like symmetry, edges, texture, underbody shadows, and corners \cite{chap_1_article:2}. These methods were computationally less demanding and
+worked well with specific environmental settings. However, these methods fail in many situations in scenarios like less illuminated highways. With the advent of deep learning, which is a subset of machine learning, object detection, and object classification have dramatically improved. Machine learning and deep learning are sub-branches of artificial intelligence that have been applied to fields including computer vision, machine vision,
 natural language processing, speech processing, biomedical imaging,
-and traffic surveillance etc. 
+traffic surveillance, etc. 
 
-In our research we are going to use deep learning techniques for detection
-and classification of different kind of vehicles on the road.
+In our research, we are going to use deep learning techniques for detection
+and the classification of different kinds of vehicles on the road.
 We are going to use deep convolutional neural networks (DCNNs)
-based architectures for detection,localization and classification of
+based architectures for detection, localization, and classification of
 different types of vehicles in still images.  
 
 \section{Goals \& Objectives}
 
-The goal of this project is to make a deep learning based model (using Python) for vehicle detection and classification. Main objectives are summarized as:
+This project aims to make a deep learning-based model (using Python) for vehicle detection and classification. Main objectives are summarized as:
 \begin{itemize}
-\item Collection of datasets (images dataset of car, truck classes etc. and videos).
+\item Collection of datasets (images dataset of car, truck classes, etc. and videos).
 \item Design of Convolutional Neural Network
-\item Configuration of training options (AlexNet, VGGNet, ResNet etc.)
-\item Training of detector (RCNN, Fast- RCNN, Faster-RCNN, YOLO etc.)
+\item Configuration of training options (AlexNet, VGGNet, ResNet, etc.)
+\item Training of detector (RCNN, Fast- RCNN, Faster-RCNN, YOLO, etc.)
 \item Evaluation of the trained detector
 \end{itemize}
 
 \section{Challenges}
 
-One of the big challenges that deep learning based methods
+One of the significant challenges that deep learning-based methods
 face is the availability of quality data. These methods work
-best when large amounts of quality data is used. However,
+best when large amounts of quality data are used. However,
 when sufficient quality data is not fed in a deep learning system,
-it can fail quite badly. In our case, gathering sufficient, high-quality,
+it can fail quite severely. In our case, gathering enough, high-quality,
 context-relevant data can be a challenge.
-Furthermore, deep learning architectures are essentially bulky,
-compute intensive algorithms and in order to implement these algorithms
-we need access to high-end computing machines specifically designed
+Furthermore, deep learning architectures are inherently bulky,
+compute intensive algorithms, and implement them; we need access to high-end computing machines specifically designed
 for this purpose. Typically, high-end GPUs are used for implementing
 these algorithms. These high-end computing machines can be
-remotely accessed in the cloud however, duration for which these
-machines are available and affordability can be a challenge in our case.	
+remotely accessed in the cloud; however, the duration for which these
+machines are available and affordability can be a challenge in our case.    
 
 \section{Organization of Thesis}
 
@@ -71,9 +54,8 @@ the whole reading and understanding of image classification \& detection.
 are discussed.
 
 \noindent\textbf{Chapter \ref{Chapter 4}}: This chapter contains all
-the procedural details of the dataset formation for classifier,
-training process and evaluation of results along with all the relevant codes.
+the procedural details of the dataset formation for the multi-class vehicle classifier, the training process, and evaluation of results and all the relevant codes.
 
 \noindent\textbf{Chapter \ref{Chapter 5}}: This chapter deals with\
-the training and testing of a YOLO based cutom object detector.
-All the relavant codes and results are attached for easy understanding.
+the training and testing of a YOLO based custom object detector.
+All the relevant codes and results are attached for easy understanding.
